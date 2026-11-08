@@ -1,0 +1,2678 @@
+=== node_1 started Fri Nov  6 11:30:45 PM +08 2026 on CN-142
+impl=serial dim=2 n=256x256x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.728e-01 l2_err=8.383151e-01 linf_err=1.705930e+00
+t_total=0.0322 s  (setup 0.0027)  compute max/mean=0.0322/0.0322  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=512x512x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.905e-01 l2_err=8.482146e-01 linf_err=1.726144e+00
+t_total=0.1180 s  (setup 0.0098)  compute max/mean=0.1180/0.1180  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=1024x1024x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.964e-01 l2_err=8.507222e-01 linf_err=1.731261e+00
+t_total=0.4214 s  (setup 0.0389)  compute max/mean=0.4214/0.4214  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=2048x2048x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.985e-01 l2_err=8.513519e-01 linf_err=1.732543e+00
+t_total=1.6553 s  (setup 0.1535)  compute max/mean=1.6553/1.6553  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=4096x4096x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.993e-01 l2_err=8.515096e-01 linf_err=1.732865e+00
+t_total=5.7843 s  (setup 0.5842)  compute max/mean=5.7843/5.7843  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=22.9482 s  (setup 1.5370)  compute max/mean=22.9481/22.9481  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=32x32x32 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=3.800e-01 l2_err=2.394382e-01 linf_err=6.797188e-01
+t_total=0.0066 s  (setup 0.0022)  compute max/mean=0.0066/0.0066  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=64x64x64 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=7.672e-01 l2_err=4.737377e-01 linf_err=1.360159e+00
+t_total=0.0689 s  (setup 0.0129)  compute max/mean=0.0688/0.0688  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=128x128x128 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.302e-01 l2_err=5.664111e-01 linf_err=1.629585e+00
+t_total=0.5553 s  (setup 0.0999)  compute max/mean=0.5553/0.5553  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=256x256x256 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.798e-01 l2_err=5.929208e-01 linf_err=1.706315e+00
+t_total=5.6437 s  (setup 0.7069)  compute max/mean=5.6437/5.6437  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=50.6324 s  (setup 4.0872)  compute max/mean=50.6323/50.6323  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=256x256x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=366 converged=1 rel_resid=7.241e-09 l2_err=8.679887e-06 linf_err=1.834381e-05
+t_total=0.1145 s  (setup 0.0029)  compute max/mean=0.1112/0.1112  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=512x512x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=731 converged=1 rel_resid=6.409e-09 l2_err=2.178433e-06 linf_err=4.603923e-06
+t_total=0.9445 s  (setup 0.0099)  compute max/mean=0.9363/0.9363  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=1024x1024x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=1458 converged=1 rel_resid=7.237e-09 l2_err=5.456710e-07 linf_err=1.153231e-06
+t_total=6.4286 s  (setup 0.0387)  compute max/mean=6.4082/6.4082  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=2048x2048x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=2909 converged=1 rel_resid=9.587e-09 l2_err=1.365499e-07 linf_err=2.885874e-07
+t_total=64.2478 s  (setup 0.0966)  compute max/mean=64.1892/64.1892  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=5809 converged=1 rel_resid=1.489e-08 l2_err=3.414444e-08 linf_err=7.216443e-08
+t_total=535.0225 s  (setup 0.5091)  compute max/mean=534.7871/534.7871  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=32x32x32 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=51 converged=1 rel_resid=2.688e-09 l2_err=4.005375e-04 linf_err=1.177920e-03
+t_total=0.0076 s  (setup 0.0024)  compute max/mean=0.0068/0.0068  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=64x64x64 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=109 converged=1 rel_resid=4.632e-09 l2_err=1.032149e-04 linf_err=3.039839e-04
+t_total=0.1652 s  (setup 0.0127)  compute max/mean=0.1603/0.1603  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=128x128x128 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=222 converged=1 rel_resid=6.465e-09 l2_err=2.620373e-05 linf_err=7.722213e-05
+t_total=1.8416 s  (setup 0.0627)  compute max/mean=1.8282/1.8282  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=256x256x256 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=446 converged=1 rel_resid=9.395e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=39.2922 s  (setup 0.6702)  compute max/mean=39.2055/39.2055  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=23.3700 s  (setup 1.5429)  compute max/mean=23.3699/23.3699  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=46.5770 s  (setup 3.9693)  compute max/mean=46.5770/46.5770  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=5809 converged=1 rel_resid=1.489e-08 l2_err=3.414444e-08 linf_err=7.216443e-08
+t_total=535.0424 s  (setup 0.5174)  compute max/mean=534.8180/534.8180  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=256x256x256 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=446 converged=1 rel_resid=9.395e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=39.3141 s  (setup 0.6525)  compute max/mean=39.2270/39.2270  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=256x256x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.728e-01 l2_err=8.383151e-01 linf_err=1.705930e+00
+t_total=0.0231 s  (setup 0.0025)  compute max/mean=0.0230/0.0230  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=512x512x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.905e-01 l2_err=8.482146e-01 linf_err=1.726144e+00
+t_total=0.1017 s  (setup 0.0097)  compute max/mean=0.1016/0.1016  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=1024x1024x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.964e-01 l2_err=8.507222e-01 linf_err=1.731261e+00
+t_total=0.4143 s  (setup 0.0387)  compute max/mean=0.4143/0.4143  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=2048x2048x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.985e-01 l2_err=8.513519e-01 linf_err=1.732543e+00
+t_total=1.3948 s  (setup 0.0964)  compute max/mean=1.3948/1.3948  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=4096x4096x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.993e-01 l2_err=8.515096e-01 linf_err=1.732865e+00
+t_total=5.7869 s  (setup 0.5142)  compute max/mean=5.7869/5.7869  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=23.3157 s  (setup 1.5418)  compute max/mean=23.3157/23.3157  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=32x32x32 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=3.800e-01 l2_err=2.394382e-01 linf_err=6.797188e-01
+t_total=0.0066 s  (setup 0.0025)  compute max/mean=0.0065/0.0065  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=64x64x64 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=7.672e-01 l2_err=4.737377e-01 linf_err=1.360159e+00
+t_total=0.0690 s  (setup 0.0128)  compute max/mean=0.0690/0.0690  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=128x128x128 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.302e-01 l2_err=5.664111e-01 linf_err=1.629585e+00
+t_total=0.3779 s  (setup 0.0642)  compute max/mean=0.3779/0.3779  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=256x256x256 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.798e-01 l2_err=5.929208e-01 linf_err=1.706315e+00
+t_total=5.6405 s  (setup 0.7348)  compute max/mean=5.6404/5.6404  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=46.5236 s  (setup 3.9624)  compute max/mean=46.5235/46.5235  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=256x256x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=366 converged=1 rel_resid=7.241e-09 l2_err=8.679887e-06 linf_err=1.834381e-05
+t_total=0.1155 s  (setup 0.0027)  compute max/mean=0.1121/0.1121  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=512x512x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=731 converged=1 rel_resid=6.409e-09 l2_err=2.178433e-06 linf_err=4.603923e-06
+t_total=0.7772 s  (setup 0.0066)  compute max/mean=0.7716/0.7716  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=1024x1024x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=1458 converged=1 rel_resid=7.237e-09 l2_err=5.456710e-07 linf_err=1.153231e-06
+t_total=6.6671 s  (setup 0.0382)  compute max/mean=6.6465/6.6465  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=2048x2048x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=2909 converged=1 rel_resid=9.587e-09 l2_err=1.365499e-07 linf_err=2.885874e-07
+t_total=64.4591 s  (setup 0.0963)  compute max/mean=64.4007/64.4007  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=5809 converged=1 rel_resid=1.489e-08 l2_err=3.414444e-08 linf_err=7.216443e-08
+t_total=535.1084 s  (setup 0.4767)  compute max/mean=534.8839/534.8839  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=32x32x32 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=51 converged=1 rel_resid=2.688e-09 l2_err=4.005375e-04 linf_err=1.177920e-03
+t_total=0.0079 s  (setup 0.0027)  compute max/mean=0.0072/0.0072  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=64x64x64 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=109 converged=1 rel_resid=4.632e-09 l2_err=1.032149e-04 linf_err=3.039839e-04
+t_total=0.1131 s  (setup 0.0087)  compute max/mean=0.1090/0.1090  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=128x128x128 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=222 converged=1 rel_resid=6.465e-09 l2_err=2.620373e-05 linf_err=7.722213e-05
+t_total=1.9085 s  (setup 0.0987)  compute max/mean=1.8922/1.8922  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=256x256x256 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=446 converged=1 rel_resid=9.395e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=39.1451 s  (setup 0.4970)  compute max/mean=39.0601/39.0601  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=23.3670 s  (setup 1.5337)  compute max/mean=23.3670/23.3670  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=46.6919 s  (setup 3.9671)  compute max/mean=46.6919/46.6919  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=5809 converged=1 rel_resid=1.489e-08 l2_err=3.414444e-08 linf_err=7.216443e-08
+t_total=532.9603 s  (setup 0.4741)  compute max/mean=532.7381/532.7381  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=256x256x256 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=446 converged=1 rel_resid=9.395e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=39.1021 s  (setup 0.6619)  compute max/mean=39.0168/39.0168  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+filled field written to results/fields/fill2d_day99.grid
+impl=serial dim=2 n=801x534x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=1.2907 s  (setup 0.0020)  compute max/mean=1.2798/1.2798  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.7490 s  (setup 0.0012)  compute max/mean=0.7489/0.7489  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+filled field written to results/fields/fill3d.grid
+impl=serial dim=3 n=801x534x365 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=197.8705 s  (setup 0.9478)  compute max/mean=196.9463/196.9463  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=68.6732 s  (setup 0.6267)  compute max/mean=68.6732/68.6732  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+filled field written to results/fields/fill2d_day99.grid
+impl=serial dim=2 n=801x534x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=1.1471 s  (setup 0.0020)  compute max/mean=1.1376/1.1376  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.7503 s  (setup 0.0012)  compute max/mean=0.7502/0.7502  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+filled field written to results/fields/fill3d.grid
+impl=serial dim=3 n=801x534x365 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=196.7156 s  (setup 0.6266)  compute max/mean=195.9546/195.9546  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=68.6794 s  (setup 0.6270)  compute max/mean=68.6794/68.6794  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=23.9002 s  (setup 1.7963)  compute max/mean=23.8997/23.8997  halo max/mean=0.0004/0.0004  allreduce max/mean=0.0000/0.0000
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=47.1423 s  (setup 3.9880)  compute max/mean=47.1417/47.1417  halo max/mean=0.0005/0.0005  allreduce max/mean=0.0001/0.0001
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=5809 converged=1 rel_resid=1.489e-08 l2_err=3.414444e-08 linf_err=7.216443e-08
+t_total=538.0295 s  (setup 0.3849)  compute max/mean=537.7875/537.7875  halo max/mean=0.0099/0.0099  allreduce max/mean=0.0058/0.0058
+impl=mpi dim=3 n=256x256x256 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=446 converged=1 rel_resid=9.395e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=40.4188 s  (setup 0.7903)  compute max/mean=40.3142/40.3142  halo max/mean=0.0009/0.0009  allreduce max/mean=0.0006/0.0006
+impl=mpi dim=2 n=1024x1024x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.964e-01 l2_err=8.507222e-01 linf_err=1.731261e+00
+t_total=1.0583 s  (setup 0.0388)  compute max/mean=1.0581/1.0581  halo max/mean=0.0002/0.0002  allreduce max/mean=0.0000/0.0000
+impl=mpi dim=3 n=64x64x64 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=7.672e-01 l2_err=4.737377e-01 linf_err=1.360159e+00
+t_total=0.0702 s  (setup 0.0127)  compute max/mean=0.0700/0.0700  halo max/mean=0.0001/0.0001  allreduce max/mean=0.0000/0.0000
+impl=mpi dim=2 n=512x512x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=300 converged=0 rel_resid=1.833e+00 l2_err=2.985029e-02 linf_err=7.410239e-02
+t_total=0.3240 s  (setup 0.0064)  compute max/mean=0.3185/0.3185  halo max/mean=0.0001/0.0001  allreduce max/mean=0.0001/0.0001
+impl=mpi dim=3 n=48x48x48 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=300 converged=0 rel_resid=2.243e-13 l2_err=1.816368e-04 linf_err=5.347096e-04
+t_total=0.1713 s  (setup 0.0060)  compute max/mean=0.1689/0.1689  halo max/mean=0.0002/0.0002  allreduce max/mean=0.0001/0.0001
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=23.9089 s  (setup 1.8220)  compute max/mean=23.9084/23.9084  halo max/mean=0.0004/0.0004  allreduce max/mean=0.0000/0.0000
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=47.4568 s  (setup 4.3475)  compute max/mean=47.4562/47.4562  halo max/mean=0.0005/0.0005  allreduce max/mean=0.0001/0.0001
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=5809 converged=1 rel_resid=1.489e-08 l2_err=3.414444e-08 linf_err=7.216443e-08
+t_total=536.8623 s  (setup 0.3838)  compute max/mean=536.6205/536.6205  halo max/mean=0.0092/0.0092  allreduce max/mean=0.0064/0.0064
+impl=mpi dim=3 n=256x256x256 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=446 converged=1 rel_resid=9.395e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=38.9223 s  (setup 0.7897)  compute max/mean=38.8191/38.8191  halo max/mean=0.0009/0.0009  allreduce max/mean=0.0006/0.0006
+impl=mpi dim=2 n=1024x1024x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.964e-01 l2_err=8.507222e-01 linf_err=1.731261e+00
+t_total=0.4190 s  (setup 0.0389)  compute max/mean=0.4188/0.4188  halo max/mean=0.0002/0.0002  allreduce max/mean=0.0000/0.0000
+impl=mpi dim=3 n=64x64x64 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=7.672e-01 l2_err=4.737377e-01 linf_err=1.360159e+00
+t_total=0.0695 s  (setup 0.0131)  compute max/mean=0.0694/0.0694  halo max/mean=0.0001/0.0001  allreduce max/mean=0.0000/0.0000
+impl=mpi dim=2 n=512x512x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=300 converged=0 rel_resid=1.833e+00 l2_err=2.985029e-02 linf_err=7.410239e-02
+t_total=0.4814 s  (setup 0.0098)  compute max/mean=0.4738/0.4738  halo max/mean=0.0002/0.0002  allreduce max/mean=0.0002/0.0002
+impl=mpi dim=3 n=48x48x48 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=300 converged=0 rel_resid=2.243e-13 l2_err=1.816368e-04 linf_err=5.347096e-04
+t_total=0.1722 s  (setup 0.0059)  compute max/mean=0.1696/0.1696  halo max/mean=0.0002/0.0002  allreduce max/mean=0.0002/0.0002
+impl=mpi dim=2 n=801x534x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=1.4668 s  (setup 0.0020)  compute max/mean=1.4562/1.4562  halo max/mean=0.0003/0.0003  allreduce max/mean=0.0002/0.0002
+impl=mpi dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.7531 s  (setup 0.0013)  compute max/mean=0.7525/0.7525  halo max/mean=0.0005/0.0005  allreduce max/mean=0.0000/0.0000
+impl=mpi dim=3 n=801x534x365 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=195.3658 s  (setup 0.6262)  compute max/mean=194.6006/194.6006  halo max/mean=0.0006/0.0006  allreduce max/mean=0.0004/0.0004
+impl=mpi dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=74.4168 s  (setup 0.6255)  compute max/mean=74.4161/74.4161  halo max/mean=0.0005/0.0005  allreduce max/mean=0.0000/0.0000
+impl=mpi dim=2 n=801x534x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=0.9793 s  (setup 0.0013)  compute max/mean=0.9705/0.9705  halo max/mean=0.0002/0.0002  allreduce max/mean=0.0002/0.0002
+impl=mpi dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=1.1977 s  (setup 0.0020)  compute max/mean=1.1970/1.1970  halo max/mean=0.0006/0.0006  allreduce max/mean=0.0000/0.0000
+impl=mpi dim=3 n=801x534x365 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=196.0793 s  (setup 0.6243)  compute max/mean=195.3189/195.3189  halo max/mean=0.0006/0.0006  allreduce max/mean=0.0004/0.0004
+impl=mpi dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=74.4157 s  (setup 0.6253)  compute max/mean=74.4151/74.4151  halo max/mean=0.0005/0.0005  allreduce max/mean=0.0000/0.0000
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=12.4144 s  (setup 1.1923)  compute max/mean=12.3872/12.3109  halo max/mean=0.1792/0.1032  allreduce max/mean=0.1003/0.0506
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=25.7624 s  (setup 2.4450)  compute max/mean=24.6002/24.3959  halo max/mean=1.5719/1.3689  allreduce max/mean=0.2874/0.1450
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415281e-08 linf_err=7.217974e-08
+t_total=271.5235 s  (setup 0.3253)  compute max/mean=270.9944/270.1441  halo max/mean=0.5545/0.4520  allreduce max/mean=1.5336/0.8133
+impl=mpi dim=3 n=256x256x256 solver=cg exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=446 converged=1 rel_resid=9.397e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=20.3757 s  (setup 0.4149)  compute max/mean=19.9494/19.9156  halo max/mean=0.3839/0.3761  allreduce max/mean=0.0564/0.0559
+impl=mpi dim=2 n=2048x1024x1 solver=jacobi exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=200 converged=0 rel_resid=9.979e-01 l2_err=8.512258e-01 linf_err=1.732285e+00
+t_total=0.7059 s  (setup 0.0359)  compute max/mean=0.7030/0.5995  halo max/mean=0.2080/0.1054  allreduce max/mean=0.0198/0.0099
+impl=mpi dim=3 n=128x64x64 solver=jacobi exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=200 converged=0 rel_resid=8.705e-01 l2_err=5.332480e-01 linf_err=1.532992e+00
+t_total=0.0775 s  (setup 0.0120)  compute max/mean=0.0693/0.0586  halo max/mean=0.0295/0.0188  allreduce max/mean=0.0073/0.0036
+impl=mpi dim=2 n=1024x512x1 solver=cg exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=300 converged=0 rel_resid=4.496e+00 l2_err=1.189920e-01 linf_err=3.069332e-01
+t_total=0.4875 s  (setup 0.0096)  compute max/mean=0.4762/0.4753  halo max/mean=0.0027/0.0026  allreduce max/mean=0.0049/0.0030
+impl=mpi dim=3 n=96x48x48 solver=cg exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=300 converged=0 rel_resid=5.348e-13 l2_err=1.470048e-04 linf_err=4.202478e-04
+t_total=0.1215 s  (setup 0.0049)  compute max/mean=0.1132/0.1126  halo max/mean=0.0058/0.0056  allreduce max/mean=0.0022/0.0018
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=12.2944 s  (setup 0.8169)  compute max/mean=12.2670/12.1443  halo max/mean=0.2715/0.1494  allreduce max/mean=0.1502/0.0758
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=26.3010 s  (setup 2.4990)  compute max/mean=24.3325/24.2244  halo max/mean=2.1957/2.0885  allreduce max/mean=0.2959/0.1480
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415281e-08 linf_err=7.217974e-08
+t_total=274.5548 s  (setup 0.3228)  compute max/mean=273.9679/273.2642  halo max/mean=0.6532/0.5051  allreduce max/mean=1.2005/0.6695
+impl=mpi dim=3 n=256x256x256 solver=cg exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=446 converged=1 rel_resid=9.397e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=20.1411 s  (setup 0.4144)  compute max/mean=19.7140/19.6714  halo max/mean=0.3747/0.3706  allreduce max/mean=0.0846/0.0715
+impl=mpi dim=2 n=2048x1024x1 solver=jacobi exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=200 converged=0 rel_resid=9.979e-01 l2_err=8.512258e-01 linf_err=1.732285e+00
+t_total=0.4575 s  (setup 0.0401)  compute max/mean=0.4538/0.4527  halo max/mean=0.0059/0.0047  allreduce max/mean=0.0069/0.0034
+impl=mpi dim=3 n=128x64x64 solver=jacobi exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=200 converged=0 rel_resid=8.705e-01 l2_err=5.332480e-01 linf_err=1.532992e+00
+t_total=0.0778 s  (setup 0.0133)  compute max/mean=0.0695/0.0693  halo max/mean=0.0087/0.0085  allreduce max/mean=0.0024/0.0012
+impl=mpi dim=2 n=1024x512x1 solver=cg exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=300 converged=0 rel_resid=4.496e+00 l2_err=1.189920e-01 linf_err=3.069332e-01
+t_total=0.4898 s  (setup 0.0096)  compute max/mean=0.4783/0.4764  halo max/mean=0.0029/0.0029  allreduce max/mean=0.0061/0.0036
+impl=mpi dim=3 n=96x48x48 solver=cg exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=300 converged=0 rel_resid=5.348e-13 l2_err=1.470048e-04 linf_err=4.202478e-04
+t_total=0.1805 s  (setup 0.0062)  compute max/mean=0.1685/0.1684  halo max/mean=0.0076/0.0076  allreduce max/mean=0.0034/0.0027
+impl=mpi dim=2 n=801x534x1 solver=cg exchange=isend ranks=2 threads=1 dims=2x1x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=0.7629 s  (setup 0.0010)  compute max/mean=0.7483/0.7324  halo max/mean=0.0055/0.0052  allreduce max/mean=0.0355/0.0196
+impl=mpi dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=2 threads=1 dims=2x1x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.6414 s  (setup 0.0010)  compute max/mean=0.6330/0.5863  halo max/mean=0.1014/0.0548  allreduce max/mean=0.0009/0.0005
+impl=mpi dim=3 n=801x534x365 solver=cg exchange=isend ranks=2 threads=1 dims=2x1x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=102.5947 s  (setup 0.3701)  compute max/mean=99.1245/98.4907  halo max/mean=2.6196/2.5030  allreduce max/mean=1.9940/1.2413
+impl=mpi dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=2 threads=1 dims=2x1x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=40.6206 s  (setup 0.3855)  compute max/mean=38.1863/37.3904  halo max/mean=4.0296/3.2380  allreduce max/mean=0.0611/0.0318
+impl=mpi dim=2 n=801x534x1 solver=cg exchange=isend ranks=2 threads=1 dims=2x1x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=0.7260 s  (setup 0.0010)  compute max/mean=0.7140/0.5994  halo max/mean=0.0290/0.0165  allreduce max/mean=0.2118/0.1067
+impl=mpi dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=2 threads=1 dims=2x1x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.5488 s  (setup 0.0010)  compute max/mean=0.5404/0.4691  halo max/mean=0.1506/0.0794  allreduce max/mean=0.0026/0.0013
+impl=mpi dim=3 n=801x534x365 solver=cg exchange=isend ranks=2 threads=1 dims=2x1x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=102.6405 s  (setup 0.3950)  compute max/mean=99.8415/98.7828  halo max/mean=2.3758/2.3611  allreduce max/mean=2.2418/1.1425
+impl=mpi dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=2 threads=1 dims=2x1x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=40.4815 s  (setup 0.4472)  compute max/mean=38.0835/37.1892  halo max/mean=4.1896/3.2998  allreduce max/mean=0.0936/0.0478
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=6.4020 s  (setup 0.6961)  compute max/mean=6.3846/6.0829  halo max/mean=0.6051/0.3177  allreduce max/mean=0.3982/0.1434
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=13.1152 s  (setup 1.3423)  compute max/mean=11.6803/11.5046  halo max/mean=1.7575/1.6141  allreduce max/mean=0.2700/0.1143
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415467e-08 linf_err=7.218313e-08
+t_total=135.7957 s  (setup 0.1054)  compute max/mean=135.3970/133.6847  halo max/mean=0.7844/0.5040  allreduce max/mean=2.7306/1.5569
+impl=mpi dim=3 n=256x256x256 solver=cg exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=446 converged=1 rel_resid=9.389e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=10.1241 s  (setup 0.2134)  compute max/mean=9.7951/9.6842  halo max/mean=0.3230/0.2976  allreduce max/mean=0.3299/0.1771
+impl=mpi dim=2 n=2048x2048x1 solver=jacobi exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=200 converged=0 rel_resid=9.985e-01 l2_err=8.513519e-01 linf_err=1.732543e+00
+t_total=0.4580 s  (setup 0.0437)  compute max/mean=0.4536/0.4350  halo max/mean=0.0689/0.0229  allreduce max/mean=0.0377/0.0126
+impl=mpi dim=3 n=128x128x64 solver=jacobi exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=200 converged=0 rel_resid=9.096e-01 l2_err=5.550833e-01 linf_err=1.596441e+00
+t_total=0.0570 s  (setup 0.0100)  compute max/mean=0.0476/0.0472  halo max/mean=0.0100/0.0097  allreduce max/mean=0.0031/0.0015
+impl=mpi dim=2 n=1024x1024x1 solver=cg exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=300 converged=0 rel_resid=6.123e+00 l2_err=1.576362e-01 linf_err=3.637335e-01
+t_total=0.4926 s  (setup 0.0104)  compute max/mean=0.4788/0.3977  halo max/mean=0.0229/0.0136  allreduce max/mean=0.1516/0.0777
+impl=mpi dim=3 n=96x96x48 solver=cg exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=300 converged=0 rel_resid=8.727e-13 l2_err=9.652910e-05 linf_err=2.775339e-04
+t_total=0.1247 s  (setup 0.0049)  compute max/mean=0.1119/0.1112  halo max/mean=0.0087/0.0084  allreduce max/mean=0.0053/0.0041
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=6.1732 s  (setup 0.6913)  compute max/mean=6.1045/6.0156  halo max/mean=0.2561/0.1569  allreduce max/mean=0.3914/0.1966
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=13.0963 s  (setup 1.2258)  compute max/mean=11.6575/11.5027  halo max/mean=1.7117/1.5966  allreduce max/mean=0.2828/0.1623
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415467e-08 linf_err=7.218313e-08
+t_total=135.6073 s  (setup 0.1064)  compute max/mean=135.1943/133.7035  halo max/mean=0.7446/0.5246  allreduce max/mean=2.1406/1.3304
+impl=mpi dim=3 n=256x256x256 solver=cg exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=446 converged=1 rel_resid=9.389e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=9.9885 s  (setup 0.1339)  compute max/mean=9.6705/9.6018  halo max/mean=0.3110/0.2914  allreduce max/mean=0.1537/0.0944
+impl=mpi dim=2 n=2048x2048x1 solver=jacobi exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=200 converged=0 rel_resid=9.985e-01 l2_err=8.513519e-01 linf_err=1.732543e+00
+t_total=0.4560 s  (setup 0.0405)  compute max/mean=0.4513/0.4233  halo max/mean=0.0649/0.0324  allreduce max/mean=0.0305/0.0163
+impl=mpi dim=3 n=128x128x64 solver=jacobi exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=200 converged=0 rel_resid=9.096e-01 l2_err=5.550833e-01 linf_err=1.596441e+00
+t_total=0.0812 s  (setup 0.0125)  compute max/mean=0.0689/0.0580  halo max/mean=0.0340/0.0232  allreduce max/mean=0.0086/0.0043
+impl=mpi dim=2 n=1024x1024x1 solver=cg exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=300 converged=0 rel_resid=6.123e+00 l2_err=1.576362e-01 linf_err=3.637335e-01
+t_total=0.4928 s  (setup 0.0095)  compute max/mean=0.4794/0.3977  halo max/mean=0.0229/0.0136  allreduce max/mean=0.1527/0.0783
+impl=mpi dim=3 n=96x96x48 solver=cg exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=300 converged=0 rel_resid=8.727e-13 l2_err=9.652910e-05 linf_err=2.775339e-04
+t_total=0.1822 s  (setup 0.0061)  compute max/mean=0.1682/0.1254  halo max/mean=0.0168/0.0123  allreduce max/mean=0.0663/0.0456
+impl=mpi dim=2 n=801x534x1 solver=cg exchange=isend ranks=4 threads=1 dims=2x2x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=0.2433 s  (setup 0.0023)  compute max/mean=0.2332/0.2099  halo max/mean=0.0034/0.0031  allreduce max/mean=0.0653/0.0285
+impl=mpi dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=4 threads=1 dims=2x2x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.3829 s  (setup 0.0007)  compute max/mean=0.3747/0.2818  halo max/mean=0.2437/0.1009  allreduce max/mean=0.0025/0.0016
+impl=mpi dim=3 n=801x534x365 solver=cg exchange=isend ranks=4 threads=1 dims=2x2x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=54.8211 s  (setup 0.2123)  compute max/mean=53.1794/49.4439  halo max/mean=1.1512/1.0386  allreduce max/mean=7.4476/4.2464
+impl=mpi dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=4 threads=1 dims=2x2x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=23.4710 s  (setup 0.2824)  compute max/mean=22.4132/18.6284  halo max/mean=7.8787/4.8258  allreduce max/mean=0.4138/0.2249
+impl=mpi dim=2 n=801x534x1 solver=cg exchange=isend ranks=4 threads=1 dims=2x2x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=0.3891 s  (setup 0.0011)  compute max/mean=0.3712/0.3326  halo max/mean=0.0045/0.0042  allreduce max/mean=0.1084/0.0477
+impl=mpi dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=4 threads=1 dims=2x2x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.3717 s  (setup 0.0007)  compute max/mean=0.3646/0.2175  halo max/mean=0.2333/0.1539  allreduce max/mean=0.0031/0.0018
+impl=mpi dim=3 n=801x534x365 solver=cg exchange=isend ranks=4 threads=1 dims=2x2x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=55.0304 s  (setup 0.2827)  compute max/mean=53.4814/49.3717  halo max/mean=1.1417/1.1004  allreduce max/mean=8.2130/4.5754
+impl=mpi dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=4 threads=1 dims=2x2x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=23.4416 s  (setup 0.4908)  compute max/mean=22.4128/18.6138  halo max/mean=7.8423/4.8108  allreduce max/mean=0.4640/0.2700
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=8 threads=1 dims=4x2x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=3.3133 s  (setup 0.3520)  compute max/mean=3.2512/3.1287  halo max/mean=0.2934/0.1841  allreduce max/mean=0.2159/0.1333
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=8 threads=1 dims=2x2x2
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=6.5273 s  (setup 0.8078)  compute max/mean=5.9202/5.8507  halo max/mean=0.7400/0.6780  allreduce max/mean=0.4248/0.2024
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=8 threads=1 dims=4x2x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415423e-08 linf_err=7.218228e-08
+t_total=75.3489 s  (setup 0.0865)  compute max/mean=74.8423/72.4570  halo max/mean=0.5238/0.4087  allreduce max/mean=3.4493/2.4857
+impl=mpi dim=3 n=256x256x256 solver=cg exchange=isend ranks=8 threads=1 dims=2x2x2
+iters=446 converged=1 rel_resid=9.396e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=5.6242 s  (setup 0.1084)  compute max/mean=5.4339/5.3237  halo max/mean=0.2010/0.1731  allreduce max/mean=0.2525/0.1295
+impl=mpi dim=2 n=4096x2048x1 solver=jacobi exchange=isend ranks=8 threads=1 dims=4x2x1
+iters=200 converged=0 rel_resid=9.991e-01 l2_err=8.514780e-01 linf_err=1.732800e+00
+t_total=0.5045 s  (setup 0.0417)  compute max/mean=0.4790/0.4446  halo max/mean=0.1439/0.0595  allreduce max/mean=0.0373/0.0186
+impl=mpi dim=3 n=128x128x128 solver=jacobi exchange=isend ranks=8 threads=1 dims=2x2x2
+iters=200 converged=0 rel_resid=9.302e-01 l2_err=5.664111e-01 linf_err=1.629585e+00
+t_total=0.0835 s  (setup 0.0133)  compute max/mean=0.0686/0.0601  halo max/mean=0.0373/0.0234  allreduce max/mean=0.0093/0.0043
+impl=mpi dim=2 n=2048x1024x1 solver=cg exchange=isend ranks=8 threads=1 dims=4x2x1
+iters=300 converged=0 rel_resid=1.044e+01 l2_err=2.253073e-01 linf_err=4.707873e-01
+t_total=0.5003 s  (setup 0.0113)  compute max/mean=0.4831/0.4067  halo max/mean=0.0262/0.0156  allreduce max/mean=0.1461/0.0761
+impl=mpi dim=3 n=96x96x96 solver=cg exchange=isend ranks=8 threads=1 dims=2x2x2
+iters=300 converged=0 rel_resid=1.219e-12 l2_err=4.634534e-05 linf_err=1.365755e-04
+t_total=0.1921 s  (setup 0.0060)  compute max/mean=0.1699/0.1475  halo max/mean=0.0171/0.0143  allreduce max/mean=0.0675/0.0296
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=8 threads=1 dims=4x2x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=3.4939 s  (setup 0.3347)  compute max/mean=3.4261/3.2400  halo max/mean=0.4724/0.2535  allreduce max/mean=0.1973/0.1004
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=8 threads=1 dims=2x2x2
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=6.5213 s  (setup 0.7559)  compute max/mean=5.9338/5.8671  halo max/mean=0.7423/0.6558  allreduce max/mean=0.3935/0.2385
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=8 threads=1 dims=4x2x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415423e-08 linf_err=7.218228e-08
+t_total=75.1649 s  (setup 0.0840)  compute max/mean=74.6757/72.4145  halo max/mean=0.4620/0.3872  allreduce max/mean=3.3675/2.3492
+impl=mpi dim=3 n=256x256x256 solver=cg exchange=isend ranks=8 threads=1 dims=2x2x2
+iters=446 converged=1 rel_resid=9.396e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=5.7553 s  (setup 0.1089)  compute max/mean=5.3941/5.3240  halo max/mean=0.1990/0.1719  allreduce max/mean=0.4018/0.2662
+impl=mpi dim=2 n=4096x2048x1 solver=jacobi exchange=isend ranks=8 threads=1 dims=4x2x1
+iters=200 converged=0 rel_resid=9.991e-01 l2_err=8.514780e-01 linf_err=1.732800e+00
+t_total=0.4886 s  (setup 0.0399)  compute max/mean=0.4811/0.4185  halo max/mean=0.1324/0.0694  allreduce max/mean=0.0303/0.0160
+impl=mpi dim=3 n=128x128x128 solver=jacobi exchange=isend ranks=8 threads=1 dims=2x2x2
+iters=200 converged=0 rel_resid=9.302e-01 l2_err=5.664111e-01 linf_err=1.629585e+00
+t_total=0.0834 s  (setup 0.0128)  compute max/mean=0.0686/0.0574  halo max/mean=0.0371/0.0260  allreduce max/mean=0.0108/0.0054
+impl=mpi dim=2 n=2048x1024x1 solver=cg exchange=isend ranks=8 threads=1 dims=4x2x1
+iters=300 converged=0 rel_resid=1.044e+01 l2_err=2.253073e-01 linf_err=4.707873e-01
+t_total=0.5003 s  (setup 0.0101)  compute max/mean=0.4829/0.4415  halo max/mean=0.0263/0.0115  allreduce max/mean=0.1519/0.0441
+impl=mpi dim=3 n=96x96x96 solver=cg exchange=isend ranks=8 threads=1 dims=2x2x2
+iters=300 converged=0 rel_resid=1.219e-12 l2_err=4.634534e-05 linf_err=1.365755e-04
+t_total=0.1928 s  (setup 0.0057)  compute max/mean=0.1701/0.1405  halo max/mean=0.0185/0.0153  allreduce max/mean=0.0669/0.0367
+impl=mpi dim=2 n=801x534x1 solver=cg exchange=isend ranks=8 threads=1 dims=4x2x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=0.1798 s  (setup 0.0009)  compute max/mean=0.1703/0.1205  halo max/mean=0.0079/0.0058  allreduce max/mean=0.0934/0.0521
+impl=mpi dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=8 threads=1 dims=4x2x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.1896 s  (setup 0.0004)  compute max/mean=0.1831/0.0992  halo max/mean=0.1365/0.0902  allreduce max/mean=0.0015/0.0009
+impl=mpi dim=3 n=801x534x365 solver=cg exchange=isend ranks=8 threads=1 dims=2x2x2
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=28.8347 s  (setup 0.1484)  compute max/mean=28.0560/26.1482  halo max/mean=0.5004/0.4501  allreduce max/mean=3.9777/2.1911
+impl=mpi dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=8 threads=1 dims=2x2x2
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=11.8548 s  (setup 0.1435)  compute max/mean=11.2705/9.4157  halo max/mean=4.2253/2.4299  allreduce max/mean=0.2169/0.1312
+impl=mpi dim=2 n=801x534x1 solver=cg exchange=isend ranks=8 threads=1 dims=4x2x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=0.1806 s  (setup 0.0005)  compute max/mean=0.1699/0.1282  halo max/mean=0.0081/0.0055  allreduce max/mean=0.0962/0.0449
+impl=mpi dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=8 threads=1 dims=4x2x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.1917 s  (setup 0.0004)  compute max/mean=0.1850/0.1235  halo max/mean=0.1311/0.0680  allreduce max/mean=0.0026/0.0013
+impl=mpi dim=3 n=801x534x365 solver=cg exchange=isend ranks=8 threads=1 dims=2x2x2
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=29.2728 s  (setup 0.2015)  compute max/mean=28.1662/26.2055  halo max/mean=0.5214/0.4651  allreduce max/mean=4.2977/2.5914
+impl=mpi dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=8 threads=1 dims=2x2x2
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=11.8368 s  (setup 0.1658)  compute max/mean=11.4087/9.4451  halo max/mean=4.1986/2.3826  allreduce max/mean=0.2582/0.0997
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=16 threads=1 dims=4x4x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=2.1057 s  (setup 0.1832)  compute max/mean=2.0860/1.9988  halo max/mean=0.2638/0.1066  allreduce max/mean=0.0923/0.0520
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=16 threads=1 dims=4x2x2
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=3.8932 s  (setup 0.4531)  compute max/mean=3.2092/3.1516  halo max/mean=0.8218/0.7431  allreduce max/mean=0.2747/0.1629
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=16 threads=1 dims=4x4x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415436e-08 linf_err=7.218253e-08
+t_total=46.4201 s  (setup 0.0424)  compute max/mean=45.9563/44.4557  halo max/mean=0.4037/0.2991  allreduce max/mean=2.3991/1.6516
+impl=mpi dim=3 n=256x256x256 solver=cg exchange=isend ranks=16 threads=1 dims=4x2x2
+iters=446 converged=1 rel_resid=9.397e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=3.7334 s  (setup 0.0539)  compute max/mean=3.4595/3.2736  halo max/mean=0.2445/0.1979  allreduce max/mean=0.3649/0.2708
+impl=mpi dim=2 n=4096x4096x1 solver=jacobi exchange=isend ranks=16 threads=1 dims=4x4x1
+iters=200 converged=0 rel_resid=9.993e-01 l2_err=8.515096e-01 linf_err=1.732865e+00
+t_total=0.5561 s  (setup 0.0408)  compute max/mean=0.5475/0.4976  halo max/mean=0.1145/0.0581  allreduce max/mean=0.0349/0.0190
+impl=mpi dim=3 n=256x128x128 solver=jacobi exchange=isend ranks=16 threads=1 dims=4x2x2
+iters=200 converged=0 rel_resid=9.624e-01 l2_err=5.838942e-01 linf_err=1.680127e+00
+t_total=0.0936 s  (setup 0.0127)  compute max/mean=0.0714/0.0578  halo max/mean=0.0451/0.0357  allreduce max/mean=0.0109/0.0062
+impl=mpi dim=2 n=2048x2048x1 solver=cg exchange=isend ranks=16 threads=1 dims=4x4x1
+iters=300 converged=0 rel_resid=1.392e+01 l2_err=2.517730e-01 linf_err=5.175813e-01
+t_total=0.5316 s  (setup 0.0107)  compute max/mean=0.5075/0.4350  halo max/mean=0.0300/0.0175  allreduce max/mean=0.1521/0.0772
+impl=mpi dim=3 n=192x96x96 solver=cg exchange=isend ranks=16 threads=1 dims=4x2x2
+iters=300 converged=0 rel_resid=2.917e-12 l2_err=3.748007e-05 linf_err=1.072306e-04
+t_total=0.1963 s  (setup 0.0058)  compute max/mean=0.1720/0.1311  halo max/mean=0.0233/0.0166  allreduce max/mean=0.0717/0.0493
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=16 threads=1 dims=4x4x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=2.2298 s  (setup 0.1680)  compute max/mean=2.2040/1.8672  halo max/mean=0.5133/0.3566  allreduce max/mean=0.1236/0.0744
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=16 threads=1 dims=4x2x2
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=3.9519 s  (setup 0.4563)  compute max/mean=3.2533/3.0826  halo max/mean=0.9463/0.8700  allreduce max/mean=0.2925/0.1410
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=16 threads=1 dims=4x4x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415436e-08 linf_err=7.218253e-08
+t_total=46.1474 s  (setup 0.0434)  compute max/mean=45.6490/44.5419  halo max/mean=0.3606/0.2649  allreduce max/mean=1.7312/1.3268
+impl=mpi dim=3 n=256x256x256 solver=cg exchange=isend ranks=16 threads=1 dims=4x2x2
+iters=446 converged=1 rel_resid=9.397e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=3.7337 s  (setup 0.0562)  compute max/mean=3.5079/3.2688  halo max/mean=0.2335/0.2006  allreduce max/mean=0.3840/0.2736
+impl=mpi dim=2 n=4096x4096x1 solver=jacobi exchange=isend ranks=16 threads=1 dims=4x4x1
+iters=200 converged=0 rel_resid=9.993e-01 l2_err=8.515096e-01 linf_err=1.732865e+00
+t_total=0.6728 s  (setup 0.0469)  compute max/mean=0.6612/0.4643  halo max/mean=0.2874/0.2061  allreduce max/mean=0.0458/0.0248
+impl=mpi dim=3 n=256x128x128 solver=jacobi exchange=isend ranks=16 threads=1 dims=4x2x2
+iters=200 converged=0 rel_resid=9.624e-01 l2_err=5.838942e-01 linf_err=1.680127e+00
+t_total=0.0920 s  (setup 0.0133)  compute max/mean=0.0700/0.0577  halo max/mean=0.0442/0.0342  allreduce max/mean=0.0119/0.0063
+impl=mpi dim=2 n=2048x2048x1 solver=cg exchange=isend ranks=16 threads=1 dims=4x4x1
+iters=300 converged=0 rel_resid=1.392e+01 l2_err=2.517730e-01 linf_err=5.175813e-01
+t_total=0.5391 s  (setup 0.0101)  compute max/mean=0.5113/0.4385  halo max/mean=0.0308/0.0157  allreduce max/mean=0.1519/0.0822
+impl=mpi dim=3 n=192x96x96 solver=cg exchange=isend ranks=16 threads=1 dims=4x2x2
+iters=300 converged=0 rel_resid=2.917e-12 l2_err=3.748007e-05 linf_err=1.072306e-04
+t_total=0.2011 s  (setup 0.0062)  compute max/mean=0.1735/0.1629  halo max/mean=0.0233/0.0173  allreduce max/mean=0.0732/0.0199
+impl=mpi dim=2 n=801x534x1 solver=cg exchange=isend ranks=16 threads=1 dims=4x4x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=0.0959 s  (setup 0.0003)  compute max/mean=0.0863/0.0595  halo max/mean=0.0063/0.0048  allreduce max/mean=0.0534/0.0308
+impl=mpi dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=16 threads=1 dims=4x4x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.1042 s  (setup 0.0003)  compute max/mean=0.0982/0.0537  halo max/mean=0.0857/0.0503  allreduce max/mean=0.0021/0.0011
+impl=mpi dim=3 n=801x534x365 solver=cg exchange=isend ranks=16 threads=1 dims=4x2x2
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=17.3799 s  (setup 0.0848)  compute max/mean=16.7823/15.2732  halo max/mean=0.5801/0.5063  allreduce max/mean=3.5573/1.6044
+impl=mpi dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=16 threads=1 dims=4x2x2
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=6.8301 s  (setup 0.0847)  compute max/mean=6.0405/4.8849  halo max/mean=3.8415/1.9388  allreduce max/mean=0.1497/0.0660
+impl=mpi dim=2 n=801x534x1 solver=cg exchange=isend ranks=16 threads=1 dims=4x4x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=0.0921 s  (setup 0.0004)  compute max/mean=0.0828/0.0575  halo max/mean=0.0065/0.0047  allreduce max/mean=0.0499/0.0291
+impl=mpi dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=16 threads=1 dims=4x4x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.0936 s  (setup 0.0010)  compute max/mean=0.0877/0.0478  halo max/mean=0.0758/0.0457  allreduce max/mean=0.0022/0.0011
+impl=mpi dim=3 n=801x534x365 solver=cg exchange=isend ranks=16 threads=1 dims=4x2x2
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=17.4240 s  (setup 0.1140)  compute max/mean=16.5749/15.3481  halo max/mean=0.5472/0.4894  allreduce max/mean=3.6080/1.5797
+impl=mpi dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=16 threads=1 dims=4x2x2
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=6.8503 s  (setup 0.0848)  compute max/mean=6.3874/4.8139  halo max/mean=3.9790/2.0292  allreduce max/mean=0.1672/0.0926
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=32 threads=1 dims=8x4x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.5875 s  (setup 0.0949)  compute max/mean=1.5729/1.4482  halo max/mean=0.2252/0.1366  allreduce max/mean=0.0854/0.0530
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=32 threads=1 dims=4x4x2
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.6448 s  (setup 0.2217)  compute max/mean=2.2865/2.1538  halo max/mean=0.6467/0.4892  allreduce max/mean=0.1740/0.1142
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=32 threads=1 dims=8x4x1
+iters=5809 converged=1 rel_resid=1.487e-08 l2_err=3.415432e-08 linf_err=7.218246e-08
+t_total=31.3699 s  (setup 0.0216)  compute max/mean=31.0021/29.9978  halo max/mean=0.4968/0.3024  allreduce max/mean=1.4455/1.0551
+impl=mpi dim=3 n=256x256x256 solver=cg exchange=isend ranks=32 threads=1 dims=4x4x2
+iters=446 converged=1 rel_resid=9.396e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=2.4914 s  (setup 0.0292)  compute max/mean=2.3332/2.2003  halo max/mean=0.1576/0.1220  allreduce max/mean=0.2704/0.1710
+impl=mpi dim=2 n=8192x4096x1 solver=jacobi exchange=isend ranks=32 threads=1 dims=8x4x1
+iters=200 converged=0 rel_resid=9.996e-01 l2_err=8.515411e-01 linf_err=1.732929e+00
+t_total=0.7933 s  (setup 0.0418)  compute max/mean=0.7769/0.6961  halo max/mean=0.1242/0.0964  allreduce max/mean=0.0348/0.0256
+impl=mpi dim=3 n=256x256x128 solver=jacobi exchange=isend ranks=32 threads=1 dims=4x4x2
+iters=200 converged=0 rel_resid=9.739e-01 l2_err=5.898902e-01 linf_err=1.697496e+00
+t_total=0.1131 s  (setup 0.0131)  compute max/mean=0.0856/0.0754  halo max/mean=0.0421/0.0375  allreduce max/mean=0.0112/0.0087
+impl=mpi dim=2 n=4096x2048x1 solver=cg exchange=isend ranks=32 threads=1 dims=8x4x1
+iters=300 converged=0 rel_resid=2.388e+01 l2_err=3.086834e-01 linf_err=6.268686e-01
+t_total=0.7478 s  (setup 0.0131)  compute max/mean=0.7095/0.6354  halo max/mean=0.0332/0.0187  allreduce max/mean=0.1638/0.0885
+impl=mpi dim=3 n=192x192x96 solver=cg exchange=isend ranks=32 threads=1 dims=4x4x2
+iters=300 converged=0 rel_resid=4.781e-12 l2_err=2.455676e-05 linf_err=7.062898e-05
+t_total=0.2081 s  (setup 0.0059)  compute max/mean=0.1762/0.1299  halo max/mean=0.0265/0.0176  allreduce max/mean=0.0808/0.0614
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=32 threads=1 dims=8x4x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.5889 s  (setup 0.0942)  compute max/mean=1.5672/1.4225  halo max/mean=0.2455/0.1639  allreduce max/mean=0.0908/0.0663
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=32 threads=1 dims=4x4x2
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.6350 s  (setup 0.2272)  compute max/mean=2.3114/2.1806  halo max/mean=0.5485/0.4549  allreduce max/mean=0.1512/0.1033
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=32 threads=1 dims=8x4x1
+iters=5809 converged=1 rel_resid=1.487e-08 l2_err=3.415432e-08 linf_err=7.218246e-08
+t_total=31.3223 s  (setup 0.0232)  compute max/mean=30.9023/30.0168  halo max/mean=0.5916/0.3272  allreduce max/mean=1.3124/0.9639
+impl=mpi dim=3 n=256x256x256 solver=cg exchange=isend ranks=32 threads=1 dims=4x4x2
+iters=446 converged=1 rel_resid=9.396e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=2.4928 s  (setup 0.0300)  compute max/mean=2.3125/2.2037  halo max/mean=0.1627/0.1233  allreduce max/mean=0.2619/0.1667
+impl=mpi dim=2 n=8192x4096x1 solver=jacobi exchange=isend ranks=32 threads=1 dims=8x4x1
+iters=200 converged=0 rel_resid=9.996e-01 l2_err=8.515411e-01 linf_err=1.732929e+00
+t_total=0.7922 s  (setup 0.0438)  compute max/mean=0.7810/0.6997  halo max/mean=0.1210/0.0915  allreduce max/mean=0.0381/0.0275
+impl=mpi dim=3 n=256x256x128 solver=jacobi exchange=isend ranks=32 threads=1 dims=4x4x2
+iters=200 converged=0 rel_resid=9.739e-01 l2_err=5.898902e-01 linf_err=1.697496e+00
+t_total=0.1152 s  (setup 0.0134)  compute max/mean=0.0850/0.0753  halo max/mean=0.0433/0.0397  allreduce max/mean=0.0105/0.0075
+impl=mpi dim=2 n=4096x2048x1 solver=cg exchange=isend ranks=32 threads=1 dims=8x4x1
+iters=300 converged=0 rel_resid=2.388e+01 l2_err=3.086834e-01 linf_err=6.268686e-01
+t_total=0.7385 s  (setup 0.0110)  compute max/mean=0.7094/0.6144  halo max/mean=0.0310/0.0170  allreduce max/mean=0.1606/0.1029
+impl=mpi dim=3 n=192x192x96 solver=cg exchange=isend ranks=32 threads=1 dims=4x4x2
+iters=300 converged=0 rel_resid=4.781e-12 l2_err=2.455676e-05 linf_err=7.062898e-05
+t_total=0.2092 s  (setup 0.0059)  compute max/mean=0.1771/0.1335  halo max/mean=0.0253/0.0178  allreduce max/mean=0.0826/0.0584
+impl=mpi dim=2 n=801x534x1 solver=cg exchange=isend ranks=32 threads=1 dims=8x4x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=0.0528 s  (setup 0.0006)  compute max/mean=0.0433/0.0277  halo max/mean=0.0053/0.0037  allreduce max/mean=0.0310/0.0213
+impl=mpi dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=32 threads=1 dims=8x4x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.0533 s  (setup 0.0008)  compute max/mean=0.0443/0.0204  halo max/mean=0.0443/0.0327  allreduce max/mean=0.0029/0.0009
+impl=mpi dim=3 n=801x534x365 solver=cg exchange=isend ranks=32 threads=1 dims=4x4x2
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=11.1316 s  (setup 0.0451)  compute max/mean=10.8534/9.9275  halo max/mean=0.3050/0.2376  allreduce max/mean=1.8839/0.9669
+impl=mpi dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=32 threads=1 dims=4x4x2
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=3.6073 s  (setup 0.0451)  compute max/mean=3.3658/2.5168  halo max/mean=2.3887/1.0853  allreduce max/mean=0.0918/0.0437
+impl=mpi dim=2 n=801x534x1 solver=cg exchange=isend ranks=32 threads=1 dims=8x4x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=0.0486 s  (setup 0.0004)  compute max/mean=0.0395/0.0267  halo max/mean=0.0051/0.0035  allreduce max/mean=0.0256/0.0180
+impl=mpi dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=32 threads=1 dims=8x4x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.0517 s  (setup 0.0005)  compute max/mean=0.0443/0.0208  halo max/mean=0.0426/0.0307  allreduce max/mean=0.0021/0.0009
+impl=mpi dim=3 n=801x534x365 solver=cg exchange=isend ranks=32 threads=1 dims=4x4x2
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=11.1571 s  (setup 0.0586)  compute max/mean=10.6924/9.9302  halo max/mean=0.3071/0.2428  allreduce max/mean=1.9558/0.9827
+impl=mpi dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=32 threads=1 dims=4x4x2
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=3.7582 s  (setup 0.0635)  compute max/mean=3.5460/2.5078  halo max/mean=2.5309/1.2442  allreduce max/mean=0.0891/0.0446
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     SOCKET
+   Node:        CN-142
+   #processes:  29
+   #cpus:       28
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  1
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  1
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  1
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  1
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  1
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  1
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  1
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  1
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  1
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  2
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  2
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  2
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  2
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  2
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  2
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  2
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  2
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  2
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  4
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  4
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  4
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  4
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  4
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  4
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  4
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  4
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  4
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  8
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  8
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  8
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  8
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  8
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  8
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  8
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  8
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  8
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  16
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  16
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  16
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  16
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  16
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  16
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  16
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  16
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  16
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  32
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  32
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  32
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  32
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  32
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  32
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  32
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  32
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  32
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  64
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  64
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  64
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  64
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  64
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  64
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  64
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  64
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+A request for multiple cpus-per-proc was given, but a conflicting binding
+policy was specified:
+
+  #cpus-per-proc:  64
+  type of cpus:    cores as cpus
+  binding policy given: SOCKET
+
+The correct binding policy for the given type of cpu is:
+
+  correct binding policy:  bind-to core
+
+This is the binding policy we would apply by default for this
+situation, so no binding need be specified. Please correct the
+situation and try again.
+--------------------------------------------------------------------------
+=== node_1 finished Sat Nov  7 01:35:26 AM +08 2026
