@@ -1,0 +1,59 @@
+#!/bin/bash
+#PBS -N mpi_256
+#PBS -P personal-e1621744
+#PBS -l select=4:ncpus=64:mpiprocs=64:ompthreads=1:mem=200gb
+#PBS -l walltime=06:00:00
+#PBS -j oe
+#PBS -k oed
+cd $PBS_O_WORKDIR
+module load gcc/13.1.0 openmpi4/gcc/4.1.8
+export OMP_NUM_THREADS=1
+export OMP_PROC_BIND=close OMP_PLACES=cores
+mkdir -p results/cluster results/fields
+echo "=== $PBS_JOBNAME started $(date) on $(hostname)"
+# --- 256 ranks: strong scaling (fixed problem) and weak scaling (fixed work per rank) ---
+for r in 1 2; do
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --map-by core --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 256 bin/poisson_mpi --dim 2 --n 8192 --iters 200 --csv results/cluster/strong.csv --tag jac2d
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --map-by core --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 256 bin/poisson_mpi --dim 3 --n 512  --iters 200 --csv results/cluster/strong.csv --tag jac3d
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --map-by core --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 256 bin/poisson_mpi --dim 2 --n 4096 --solver cg --tol 1e-8 --iters 1000000 --csv results/cluster/strong.csv --tag cg2d
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --map-by core --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 256 bin/poisson_mpi --dim 3 --n 256  --solver cg --tol 1e-8 --iters 1000000 --csv results/cluster/strong.csv --tag cg3d
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --map-by core --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 256 bin/poisson_mpi --dim 2 --local-n 1024 --iters 200 --csv results/cluster/weak.csv --tag jac2d
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --map-by core --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 256 bin/poisson_mpi --dim 3 --local-n 64   --iters 200 --csv results/cluster/weak.csv --tag jac3d
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --map-by core --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 256 bin/poisson_mpi --dim 2 --local-n 512  --solver cg --iters 300 --csv results/cluster/weak.csv --tag cg2d
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --map-by core --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 256 bin/poisson_mpi --dim 3 --local-n 48   --solver cg --iters 300 --csv results/cluster/weak.csv --tag cg3d
+done
+# --- 256 ranks: satellite data ---
+for r in 1 2; do
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --map-by core --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 256 bin/poisson_mpi --data data/india_2025.grid --dim 2 --day 99 --holdout 0.1 --holdout-block 16 --solver cg --tol 1e-6 --iters 100000 --csv results/cluster/gapfill.csv --tag sst2d_cg
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --map-by core --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 256 bin/poisson_mpi --data data/india_2025.grid --dim 2 --day 99 --holdout 0.1 --holdout-block 16 --solver jacobi --iters 1000 --csv results/cluster/gapfill.csv --tag sst2d_jac
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --map-by core --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 256 bin/poisson_mpi --data data/india_2025.grid --dim 3 --holdout 0.1 --holdout-block 16 --tweight 1 --solver cg --tol 1e-6 --iters 100000 --csv results/cluster/gapfill.csv --tag sst3d_cg
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --map-by core --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 256 bin/poisson_mpi --data data/india_2025.grid --dim 3 --holdout 0.1 --holdout-block 16 --tweight 1 --solver jacobi --iters 200 --csv results/cluster/gapfill.csv --tag sst3d_jac
+done
+# --- 256 ranks: exchange strategy and residual-check interval ---
+for r in 1 2; do
+for mode in sendrecv isend overlap rma; do
+  timeout 900 mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --map-by core --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 256 bin/poisson_mpi --dim 2 --n 8192 --iters 200 --exchange $mode --csv results/cluster/exchange.csv --tag jac2d
+  timeout 900 mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --map-by core --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 256 bin/poisson_mpi --dim 3 --n 512  --iters 200 --exchange $mode --csv results/cluster/exchange.csv --tag jac3d
+  timeout 900 mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --map-by core --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 256 bin/poisson_mpi --dim 2 --n 4096 --solver cg --iters 300 --exchange $mode --csv results/cluster/exchange.csv --tag cg2d
+done
+for c in 0 1 10 100; do
+  mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --map-by core --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 256 bin/poisson_mpi --dim 2 --n 8192 --iters 200 --check-every $c --csv results/cluster/checkevery.csv --tag jac2d
+  mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --map-by core --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 256 bin/poisson_mpi --dim 3 --n 512  --iters 200 --check-every $c --csv results/cluster/checkevery.csv --tag jac3d
+done
+done
+# --- 256 ranks: shape of the process grid ---
+for r in 1 2; do
+for d in 256,1 64,4 16,16 4,64 1,256; do mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --map-by core --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 256 bin/poisson_mpi --dim 2 --n 8192 --iters 200 --dims $d --csv results/cluster/decomp.csv --tag jac2d; done
+for d in 256,1,1 1,1,256 16,16,1 8,8,4 4,8,8 1,16,16; do mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --map-by core --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 256 bin/poisson_mpi --dim 3 --n 512  --iters 200 --dims $d --csv results/cluster/decomp.csv --tag jac3d; done
+done
+# --- 256 ranks: accuracy of the fill (hidden patch size, time weight) ---
+for b in 1 4 16 64; do
+  mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --map-by core --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 256 bin/poisson_mpi --data data/india_2025.grid --dim 2 --day 99 --holdout 0.1 --holdout-block $b --solver cg --tol 1e-6 --iters 100000 --ref data/india_2025_ref.grid --csv results/cluster/gapfill.csv --tag acc2d
+  mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --map-by core --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 256 bin/poisson_mpi --data data/india_2025.grid --dim 3 --holdout 0.1 --holdout-block $b --tweight 1 --solver cg --tol 1e-6 --iters 100000 --ref data/india_2025_ref.grid --csv results/cluster/gapfill.csv --tag acc3d
+  mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --map-by core --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 256 bin/poisson_mpi --data data/india_2025.grid --dim 3 --holdout 0.1 --holdout-block $b --tweight 1 --solver cg --tol 1e-6 --iters 100000 --ref data/india_2025_ref.grid --eval-day 99 --csv results/cluster/gapfill.csv --tag acc3d_day
+done
+for w in 0.01 0.03 0.1 0.3 3; do
+  mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --map-by core --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 256 bin/poisson_mpi --data data/india_2025.grid --dim 3 --holdout 0.1 --holdout-block 16 --tweight $w --solver cg --tol 1e-6 --iters 100000 --ref data/india_2025_ref.grid --csv results/cluster/gapfill.csv --tag acc3d
+  mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --map-by core --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 256 bin/poisson_mpi --data data/india_2025.grid --dim 3 --holdout 0.1 --holdout-block 16 --tweight $w --solver cg --tol 1e-6 --iters 100000 --ref data/india_2025_ref.grid --eval-day 99 --csv results/cluster/gapfill.csv --tag acc3d_day
+done
+echo "=== $PBS_JOBNAME finished $(date)"

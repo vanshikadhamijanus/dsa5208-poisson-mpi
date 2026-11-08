@@ -1,0 +1,88 @@
+=== A 128 ranks, default network
+exit code 1
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     CORE
+   Node:        CN-087
+   #processes:  2
+   #cpus:       1
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+=== B 128 ranks, TCP
+exit code 1
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     CORE
+   Node:        CN-087
+   #processes:  2
+   #cpus:       1
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+=== C 128 ranks, UCX
+exit code 1
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     CORE
+   Node:        CN-087
+   #processes:  2
+   #cpus:       1
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+=== D 128 ranks, PBS startup
+exit code 205
+--------------------------------------------------------------------------
+ORTE has lost communication with a remote daemon.
+
+  HNP daemon   : [[20290,0],0] on node CN-087
+  Remote daemon: [[20290,0],1] on node cn-087
+
+This is usually due to either a failure of the TCP network
+connection to the node, or possibly an internal failure of
+the daemon itself. We cannot recover from this failure, and
+therefore will terminate the job.
+--------------------------------------------------------------------------
+=== E 64 ranks, one node
+exit code 1
+--------------------------------------------------------------------------
+A request was made to bind to that would result in binding more
+processes than cpus on a resource:
+
+   Bind to:     CORE
+   Node:        CN-087
+   #processes:  2
+   #cpus:       1
+
+You can override this protection by adding the "overload-allowed"
+option to your binding directive.
+--------------------------------------------------------------------------
+=== F hybrid 8x16
+exit code 0
+impl=mpi_omp dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=8 threads=16 dims=4x2x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=0.7383 s  (setup 0.0610)  compute max/mean=0.7190/0.5960  halo max/mean=0.2034/0.1415  allreduce max/mean=0.0562/0.0312
+=== G 64 ranks, one node, map by core
+exit code 0
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=64 threads=1 dims=8x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.3800 s  (setup 0.0297)  compute max/mean=1.3697/1.0659  halo max/mean=0.7053/0.3099  allreduce max/mean=0.0152/0.0084
+=== H 128 ranks, map by core
+exit code 0
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=128 threads=1 dims=16x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=0.6847 s  (setup 0.0237)  compute max/mean=0.6638/0.5107  halo max/mean=0.3531/0.1699  allreduce max/mean=0.0230/0.0162
+=== MPI settings on the compute node
+OMPI_MCA_btl=self,vader,tcp
+OMPI_MCA_pml=ob1
+OMPI_MCA_hwloc_base_binding_policy=socket

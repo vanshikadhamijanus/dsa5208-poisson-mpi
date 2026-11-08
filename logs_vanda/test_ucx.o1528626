@@ -1,0 +1,16 @@
+=== TCP
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=128 threads=1 dims=8x4x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=1.2746 s  (setup 0.0597)  compute max/mean=1.0697/0.7954  halo max/mean=0.7447/0.4758  allreduce max/mean=0.0368/0.0242
+=== UCX
+[CN-108:618024] PML ucx cannot be selected
+[CN-105:988556] 126 more processes have sent help message help-mca-base.txt / find-available:none found
+[CN-105:988556] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+=== TCP
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=128 threads=1 dims=8x4x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=1.2839 s  (setup 0.0607)  compute max/mean=1.0841/0.8003  halo max/mean=0.7554/0.4800  allreduce max/mean=0.0376/0.0243
+=== UCX
+[CN-108:618788] PML ucx cannot be selected
+[CN-105:989219] 126 more processes have sent help message help-mca-base.txt / find-available:none found
+[CN-105:989219] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages

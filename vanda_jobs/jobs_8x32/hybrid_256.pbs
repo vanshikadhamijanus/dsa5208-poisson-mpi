@@ -1,0 +1,64 @@
+#!/bin/bash
+#PBS -N hybrid_256_8x32
+#PBS -P personal-e1621744
+#PBS -l select=8:ncpus=32:mpiprocs=32:ompthreads=1:mem=100gb
+#PBS -l walltime=03:00:00
+#PBS -j oe
+#PBS -k oed
+cd $PBS_O_WORKDIR
+module load gcc/13.1.0 openmpi4/gcc/4.1.8
+export OMP_NUM_THREADS=1
+export OMP_PROC_BIND=close OMP_PLACES=cores
+mkdir -p results/cluster_8x32 results/fields
+echo "=== $PBS_JOBNAME started $(date) on $(hostname)"
+# --- MPI+OpenMP on 8 node(s): ranks x threads = 256 ---
+export OMP_NUM_THREADS=1
+for r in 1 2; do
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 256 --map-by ppr:32:node:pe=1 bin/poisson_mpi_omp --threads 1 --dim 2 --n 8192 --iters 200 --csv results/cluster_8x32/hybrid.csv --tag jac2d
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 256 --map-by ppr:32:node:pe=1 bin/poisson_mpi_omp --threads 1 --dim 3 --n 512  --iters 200 --csv results/cluster_8x32/hybrid.csv --tag jac3d
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 256 --map-by ppr:32:node:pe=1 bin/poisson_mpi_omp --threads 1 --dim 2 --n 4096 --solver cg --tol 1e-8 --iters 1000000 --csv results/cluster_8x32/hybrid.csv --tag cg2d
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 256 --map-by ppr:32:node:pe=1 bin/poisson_mpi_omp --threads 1 --dim 3 --n 256  --solver cg --tol 1e-8 --iters 1000000 --csv results/cluster_8x32/hybrid.csv --tag cg3d
+done
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 256 --map-by ppr:32:node:pe=1 bin/poisson_mpi_omp --threads 1 --data data/india_2025.grid --dim 3 --holdout 0.1 --holdout-block 16 --tweight 1 --solver cg --tol 1e-6 --iters 100000 --csv results/cluster_8x32/gapfill.csv --tag sst3d_cg
+export OMP_NUM_THREADS=2
+for r in 1 2; do
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 128 --map-by ppr:16:node:pe=2 bin/poisson_mpi_omp --threads 2 --dim 2 --n 8192 --iters 200 --csv results/cluster_8x32/hybrid.csv --tag jac2d
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 128 --map-by ppr:16:node:pe=2 bin/poisson_mpi_omp --threads 2 --dim 3 --n 512  --iters 200 --csv results/cluster_8x32/hybrid.csv --tag jac3d
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 128 --map-by ppr:16:node:pe=2 bin/poisson_mpi_omp --threads 2 --dim 2 --n 4096 --solver cg --tol 1e-8 --iters 1000000 --csv results/cluster_8x32/hybrid.csv --tag cg2d
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 128 --map-by ppr:16:node:pe=2 bin/poisson_mpi_omp --threads 2 --dim 3 --n 256  --solver cg --tol 1e-8 --iters 1000000 --csv results/cluster_8x32/hybrid.csv --tag cg3d
+done
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 128 --map-by ppr:16:node:pe=2 bin/poisson_mpi_omp --threads 2 --data data/india_2025.grid --dim 3 --holdout 0.1 --holdout-block 16 --tweight 1 --solver cg --tol 1e-6 --iters 100000 --csv results/cluster_8x32/gapfill.csv --tag sst3d_cg
+export OMP_NUM_THREADS=4
+for r in 1 2; do
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 64 --map-by ppr:8:node:pe=4 bin/poisson_mpi_omp --threads 4 --dim 2 --n 8192 --iters 200 --csv results/cluster_8x32/hybrid.csv --tag jac2d
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 64 --map-by ppr:8:node:pe=4 bin/poisson_mpi_omp --threads 4 --dim 3 --n 512  --iters 200 --csv results/cluster_8x32/hybrid.csv --tag jac3d
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 64 --map-by ppr:8:node:pe=4 bin/poisson_mpi_omp --threads 4 --dim 2 --n 4096 --solver cg --tol 1e-8 --iters 1000000 --csv results/cluster_8x32/hybrid.csv --tag cg2d
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 64 --map-by ppr:8:node:pe=4 bin/poisson_mpi_omp --threads 4 --dim 3 --n 256  --solver cg --tol 1e-8 --iters 1000000 --csv results/cluster_8x32/hybrid.csv --tag cg3d
+done
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 64 --map-by ppr:8:node:pe=4 bin/poisson_mpi_omp --threads 4 --data data/india_2025.grid --dim 3 --holdout 0.1 --holdout-block 16 --tweight 1 --solver cg --tol 1e-6 --iters 100000 --csv results/cluster_8x32/gapfill.csv --tag sst3d_cg
+export OMP_NUM_THREADS=8
+for r in 1 2; do
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 32 --map-by ppr:4:node:pe=8 bin/poisson_mpi_omp --threads 8 --dim 2 --n 8192 --iters 200 --csv results/cluster_8x32/hybrid.csv --tag jac2d
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 32 --map-by ppr:4:node:pe=8 bin/poisson_mpi_omp --threads 8 --dim 3 --n 512  --iters 200 --csv results/cluster_8x32/hybrid.csv --tag jac3d
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 32 --map-by ppr:4:node:pe=8 bin/poisson_mpi_omp --threads 8 --dim 2 --n 4096 --solver cg --tol 1e-8 --iters 1000000 --csv results/cluster_8x32/hybrid.csv --tag cg2d
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 32 --map-by ppr:4:node:pe=8 bin/poisson_mpi_omp --threads 8 --dim 3 --n 256  --solver cg --tol 1e-8 --iters 1000000 --csv results/cluster_8x32/hybrid.csv --tag cg3d
+done
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 32 --map-by ppr:4:node:pe=8 bin/poisson_mpi_omp --threads 8 --data data/india_2025.grid --dim 3 --holdout 0.1 --holdout-block 16 --tweight 1 --solver cg --tol 1e-6 --iters 100000 --csv results/cluster_8x32/gapfill.csv --tag sst3d_cg
+export OMP_NUM_THREADS=16
+for r in 1 2; do
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 16 --map-by ppr:2:node:pe=16 bin/poisson_mpi_omp --threads 16 --dim 2 --n 8192 --iters 200 --csv results/cluster_8x32/hybrid.csv --tag jac2d
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 16 --map-by ppr:2:node:pe=16 bin/poisson_mpi_omp --threads 16 --dim 3 --n 512  --iters 200 --csv results/cluster_8x32/hybrid.csv --tag jac3d
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 16 --map-by ppr:2:node:pe=16 bin/poisson_mpi_omp --threads 16 --dim 2 --n 4096 --solver cg --tol 1e-8 --iters 1000000 --csv results/cluster_8x32/hybrid.csv --tag cg2d
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 16 --map-by ppr:2:node:pe=16 bin/poisson_mpi_omp --threads 16 --dim 3 --n 256  --solver cg --tol 1e-8 --iters 1000000 --csv results/cluster_8x32/hybrid.csv --tag cg3d
+done
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 16 --map-by ppr:2:node:pe=16 bin/poisson_mpi_omp --threads 16 --data data/india_2025.grid --dim 3 --holdout 0.1 --holdout-block 16 --tweight 1 --solver cg --tol 1e-6 --iters 100000 --csv results/cluster_8x32/gapfill.csv --tag sst3d_cg
+export OMP_NUM_THREADS=32
+for r in 1 2; do
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 8 --map-by ppr:1:node:pe=32 bin/poisson_mpi_omp --threads 32 --dim 2 --n 8192 --iters 200 --csv results/cluster_8x32/hybrid.csv --tag jac2d
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 8 --map-by ppr:1:node:pe=32 bin/poisson_mpi_omp --threads 32 --dim 3 --n 512  --iters 200 --csv results/cluster_8x32/hybrid.csv --tag jac3d
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 8 --map-by ppr:1:node:pe=32 bin/poisson_mpi_omp --threads 32 --dim 2 --n 4096 --solver cg --tol 1e-8 --iters 1000000 --csv results/cluster_8x32/hybrid.csv --tag cg2d
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 8 --map-by ppr:1:node:pe=32 bin/poisson_mpi_omp --threads 32 --dim 3 --n 256  --solver cg --tol 1e-8 --iters 1000000 --csv results/cluster_8x32/hybrid.csv --tag cg3d
+done
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 8 --map-by ppr:1:node:pe=32 bin/poisson_mpi_omp --threads 32 --data data/india_2025.grid --dim 3 --holdout 0.1 --holdout-block 16 --tweight 1 --solver cg --tol 1e-6 --iters 100000 --csv results/cluster_8x32/gapfill.csv --tag sst3d_cg
+export OMP_NUM_THREADS=1
+echo "=== $PBS_JOBNAME finished $(date)"

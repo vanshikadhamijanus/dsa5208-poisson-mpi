@@ -1,0 +1,29 @@
+#!/bin/bash
+# Two GPUs on one Vanda GPU node, one MPI rank per GPU. Build as described in gpu.pbs first.
+# With a project instead of the free tier: replace "#PBS -q auto_free" by "#PBS -P <project>".
+#PBS -N poisson_gpu_multi
+#PBS -q auto_free
+#PBS -l select=1:ncpus=36:mpiprocs=2:ompthreads=18:ngpus=2:mem=240gb
+#PBS -l walltime=02:00:00
+#PBS -j oe
+#PBS -k oed
+cd $PBS_O_WORKDIR
+module load gcc/13.1.0 openmpi4/gcc/4.1.8 cuda12.4/toolkit/12.4.1
+OUT=results/cluster; mkdir -p $OUT
+G=bin/poisson_mpi_cuda
+[ -x $G ] || { echo "missing $G: build it on a GPU node first (see scripts/vanda/gpu.pbs)"; exit 1; }
+echo "=== $PBS_JOBNAME started $(date) on $(hostname)"
+nvidia-smi --query-gpu=name,memory.total --format=csv
+for r in 1 2; do
+for mode in isend overlap; do
+  mpirun -np 2 --bind-to none $G --dim 2 --n 8192 --iters 200 --exchange $mode --csv $OUT/gpu_multi.csv --tag jac2d
+  mpirun -np 2 --bind-to none $G --dim 3 --n 512  --iters 200 --exchange $mode --csv $OUT/gpu_multi.csv --tag jac3d
+  mpirun -np 2 --bind-to none $G --dim 2 --n 8192 --iters 200 --exchange $mode --cuda-aware --csv $OUT/gpu_multi.csv --tag jac2d_cudaaware || echo "CUDA-aware MPI not available"
+done
+# weak scaling on GPUs: same work per GPU as the 1-GPU run
+mpirun -np 2 --bind-to none $G --dim 2 --local-n 4096 --iters 200 --csv $OUT/gpu_multi.csv --tag weak2d
+mpirun -np 2 --bind-to none $G --dim 3 --local-n 256  --iters 200 --csv $OUT/gpu_multi.csv --tag weak3d
+# the satellite year on two GPUs
+[ -f data/india_2025.grid ] && mpirun -np 2 --bind-to none $G --data data/india_2025.grid --dim 3 --holdout 0.1 --holdout-block 16 --solver cg --tol 1e-6 --iters 100000 --csv $OUT/gapfill_gpu.csv --tag sst3d_cg
+done
+echo "=== $PBS_JOBNAME finished $(date)"

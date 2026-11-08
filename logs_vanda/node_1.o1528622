@@ -1,0 +1,1118 @@
+=== node_1 started Sat Nov  7 10:24:13 AM +08 2026 on CN-089
+impl=serial dim=2 n=256x256x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.728e-01 l2_err=8.383151e-01 linf_err=1.705930e+00
+t_total=0.0328 s  (setup 0.0026)  compute max/mean=0.0328/0.0328  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=512x512x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.905e-01 l2_err=8.482146e-01 linf_err=1.726144e+00
+t_total=0.1221 s  (setup 0.0100)  compute max/mean=0.1221/0.1221  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=1024x1024x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.964e-01 l2_err=8.507222e-01 linf_err=1.731261e+00
+t_total=0.4472 s  (setup 0.0389)  compute max/mean=0.4472/0.4472  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=2048x2048x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.985e-01 l2_err=8.513519e-01 linf_err=1.732543e+00
+t_total=1.7207 s  (setup 0.1538)  compute max/mean=1.7207/1.7207  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=4096x4096x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.993e-01 l2_err=8.515096e-01 linf_err=1.732865e+00
+t_total=5.7994 s  (setup 0.5544)  compute max/mean=5.7993/5.7993  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=23.3893 s  (setup 1.5341)  compute max/mean=23.3892/23.3892  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=32x32x32 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=3.800e-01 l2_err=2.394382e-01 linf_err=6.797188e-01
+t_total=0.0064 s  (setup 0.0026)  compute max/mean=0.0064/0.0064  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=64x64x64 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=7.672e-01 l2_err=4.737377e-01 linf_err=1.360159e+00
+t_total=0.0471 s  (setup 0.0086)  compute max/mean=0.0471/0.0471  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=128x128x128 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.302e-01 l2_err=5.664111e-01 linf_err=1.629585e+00
+t_total=0.5507 s  (setup 0.0987)  compute max/mean=0.5507/0.5507  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=256x256x256 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.798e-01 l2_err=5.929208e-01 linf_err=1.706315e+00
+t_total=5.6557 s  (setup 0.4969)  compute max/mean=5.6556/5.6556  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=46.7929 s  (setup 3.9684)  compute max/mean=46.7929/46.7929  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=256x256x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=366 converged=1 rel_resid=7.241e-09 l2_err=8.679887e-06 linf_err=1.834381e-05
+t_total=0.1132 s  (setup 0.0025)  compute max/mean=0.1099/0.1099  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=512x512x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=731 converged=1 rel_resid=6.409e-09 l2_err=2.178433e-06 linf_err=4.603923e-06
+t_total=0.7776 s  (setup 0.0064)  compute max/mean=0.7722/0.7722  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=1024x1024x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=1458 converged=1 rel_resid=7.237e-09 l2_err=5.456710e-07 linf_err=1.153231e-06
+t_total=6.4776 s  (setup 0.0386)  compute max/mean=6.4571/6.4571  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=2048x2048x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=2909 converged=1 rel_resid=9.587e-09 l2_err=1.365499e-07 linf_err=2.885874e-07
+t_total=64.0258 s  (setup 0.0964)  compute max/mean=63.9685/63.9685  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=5809 converged=1 rel_resid=1.489e-08 l2_err=3.414444e-08 linf_err=7.216443e-08
+t_total=531.3282 s  (setup 0.5181)  compute max/mean=531.1093/531.1093  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=32x32x32 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=51 converged=1 rel_resid=2.688e-09 l2_err=4.005375e-04 linf_err=1.177920e-03
+t_total=0.0075 s  (setup 0.0028)  compute max/mean=0.0069/0.0069  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=64x64x64 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=109 converged=1 rel_resid=4.632e-09 l2_err=1.032149e-04 linf_err=3.039839e-04
+t_total=0.1648 s  (setup 0.0130)  compute max/mean=0.1600/0.1600  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=128x128x128 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=222 converged=1 rel_resid=6.465e-09 l2_err=2.620373e-05 linf_err=7.722213e-05
+t_total=1.7729 s  (setup 0.0627)  compute max/mean=1.7600/1.7600  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=256x256x256 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=446 converged=1 rel_resid=9.395e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=39.0359 s  (setup 0.6788)  compute max/mean=38.9520/38.9520  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=23.3897 s  (setup 1.5344)  compute max/mean=23.3897/23.3897  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=46.7263 s  (setup 3.9665)  compute max/mean=46.7263/46.7263  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=5809 converged=1 rel_resid=1.489e-08 l2_err=3.414444e-08 linf_err=7.216443e-08
+t_total=531.0120 s  (setup 0.4769)  compute max/mean=530.7925/530.7925  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=256x256x256 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=446 converged=1 rel_resid=9.395e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=39.0130 s  (setup 0.6673)  compute max/mean=38.9292/38.9292  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=256x256x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.728e-01 l2_err=8.383151e-01 linf_err=1.705930e+00
+t_total=0.0228 s  (setup 0.0025)  compute max/mean=0.0228/0.0228  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=512x512x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.905e-01 l2_err=8.482146e-01 linf_err=1.726144e+00
+t_total=0.1018 s  (setup 0.0098)  compute max/mean=0.1018/0.1018  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=1024x1024x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.964e-01 l2_err=8.507222e-01 linf_err=1.731261e+00
+t_total=0.2932 s  (setup 0.0244)  compute max/mean=0.2932/0.2932  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=2048x2048x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.985e-01 l2_err=8.513519e-01 linf_err=1.732543e+00
+t_total=1.5395 s  (setup 0.1525)  compute max/mean=1.5395/1.5395  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=4096x4096x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.993e-01 l2_err=8.515096e-01 linf_err=1.732865e+00
+t_total=5.8023 s  (setup 0.3831)  compute max/mean=5.8022/5.8022  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=23.3936 s  (setup 1.5341)  compute max/mean=23.3935/23.3935  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=32x32x32 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=3.800e-01 l2_err=2.394382e-01 linf_err=6.797188e-01
+t_total=0.0066 s  (setup 0.0027)  compute max/mean=0.0066/0.0066  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=64x64x64 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=7.672e-01 l2_err=4.737377e-01 linf_err=1.360159e+00
+t_total=0.0474 s  (setup 0.0087)  compute max/mean=0.0473/0.0473  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=128x128x128 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.302e-01 l2_err=5.664111e-01 linf_err=1.629585e+00
+t_total=0.5577 s  (setup 0.0988)  compute max/mean=0.5576/0.5576  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=256x256x256 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.798e-01 l2_err=5.929208e-01 linf_err=1.706315e+00
+t_total=5.6539 s  (setup 0.4964)  compute max/mean=5.6538/5.6538  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=46.7612 s  (setup 3.9916)  compute max/mean=46.7612/46.7612  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=256x256x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=366 converged=1 rel_resid=7.241e-09 l2_err=8.679887e-06 linf_err=1.834381e-05
+t_total=0.1141 s  (setup 0.0028)  compute max/mean=0.1110/0.1110  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=512x512x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=731 converged=1 rel_resid=6.409e-09 l2_err=2.178433e-06 linf_err=4.603923e-06
+t_total=0.7773 s  (setup 0.0065)  compute max/mean=0.7722/0.7722  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=1024x1024x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=1458 converged=1 rel_resid=7.237e-09 l2_err=5.456710e-07 linf_err=1.153231e-06
+t_total=6.8216 s  (setup 0.0383)  compute max/mean=6.8015/6.8015  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=2048x2048x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=2909 converged=1 rel_resid=9.587e-09 l2_err=1.365499e-07 linf_err=2.885874e-07
+t_total=64.1453 s  (setup 0.0959)  compute max/mean=64.0885/64.0885  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=5809 converged=1 rel_resid=1.489e-08 l2_err=3.414444e-08 linf_err=7.216443e-08
+t_total=531.2395 s  (setup 0.5385)  compute max/mean=531.0198/531.0198  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=32x32x32 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=51 converged=1 rel_resid=2.688e-09 l2_err=4.005375e-04 linf_err=1.177920e-03
+t_total=0.0076 s  (setup 0.0023)  compute max/mean=0.0068/0.0068  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=64x64x64 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=109 converged=1 rel_resid=4.632e-09 l2_err=1.032149e-04 linf_err=3.039839e-04
+t_total=0.1111 s  (setup 0.0086)  compute max/mean=0.1076/0.1076  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=128x128x128 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=222 converged=1 rel_resid=6.465e-09 l2_err=2.620373e-05 linf_err=7.722213e-05
+t_total=2.0110 s  (setup 0.0987)  compute max/mean=1.9950/1.9950  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=256x256x256 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=446 converged=1 rel_resid=9.395e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=39.0003 s  (setup 0.4971)  compute max/mean=38.9163/38.9163  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=23.4226 s  (setup 1.5323)  compute max/mean=23.4226/23.4226  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=46.7331 s  (setup 4.0193)  compute max/mean=46.7331/46.7331  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=5809 converged=1 rel_resid=1.489e-08 l2_err=3.414444e-08 linf_err=7.216443e-08
+t_total=531.8236 s  (setup 0.4935)  compute max/mean=531.6047/531.6047  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=256x256x256 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=446 converged=1 rel_resid=9.395e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=38.9965 s  (setup 0.6654)  compute max/mean=38.9120/38.9120  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+filled field written to results/fields/fill2d_day99.grid
+impl=serial dim=2 n=801x534x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=1.3113 s  (setup 0.0020)  compute max/mean=1.3013/1.3013  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.7493 s  (setup 0.0012)  compute max/mean=0.7493/0.7493  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+filled field written to results/fields/fill3d.grid
+impl=serial dim=3 n=801x534x365 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=197.2881 s  (setup 0.9493)  compute max/mean=196.3699/196.3699  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=68.8434 s  (setup 0.6202)  compute max/mean=68.8433/68.8433  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+filled field written to results/fields/fill2d_day99.grid
+impl=serial dim=2 n=801x534x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=1.1722 s  (setup 0.0020)  compute max/mean=1.1627/1.1627  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.9366 s  (setup 0.0020)  compute max/mean=0.9365/0.9365  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+filled field written to results/fields/fill3d.grid
+impl=serial dim=3 n=801x534x365 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=197.7366 s  (setup 0.6269)  compute max/mean=196.9791/196.9791  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=serial dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=68.6506 s  (setup 0.6237)  compute max/mean=68.6506/68.6506  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=23.5104 s  (setup 2.1874)  compute max/mean=23.5098/23.5098  halo max/mean=0.0005/0.0005  allreduce max/mean=0.0000/0.0000
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=48.7310 s  (setup 3.9977)  compute max/mean=48.7304/48.7304  halo max/mean=0.0005/0.0005  allreduce max/mean=0.0001/0.0001
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=5809 converged=1 rel_resid=1.489e-08 l2_err=3.414444e-08 linf_err=7.216443e-08
+t_total=545.1113 s  (setup 0.3858)  compute max/mean=544.8690/544.8690  halo max/mean=0.0095/0.0095  allreduce max/mean=0.0066/0.0066
+impl=mpi dim=3 n=256x256x256 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=446 converged=1 rel_resid=9.395e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=40.2321 s  (setup 0.4979)  compute max/mean=40.1458/40.1458  halo max/mean=0.0009/0.0009  allreduce max/mean=0.0006/0.0006
+impl=mpi dim=2 n=1024x1024x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.964e-01 l2_err=8.507222e-01 linf_err=1.731261e+00
+t_total=0.2966 s  (setup 0.0246)  compute max/mean=0.2965/0.2965  halo max/mean=0.0001/0.0001  allreduce max/mean=0.0000/0.0000
+impl=mpi dim=3 n=64x64x64 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=7.672e-01 l2_err=4.737377e-01 linf_err=1.360159e+00
+t_total=0.0489 s  (setup 0.0087)  compute max/mean=0.0488/0.0488  halo max/mean=0.0001/0.0001  allreduce max/mean=0.0000/0.0000
+impl=mpi dim=2 n=512x512x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=300 converged=0 rel_resid=1.833e+00 l2_err=2.985029e-02 linf_err=7.410239e-02
+t_total=0.3246 s  (setup 0.0062)  compute max/mean=0.3182/0.3182  halo max/mean=0.0001/0.0001  allreduce max/mean=0.0001/0.0001
+impl=mpi dim=3 n=48x48x48 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=300 converged=0 rel_resid=2.243e-13 l2_err=1.816368e-04 linf_err=5.347096e-04
+t_total=0.1122 s  (setup 0.0046)  compute max/mean=0.1104/0.1104  halo max/mean=0.0002/0.0002  allreduce max/mean=0.0001/0.0001
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=23.5252 s  (setup 1.5548)  compute max/mean=23.5247/23.5247  halo max/mean=0.0004/0.0004  allreduce max/mean=0.0000/0.0000
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=49.1351 s  (setup 4.0097)  compute max/mean=49.1345/49.1345  halo max/mean=0.0005/0.0005  allreduce max/mean=0.0001/0.0001
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=5809 converged=1 rel_resid=1.489e-08 l2_err=3.414444e-08 linf_err=7.216443e-08
+t_total=546.1579 s  (setup 0.3864)  compute max/mean=545.9214/545.9214  halo max/mean=0.0090/0.0090  allreduce max/mean=0.0063/0.0063
+impl=mpi dim=3 n=256x256x256 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=446 converged=1 rel_resid=9.395e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=40.3661 s  (setup 0.4984)  compute max/mean=40.2765/40.2765  halo max/mean=0.0009/0.0009  allreduce max/mean=0.0007/0.0007
+impl=mpi dim=2 n=1024x1024x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=9.964e-01 l2_err=8.507222e-01 linf_err=1.731261e+00
+t_total=0.3072 s  (setup 0.0245)  compute max/mean=0.3070/0.3070  halo max/mean=0.0001/0.0001  allreduce max/mean=0.0000/0.0000
+impl=mpi dim=3 n=64x64x64 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=200 converged=0 rel_resid=7.672e-01 l2_err=4.737377e-01 linf_err=1.360159e+00
+t_total=0.0491 s  (setup 0.0083)  compute max/mean=0.0489/0.0489  halo max/mean=0.0001/0.0001  allreduce max/mean=0.0000/0.0000
+impl=mpi dim=2 n=512x512x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=300 converged=0 rel_resid=1.833e+00 l2_err=2.985029e-02 linf_err=7.410239e-02
+t_total=0.3224 s  (setup 0.0061)  compute max/mean=0.3171/0.3171  halo max/mean=0.0001/0.0001  allreduce max/mean=0.0001/0.0001
+impl=mpi dim=3 n=48x48x48 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+iters=300 converged=0 rel_resid=2.243e-13 l2_err=1.816368e-04 linf_err=5.347096e-04
+t_total=0.1127 s  (setup 0.0046)  compute max/mean=0.1108/0.1108  halo max/mean=0.0001/0.0001  allreduce max/mean=0.0001/0.0001
+impl=mpi dim=2 n=801x534x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=0.9802 s  (setup 0.0013)  compute max/mean=0.9715/0.9715  halo max/mean=0.0002/0.0002  allreduce max/mean=0.0002/0.0002
+impl=mpi dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.7522 s  (setup 0.0013)  compute max/mean=0.7517/0.7517  halo max/mean=0.0004/0.0004  allreduce max/mean=0.0000/0.0000
+impl=mpi dim=3 n=801x534x365 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=198.6094 s  (setup 0.6360)  compute max/mean=197.8413/197.8413  halo max/mean=0.0006/0.0006  allreduce max/mean=0.0005/0.0005
+impl=mpi dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=75.7617 s  (setup 0.6386)  compute max/mean=75.7611/75.7611  halo max/mean=0.0006/0.0006  allreduce max/mean=0.0000/0.0000
+impl=mpi dim=2 n=801x534x1 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=0.9825 s  (setup 0.0014)  compute max/mean=0.9735/0.9735  halo max/mean=0.0002/0.0002  allreduce max/mean=0.0002/0.0002
+impl=mpi dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.7513 s  (setup 0.0013)  compute max/mean=0.7508/0.7508  halo max/mean=0.0004/0.0004  allreduce max/mean=0.0000/0.0000
+impl=mpi dim=3 n=801x534x365 solver=cg exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=198.9403 s  (setup 0.6350)  compute max/mean=198.1789/198.1789  halo max/mean=0.0006/0.0006  allreduce max/mean=0.0004/0.0004
+impl=mpi dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=1 threads=1 dims=1x1x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=75.8496 s  (setup 0.6355)  compute max/mean=75.8490/75.8490  halo max/mean=0.0006/0.0006  allreduce max/mean=0.0000/0.0000
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=12.1827 s  (setup 1.2371)  compute max/mean=12.1550/12.0203  halo max/mean=0.2957/0.1617  allreduce max/mean=0.5656/0.2829
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=26.7347 s  (setup 2.0820)  compute max/mean=24.8713/24.6987  halo max/mean=2.2192/2.0472  allreduce max/mean=0.2972/0.1532
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415281e-08 linf_err=7.217974e-08
+t_total=278.2772 s  (setup 0.2048)  compute max/mean=277.1891/275.6797  halo max/mean=0.9255/0.6376  allreduce max/mean=3.6378/1.8592
+impl=mpi dim=3 n=256x256x256 solver=cg exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=446 converged=1 rel_resid=9.397e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=20.6467 s  (setup 0.2611)  compute max/mean=20.1608/20.0182  halo max/mean=0.4363/0.4074  allreduce max/mean=0.3477/0.1926
+impl=mpi dim=2 n=2048x1024x1 solver=jacobi exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=200 converged=0 rel_resid=9.979e-01 l2_err=8.512258e-01 linf_err=1.732285e+00
+t_total=0.5086 s  (setup 0.0266)  compute max/mean=0.5055/0.4502  halo max/mean=0.1126/0.0578  allreduce max/mean=0.0061/0.0031
+impl=mpi dim=3 n=128x64x64 solver=jacobi exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=200 converged=0 rel_resid=8.705e-01 l2_err=5.332480e-01 linf_err=1.532992e+00
+t_total=0.0550 s  (setup 0.0086)  compute max/mean=0.0488/0.0482  halo max/mean=0.0074/0.0068  allreduce max/mean=0.0012/0.0006
+impl=mpi dim=2 n=1024x512x1 solver=cg exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=300 converged=0 rel_resid=4.496e+00 l2_err=1.189920e-01 linf_err=3.069332e-01
+t_total=0.3294 s  (setup 0.0069)  compute max/mean=0.3190/0.3183  halo max/mean=0.0023/0.0022  allreduce max/mean=0.0051/0.0035
+impl=mpi dim=3 n=96x48x48 solver=cg exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=300 converged=0 rel_resid=5.348e-13 l2_err=1.470048e-04 linf_err=4.202478e-04
+t_total=0.1204 s  (setup 0.0068)  compute max/mean=0.1118/0.1116  halo max/mean=0.0056/0.0055  allreduce max/mean=0.0048/0.0031
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=12.2038 s  (setup 0.8184)  compute max/mean=12.1765/12.0369  halo max/mean=0.3050/0.1662  allreduce max/mean=0.1404/0.0702
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=27.6450 s  (setup 2.0829)  compute max/mean=25.2875/24.7921  halo max/mean=3.3555/2.8623  allreduce max/mean=0.2935/0.1563
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415281e-08 linf_err=7.217974e-08
+t_total=278.9228 s  (setup 0.2045)  compute max/mean=277.5673/276.8027  halo max/mean=1.1170/0.7345  allreduce max/mean=2.4109/1.2837
+impl=mpi dim=3 n=256x256x256 solver=cg exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=446 converged=1 rel_resid=9.397e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=20.5517 s  (setup 0.2611)  compute max/mean=20.0751/19.9684  halo max/mean=0.4279/0.4005  allreduce max/mean=0.2720/0.1543
+impl=mpi dim=2 n=2048x1024x1 solver=jacobi exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=200 converged=0 rel_resid=9.979e-01 l2_err=8.512258e-01 linf_err=1.732285e+00
+t_total=0.5033 s  (setup 0.0254)  compute max/mean=0.4953/0.4480  halo max/mean=0.1017/0.0549  allreduce max/mean=0.0052/0.0026
+impl=mpi dim=3 n=128x64x64 solver=jacobi exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=200 converged=0 rel_resid=8.705e-01 l2_err=5.332480e-01 linf_err=1.532992e+00
+t_total=0.0543 s  (setup 0.0084)  compute max/mean=0.0483/0.0476  halo max/mean=0.0074/0.0067  allreduce max/mean=0.0011/0.0006
+impl=mpi dim=2 n=1024x512x1 solver=cg exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=300 converged=0 rel_resid=4.496e+00 l2_err=1.189920e-01 linf_err=3.069332e-01
+t_total=0.3299 s  (setup 0.0066)  compute max/mean=0.3194/0.3187  halo max/mean=0.0023/0.0022  allreduce max/mean=0.0052/0.0036
+impl=mpi dim=3 n=96x48x48 solver=cg exchange=isend ranks=2 threads=1 dims=2x1x1
+iters=300 converged=0 rel_resid=5.348e-13 l2_err=1.470048e-04 linf_err=4.202478e-04
+t_total=0.1203 s  (setup 0.0046)  compute max/mean=0.1113/0.1113  halo max/mean=0.0056/0.0055  allreduce max/mean=0.0022/0.0020
+impl=mpi dim=2 n=801x534x1 solver=cg exchange=isend ranks=2 threads=1 dims=2x1x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=0.4961 s  (setup 0.0007)  compute max/mean=0.4851/0.4735  halo max/mean=0.0037/0.0037  allreduce max/mean=0.0248/0.0139
+impl=mpi dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=2 threads=1 dims=2x1x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.4042 s  (setup 0.0007)  compute max/mean=0.3975/0.3695  halo max/mean=0.0626/0.0346  allreduce max/mean=0.0003/0.0002
+impl=mpi dim=3 n=801x534x365 solver=cg exchange=isend ranks=2 threads=1 dims=2x1x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=104.2596 s  (setup 0.3389)  compute max/mean=100.5363/100.3806  halo max/mean=2.3436/2.3250  allreduce max/mean=1.3552/1.2058
+impl=mpi dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=2 threads=1 dims=2x1x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=40.6698 s  (setup 0.3406)  compute max/mean=38.3096/37.7418  halo max/mean=3.5019/2.9369  allreduce max/mean=0.0549/0.0303
+impl=mpi dim=2 n=801x534x1 solver=cg exchange=isend ranks=2 threads=1 dims=2x1x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=0.4946 s  (setup 0.0007)  compute max/mean=0.4834/0.4726  halo max/mean=0.0038/0.0036  allreduce max/mean=0.0244/0.0135
+impl=mpi dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=2 threads=1 dims=2x1x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.4046 s  (setup 0.0007)  compute max/mean=0.3979/0.3696  halo max/mean=0.0631/0.0349  allreduce max/mean=0.0004/0.0003
+impl=mpi dim=3 n=801x534x365 solver=cg exchange=isend ranks=2 threads=1 dims=2x1x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=104.5938 s  (setup 0.3437)  compute max/mean=100.7294/100.7214  halo max/mean=2.3702/2.3477  allreduce max/mean=1.1825/1.1707
+impl=mpi dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=2 threads=1 dims=2x1x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=40.6260 s  (setup 0.3413)  compute max/mean=38.2705/37.7390  halo max/mean=3.4256/2.8966  allreduce max/mean=0.0537/0.0290
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=6.4595 s  (setup 0.6881)  compute max/mean=6.4428/6.2549  halo max/mean=0.3690/0.2040  allreduce max/mean=0.3876/0.1946
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=13.4995 s  (setup 1.0645)  compute max/mean=11.9393/11.7605  halo max/mean=1.9580/1.7431  allreduce max/mean=0.2653/0.1348
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415467e-08 linf_err=7.218313e-08
+t_total=149.8372 s  (setup 0.1052)  compute max/mean=148.9049/147.9721  halo max/mean=0.5645/0.3580  allreduce max/mean=2.3143/1.4514
+impl=mpi dim=3 n=256x256x256 solver=cg exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=446 converged=1 rel_resid=9.389e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=11.2490 s  (setup 0.1329)  compute max/mean=10.9188/10.8387  halo max/mean=0.2961/0.2746  allreduce max/mean=0.1849/0.1278
+impl=mpi dim=2 n=2048x2048x1 solver=jacobi exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=200 converged=0 rel_resid=9.985e-01 l2_err=8.513519e-01 linf_err=1.732543e+00
+t_total=0.3779 s  (setup 0.0270)  compute max/mean=0.3735/0.3666  halo max/mean=0.0192/0.0112  allreduce max/mean=0.0086/0.0037
+impl=mpi dim=3 n=128x128x64 solver=jacobi exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=200 converged=0 rel_resid=9.096e-01 l2_err=5.550833e-01 linf_err=1.596441e+00
+t_total=0.0561 s  (setup 0.0085)  compute max/mean=0.0480/0.0474  halo max/mean=0.0095/0.0088  allreduce max/mean=0.0017/0.0010
+impl=mpi dim=2 n=1024x1024x1 solver=cg exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=300 converged=0 rel_resid=6.123e+00 l2_err=1.576362e-01 linf_err=3.637335e-01
+t_total=0.3552 s  (setup 0.0067)  compute max/mean=0.3414/0.3327  halo max/mean=0.0038/0.0038  allreduce max/mean=0.0221/0.0126
+impl=mpi dim=3 n=96x96x48 solver=cg exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=300 converged=0 rel_resid=8.727e-13 l2_err=9.652910e-05 linf_err=2.775339e-04
+t_total=0.1240 s  (setup 0.0065)  compute max/mean=0.1122/0.1115  halo max/mean=0.0078/0.0075  allreduce max/mean=0.0067/0.0045
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=6.3500 s  (setup 0.4201)  compute max/mean=6.3335/6.2145  halo max/mean=0.2605/0.1348  allreduce max/mean=0.1211/0.0581
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=13.4593 s  (setup 1.0633)  compute max/mean=11.9436/11.7659  halo max/mean=1.9180/1.6971  allreduce max/mean=0.2546/0.1263
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415467e-08 linf_err=7.218313e-08
+t_total=150.3455 s  (setup 0.1054)  compute max/mean=149.1307/148.4134  halo max/mean=0.6854/0.4097  allreduce max/mean=2.2657/1.4661
+impl=mpi dim=3 n=256x256x256 solver=cg exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=446 converged=1 rel_resid=9.389e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=11.2843 s  (setup 0.1348)  compute max/mean=10.9560/10.8752  halo max/mean=0.2953/0.2712  allreduce max/mean=0.1758/0.1263
+impl=mpi dim=2 n=2048x2048x1 solver=jacobi exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=200 converged=0 rel_resid=9.985e-01 l2_err=8.513519e-01 linf_err=1.732543e+00
+t_total=0.3767 s  (setup 0.0266)  compute max/mean=0.3724/0.3654  halo max/mean=0.0191/0.0113  allreduce max/mean=0.0084/0.0040
+impl=mpi dim=3 n=128x128x64 solver=jacobi exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=200 converged=0 rel_resid=9.096e-01 l2_err=5.550833e-01 linf_err=1.596441e+00
+t_total=0.0564 s  (setup 0.0087)  compute max/mean=0.0481/0.0474  halo max/mean=0.0098/0.0091  allreduce max/mean=0.0022/0.0012
+impl=mpi dim=2 n=1024x1024x1 solver=cg exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=300 converged=0 rel_resid=6.123e+00 l2_err=1.576362e-01 linf_err=3.637335e-01
+t_total=0.3467 s  (setup 0.0074)  compute max/mean=0.3321/0.3293  halo max/mean=0.0037/0.0036  allreduce max/mean=0.0134/0.0084
+impl=mpi dim=3 n=96x96x48 solver=cg exchange=isend ranks=4 threads=1 dims=2x2x1
+iters=300 converged=0 rel_resid=8.727e-13 l2_err=9.652910e-05 linf_err=2.775339e-04
+t_total=0.1238 s  (setup 0.0046)  compute max/mean=0.1123/0.1112  halo max/mean=0.0080/0.0076  allreduce max/mean=0.0050/0.0038
+impl=mpi dim=2 n=801x534x1 solver=cg exchange=isend ranks=4 threads=1 dims=2x2x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=0.2492 s  (setup 0.0007)  compute max/mean=0.2390/0.2121  halo max/mean=0.0028/0.0026  allreduce max/mean=0.0683/0.0310
+impl=mpi dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=4 threads=1 dims=2x2x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.2389 s  (setup 0.0004)  compute max/mean=0.2334/0.1743  halo max/mean=0.1514/0.0644  allreduce max/mean=0.0013/0.0009
+impl=mpi dim=3 n=801x534x365 solver=cg exchange=isend ranks=4 threads=1 dims=2x2x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=58.1765 s  (setup 0.2119)  compute max/mean=56.4636/52.8324  halo max/mean=1.1460/1.0397  allreduce max/mean=7.6103/4.1918
+impl=mpi dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=4 threads=1 dims=2x2x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=23.4492 s  (setup 0.2108)  compute max/mean=22.4299/18.8601  halo max/mean=7.7686/4.5736  allreduce max/mean=0.1918/0.1009
+impl=mpi dim=2 n=801x534x1 solver=cg exchange=isend ranks=4 threads=1 dims=2x2x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=0.2481 s  (setup 0.0008)  compute max/mean=0.2388/0.2127  halo max/mean=0.0027/0.0026  allreduce max/mean=0.0674/0.0303
+impl=mpi dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=4 threads=1 dims=2x2x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.2337 s  (setup 0.0004)  compute max/mean=0.2293/0.1721  halo max/mean=0.1467/0.0615  allreduce max/mean=0.0013/0.0008
+impl=mpi dim=3 n=801x534x365 solver=cg exchange=isend ranks=4 threads=1 dims=2x2x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=57.9748 s  (setup 0.2127)  compute max/mean=56.3117/52.7513  halo max/mean=1.0217/0.9457  allreduce max/mean=7.6164/4.1678
+impl=mpi dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=4 threads=1 dims=2x2x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=23.4460 s  (setup 0.2135)  compute max/mean=22.4258/18.8499  halo max/mean=7.7724/4.5803  allreduce max/mean=0.1881/0.1001
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=8 threads=1 dims=4x2x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=4.1092 s  (setup 0.3624)  compute max/mean=3.9893/3.9374  halo max/mean=0.2777/0.1713  allreduce max/mean=0.2342/0.1283
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=8 threads=1 dims=2x2x2
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=7.6234 s  (setup 0.5432)  compute max/mean=7.0267/6.8731  halo max/mean=0.8374/0.7502  allreduce max/mean=0.2156/0.1150
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=8 threads=1 dims=4x2x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415423e-08 linf_err=7.218228e-08
+t_total=94.0812 s  (setup 0.0545)  compute max/mean=93.0836/92.1106  halo max/mean=0.6057/0.4117  allreduce max/mean=2.5544/1.5255
+impl=mpi dim=3 n=256x256x256 solver=cg exchange=isend ranks=8 threads=1 dims=2x2x2
+iters=446 converged=1 rel_resid=9.396e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=6.9236 s  (setup 0.0675)  compute max/mean=6.7137/6.6570  halo max/mean=0.1685/0.1556  allreduce max/mean=0.1411/0.1020
+impl=mpi dim=2 n=4096x2048x1 solver=jacobi exchange=isend ranks=8 threads=1 dims=4x2x1
+iters=200 converged=0 rel_resid=9.991e-01 l2_err=8.514780e-01 linf_err=1.732800e+00
+t_total=0.5240 s  (setup 0.0302)  compute max/mean=0.5137/0.4827  halo max/mean=0.0658/0.0410  allreduce max/mean=0.0226/0.0149
+impl=mpi dim=3 n=128x128x128 solver=jacobi exchange=isend ranks=8 threads=1 dims=2x2x2
+iters=200 converged=0 rel_resid=9.302e-01 l2_err=5.664111e-01 linf_err=1.629585e+00
+t_total=0.0617 s  (setup 0.0087)  compute max/mean=0.0512/0.0501  halo max/mean=0.0123/0.0116  allreduce max/mean=0.0024/0.0013
+impl=mpi dim=2 n=2048x1024x1 solver=cg exchange=isend ranks=8 threads=1 dims=4x2x1
+iters=300 converged=0 rel_resid=1.044e+01 l2_err=2.253073e-01 linf_err=4.707873e-01
+t_total=0.4183 s  (setup 0.0060)  compute max/mean=0.3962/0.3825  halo max/mean=0.0062/0.0057  allreduce max/mean=0.0319/0.0236
+impl=mpi dim=3 n=96x96x96 solver=cg exchange=isend ranks=8 threads=1 dims=2x2x2
+iters=300 converged=0 rel_resid=1.219e-12 l2_err=4.634534e-05 linf_err=1.365755e-04
+t_total=0.1293 s  (setup 0.0050)  compute max/mean=0.1130/0.1122  halo max/mean=0.0097/0.0091  allreduce max/mean=0.0080/0.0068
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=8 threads=1 dims=4x2x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=4.0398 s  (setup 0.2202)  compute max/mean=4.0131/3.9370  halo max/mean=0.1510/0.1023  allreduce max/mean=0.0919/0.0515
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=8 threads=1 dims=2x2x2
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=7.5972 s  (setup 0.5421)  compute max/mean=7.0583/6.9058  halo max/mean=0.7953/0.6923  allreduce max/mean=0.1797/0.0862
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=8 threads=1 dims=4x2x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415423e-08 linf_err=7.218228e-08
+t_total=94.2988 s  (setup 0.0549)  compute max/mean=93.4049/92.2690  halo max/mean=0.5685/0.3883  allreduce max/mean=2.6753/1.6082
+impl=mpi dim=3 n=256x256x256 solver=cg exchange=isend ranks=8 threads=1 dims=2x2x2
+iters=446 converged=1 rel_resid=9.396e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=6.9260 s  (setup 0.0672)  compute max/mean=6.7238/6.6530  halo max/mean=0.1694/0.1555  allreduce max/mean=0.1668/0.1086
+impl=mpi dim=2 n=4096x2048x1 solver=jacobi exchange=isend ranks=8 threads=1 dims=4x2x1
+iters=200 converged=0 rel_resid=9.991e-01 l2_err=8.514780e-01 linf_err=1.732800e+00
+t_total=0.4987 s  (setup 0.0292)  compute max/mean=0.4912/0.4802  halo max/mean=0.0256/0.0184  allreduce max/mean=0.0131/0.0068
+impl=mpi dim=3 n=128x128x128 solver=jacobi exchange=isend ranks=8 threads=1 dims=2x2x2
+iters=200 converged=0 rel_resid=9.302e-01 l2_err=5.664111e-01 linf_err=1.629585e+00
+t_total=0.0614 s  (setup 0.0087)  compute max/mean=0.0508/0.0500  halo max/mean=0.0123/0.0113  allreduce max/mean=0.0025/0.0016
+impl=mpi dim=2 n=2048x1024x1 solver=cg exchange=isend ranks=8 threads=1 dims=4x2x1
+iters=300 converged=0 rel_resid=1.044e+01 l2_err=2.253073e-01 linf_err=4.707873e-01
+t_total=0.4330 s  (setup 0.0078)  compute max/mean=0.4082/0.3964  halo max/mean=0.0063/0.0055  allreduce max/mean=0.0389/0.0248
+impl=mpi dim=3 n=96x96x96 solver=cg exchange=isend ranks=8 threads=1 dims=2x2x2
+iters=300 converged=0 rel_resid=1.219e-12 l2_err=4.634534e-05 linf_err=1.365755e-04
+t_total=0.1277 s  (setup 0.0056)  compute max/mean=0.1130/0.1121  halo max/mean=0.0095/0.0090  allreduce max/mean=0.0074/0.0061
+impl=mpi dim=2 n=801x534x1 solver=cg exchange=isend ranks=8 threads=1 dims=4x2x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=0.1197 s  (setup 0.0010)  compute max/mean=0.1121/0.0935  halo max/mean=0.0030/0.0027  allreduce max/mean=0.0409/0.0223
+impl=mpi dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=8 threads=1 dims=4x2x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.1185 s  (setup 0.0004)  compute max/mean=0.1145/0.0773  halo max/mean=0.0804/0.0410  allreduce max/mean=0.0015/0.0007
+impl=mpi dim=3 n=801x534x365 solver=cg exchange=isend ranks=8 threads=1 dims=2x2x2
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=32.9857 s  (setup 0.1061)  compute max/mean=32.1496/30.4888  halo max/mean=0.5069/0.4519  allreduce max/mean=3.7920/1.9692
+impl=mpi dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=8 threads=1 dims=2x2x2
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=11.6762 s  (setup 0.1057)  compute max/mean=11.3283/9.5346  halo max/mean=3.9067/2.1332  allreduce max/mean=0.1022/0.0553
+impl=mpi dim=2 n=801x534x1 solver=cg exchange=isend ranks=8 threads=1 dims=4x2x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=0.1192 s  (setup 0.0005)  compute max/mean=0.1111/0.0947  halo max/mean=0.0031/0.0027  allreduce max/mean=0.0399/0.0198
+impl=mpi dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=8 threads=1 dims=4x2x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.1184 s  (setup 0.0007)  compute max/mean=0.1145/0.0778  halo max/mean=0.0804/0.0405  allreduce max/mean=0.0013/0.0007
+impl=mpi dim=3 n=801x534x365 solver=cg exchange=isend ranks=8 threads=1 dims=2x2x2
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=33.0082 s  (setup 0.1049)  compute max/mean=32.1457/30.5195  halo max/mean=0.5105/0.4560  allreduce max/mean=3.7993/1.9550
+impl=mpi dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=8 threads=1 dims=2x2x2
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=11.6890 s  (setup 0.1049)  compute max/mean=11.3377/9.5392  halo max/mean=3.9191/2.1407  allreduce max/mean=0.1028/0.0554
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=16 threads=1 dims=4x4x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=3.0725 s  (setup 0.1890)  compute max/mean=3.0330/2.9583  halo max/mean=0.1990/0.1138  allreduce max/mean=0.1308/0.0757
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=16 threads=1 dims=4x2x2
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=5.2831 s  (setup 0.2844)  compute max/mean=4.5026/4.4162  halo max/mean=1.0092/0.8683  allreduce max/mean=0.1233/0.0661
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=16 threads=1 dims=4x4x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415436e-08 linf_err=7.218253e-08
+t_total=64.3901 s  (setup 0.0282)  compute max/mean=63.8042/63.2003  halo max/mean=0.3920/0.2840  allreduce max/mean=1.5699/0.8738
+impl=mpi dim=3 n=256x256x256 solver=cg exchange=isend ranks=16 threads=1 dims=4x2x2
+iters=446 converged=1 rel_resid=9.397e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=4.8896 s  (setup 0.0356)  compute max/mean=4.6267/4.5829  halo max/mean=0.2486/0.2051  allreduce max/mean=0.1451/0.0958
+impl=mpi dim=2 n=4096x4096x1 solver=jacobi exchange=isend ranks=16 threads=1 dims=4x4x1
+iters=200 converged=0 rel_resid=9.993e-01 l2_err=8.515096e-01 linf_err=1.732865e+00
+t_total=0.7675 s  (setup 0.0282)  compute max/mean=0.7577/0.7259  halo max/mean=0.0645/0.0411  allreduce max/mean=0.0138/0.0081
+impl=mpi dim=3 n=256x128x128 solver=jacobi exchange=isend ranks=16 threads=1 dims=4x2x2
+iters=200 converged=0 rel_resid=9.624e-01 l2_err=5.838942e-01 linf_err=1.680127e+00
+t_total=0.0975 s  (setup 0.0086)  compute max/mean=0.0775/0.0759  halo max/mean=0.0229/0.0215  allreduce max/mean=0.0033/0.0018
+impl=mpi dim=2 n=2048x2048x1 solver=cg exchange=isend ranks=16 threads=1 dims=4x4x1
+iters=300 converged=0 rel_resid=1.392e+01 l2_err=2.517730e-01 linf_err=5.175813e-01
+t_total=0.6476 s  (setup 0.0069)  compute max/mean=0.6275/0.6093  halo max/mean=0.0090/0.0075  allreduce max/mean=0.0427/0.0225
+impl=mpi dim=3 n=192x96x96 solver=cg exchange=isend ranks=16 threads=1 dims=4x2x2
+iters=300 converged=0 rel_resid=2.917e-12 l2_err=3.748007e-05 linf_err=1.072306e-04
+t_total=0.1399 s  (setup 0.0049)  compute max/mean=0.1188/0.1172  halo max/mean=0.0139/0.0118  allreduce max/mean=0.0124/0.0090
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=16 threads=1 dims=4x4x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=3.0429 s  (setup 0.1165)  compute max/mean=3.0267/2.9716  halo max/mean=0.1367/0.0709  allreduce max/mean=0.0580/0.0352
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=16 threads=1 dims=4x2x2
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=5.2987 s  (setup 0.2850)  compute max/mean=4.5227/4.4251  halo max/mean=1.0986/0.8755  allreduce max/mean=0.1237/0.0675
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=16 threads=1 dims=4x4x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415436e-08 linf_err=7.218253e-08
+t_total=64.4945 s  (setup 0.0284)  compute max/mean=63.9609/63.2778  halo max/mean=0.3758/0.2827  allreduce max/mean=1.5368/0.9020
+impl=mpi dim=3 n=256x256x256 solver=cg exchange=isend ranks=16 threads=1 dims=4x2x2
+iters=446 converged=1 rel_resid=9.397e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=4.8933 s  (setup 0.0342)  compute max/mean=4.6658/4.5929  halo max/mean=0.2311/0.2032  allreduce max/mean=0.1383/0.0906
+impl=mpi dim=2 n=4096x4096x1 solver=jacobi exchange=isend ranks=16 threads=1 dims=4x4x1
+iters=200 converged=0 rel_resid=9.993e-01 l2_err=8.515096e-01 linf_err=1.732865e+00
+t_total=0.7566 s  (setup 0.0283)  compute max/mean=0.7485/0.7373  halo max/mean=0.0359/0.0192  allreduce max/mean=0.0138/0.0081
+impl=mpi dim=3 n=256x128x128 solver=jacobi exchange=isend ranks=16 threads=1 dims=4x2x2
+iters=200 converged=0 rel_resid=9.624e-01 l2_err=5.838942e-01 linf_err=1.680127e+00
+t_total=0.0974 s  (setup 0.0088)  compute max/mean=0.0774/0.0758  halo max/mean=0.0232/0.0216  allreduce max/mean=0.0037/0.0022
+impl=mpi dim=2 n=2048x2048x1 solver=cg exchange=isend ranks=16 threads=1 dims=4x4x1
+iters=300 converged=0 rel_resid=1.392e+01 l2_err=2.517730e-01 linf_err=5.175813e-01
+t_total=0.6522 s  (setup 0.0065)  compute max/mean=0.6272/0.6100  halo max/mean=0.0128/0.0081  allreduce max/mean=0.0414/0.0254
+impl=mpi dim=3 n=192x96x96 solver=cg exchange=isend ranks=16 threads=1 dims=4x2x2
+iters=300 converged=0 rel_resid=2.917e-12 l2_err=3.748007e-05 linf_err=1.072306e-04
+t_total=0.1399 s  (setup 0.0043)  compute max/mean=0.1187/0.1172  halo max/mean=0.0138/0.0117  allreduce max/mean=0.0121/0.0090
+impl=mpi dim=2 n=801x534x1 solver=cg exchange=isend ranks=16 threads=1 dims=4x4x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=0.0617 s  (setup 0.0003)  compute max/mean=0.0549/0.0463  halo max/mean=0.0031/0.0025  allreduce max/mean=0.0213/0.0118
+impl=mpi dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=16 threads=1 dims=4x4x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.0616 s  (setup 0.0010)  compute max/mean=0.0569/0.0367  halo max/mean=0.0435/0.0248  allreduce max/mean=0.0020/0.0010
+impl=mpi dim=3 n=801x534x365 solver=cg exchange=isend ranks=16 threads=1 dims=4x2x2
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=22.0671 s  (setup 0.0564)  compute max/mean=21.4529/19.8456  halo max/mean=0.5893/0.5151  allreduce max/mean=3.1107/1.6529
+impl=mpi dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=16 threads=1 dims=4x2x2
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=6.6954 s  (setup 0.0563)  compute max/mean=6.2027/4.8770  halo max/mean=3.6194/1.8071  allreduce max/mean=0.0962/0.0379
+impl=mpi dim=2 n=801x534x1 solver=cg exchange=isend ranks=16 threads=1 dims=4x4x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=0.0603 s  (setup 0.0006)  compute max/mean=0.0537/0.0453  halo max/mean=0.0031/0.0024  allreduce max/mean=0.0205/0.0115
+impl=mpi dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=16 threads=1 dims=4x4x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.0618 s  (setup 0.0007)  compute max/mean=0.0570/0.0363  halo max/mean=0.0437/0.0254  allreduce max/mean=0.0014/0.0008
+impl=mpi dim=3 n=801x534x365 solver=cg exchange=isend ranks=16 threads=1 dims=4x2x2
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=22.1094 s  (setup 0.0564)  compute max/mean=21.4467/19.8593  halo max/mean=0.6679/0.5405  allreduce max/mean=3.1571/1.6566
+impl=mpi dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=16 threads=1 dims=4x2x2
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=6.7085 s  (setup 0.0563)  compute max/mean=6.2125/4.8783  halo max/mean=3.6337/1.8192  allreduce max/mean=0.0985/0.0373
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=32 threads=1 dims=8x4x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=2.5389 s  (setup 0.0933)  compute max/mean=2.5022/2.4333  halo max/mean=0.1453/0.1050  allreduce max/mean=0.0526/0.0321
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=32 threads=1 dims=4x4x2
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=4.1395 s  (setup 0.1660)  compute max/mean=3.7573/3.6861  halo max/mean=0.5891/0.4541  allreduce max/mean=0.0590/0.0380
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=32 threads=1 dims=8x4x1
+iters=5809 converged=1 rel_resid=1.487e-08 l2_err=3.415432e-08 linf_err=7.218246e-08
+t_total=53.5612 s  (setup 0.0195)  compute max/mean=53.1329/52.5423  halo max/mean=0.5953/0.3347  allreduce max/mean=1.0843/0.6529
+impl=mpi dim=3 n=256x256x256 solver=cg exchange=isend ranks=32 threads=1 dims=4x4x2
+iters=446 converged=1 rel_resid=9.396e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=4.0684 s  (setup 0.0209)  compute max/mean=3.8593/3.8232  halo max/mean=0.1866/0.1434  allreduce max/mean=0.1418/0.0919
+impl=mpi dim=2 n=8192x4096x1 solver=jacobi exchange=isend ranks=32 threads=1 dims=8x4x1
+iters=200 converged=0 rel_resid=9.996e-01 l2_err=8.515411e-01 linf_err=1.732929e+00
+t_total=1.2433 s  (setup 0.0330)  compute max/mean=1.2340/1.2126  halo max/mean=0.0489/0.0304  allreduce max/mean=0.0137/0.0088
+impl=mpi dim=3 n=256x256x128 solver=jacobi exchange=isend ranks=32 threads=1 dims=4x4x2
+iters=200 converged=0 rel_resid=9.739e-01 l2_err=5.898902e-01 linf_err=1.697496e+00
+t_total=0.2117 s  (setup 0.0103)  compute max/mean=0.1797/0.1732  halo max/mean=0.0474/0.0385  allreduce max/mean=0.0037/0.0026
+impl=mpi dim=2 n=4096x2048x1 solver=cg exchange=isend ranks=32 threads=1 dims=8x4x1
+iters=300 converged=0 rel_resid=2.388e+01 l2_err=3.086834e-01 linf_err=6.268686e-01
+t_total=1.2389 s  (setup 0.0077)  compute max/mean=1.2005/1.1847  halo max/mean=0.0210/0.0129  allreduce max/mean=0.0528/0.0249
+impl=mpi dim=3 n=192x192x96 solver=cg exchange=isend ranks=32 threads=1 dims=4x4x2
+iters=300 converged=0 rel_resid=4.781e-12 l2_err=2.455676e-05 linf_err=7.062898e-05
+t_total=0.2015 s  (setup 0.0046)  compute max/mean=0.1695/0.1672  halo max/mean=0.0209/0.0170  allreduce max/mean=0.0181/0.0131
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=32 threads=1 dims=8x4x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=2.5144 s  (setup 0.0663)  compute max/mean=2.4995/2.4601  halo max/mean=0.0833/0.0539  allreduce max/mean=0.0252/0.0165
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=32 threads=1 dims=4x4x2
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=4.1405 s  (setup 0.1653)  compute max/mean=3.7530/3.6799  halo max/mean=0.5885/0.4615  allreduce max/mean=0.0573/0.0378
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=32 threads=1 dims=8x4x1
+iters=5809 converged=1 rel_resid=1.487e-08 l2_err=3.415432e-08 linf_err=7.218246e-08
+t_total=53.5942 s  (setup 0.0311)  compute max/mean=53.2130/52.6364  halo max/mean=0.4972/0.3151  allreduce max/mean=0.9580/0.6352
+impl=mpi dim=3 n=256x256x256 solver=cg exchange=isend ranks=32 threads=1 dims=4x4x2
+iters=446 converged=1 rel_resid=9.396e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=4.0624 s  (setup 0.0218)  compute max/mean=3.8400/3.8145  halo max/mean=0.1803/0.1419  allreduce max/mean=0.1560/0.0960
+impl=mpi dim=2 n=8192x4096x1 solver=jacobi exchange=isend ranks=32 threads=1 dims=8x4x1
+iters=200 converged=0 rel_resid=9.996e-01 l2_err=8.515411e-01 linf_err=1.732929e+00
+t_total=1.2428 s  (setup 0.0335)  compute max/mean=1.2329/1.2161  halo max/mean=0.0471/0.0266  allreduce max/mean=0.0133/0.0081
+impl=mpi dim=3 n=256x256x128 solver=jacobi exchange=isend ranks=32 threads=1 dims=4x4x2
+iters=200 converged=0 rel_resid=9.739e-01 l2_err=5.898902e-01 linf_err=1.697496e+00
+t_total=0.2113 s  (setup 0.0105)  compute max/mean=0.1805/0.1741  halo max/mean=0.0478/0.0371  allreduce max/mean=0.0040/0.0028
+impl=mpi dim=2 n=4096x2048x1 solver=cg exchange=isend ranks=32 threads=1 dims=8x4x1
+iters=300 converged=0 rel_resid=2.388e+01 l2_err=3.086834e-01 linf_err=6.268686e-01
+t_total=1.2348 s  (setup 0.0082)  compute max/mean=1.1969/1.1785  halo max/mean=0.0280/0.0139  allreduce max/mean=0.0479/0.0263
+impl=mpi dim=3 n=192x192x96 solver=cg exchange=isend ranks=32 threads=1 dims=4x4x2
+iters=300 converged=0 rel_resid=4.781e-12 l2_err=2.455676e-05 linf_err=7.062898e-05
+t_total=0.2003 s  (setup 0.0044)  compute max/mean=0.1690/0.1664  halo max/mean=0.0208/0.0171  allreduce max/mean=0.0181/0.0125
+impl=mpi dim=2 n=801x534x1 solver=cg exchange=isend ranks=32 threads=1 dims=8x4x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=0.0454 s  (setup 0.0003)  compute max/mean=0.0369/0.0285  halo max/mean=0.0031/0.0026  allreduce max/mean=0.0193/0.0133
+impl=mpi dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=32 threads=1 dims=8x4x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.0374 s  (setup 0.0004)  compute max/mean=0.0320/0.0197  halo max/mean=0.0276/0.0176  allreduce max/mean=0.0024/0.0008
+impl=mpi dim=3 n=801x534x365 solver=cg exchange=isend ranks=32 threads=1 dims=4x4x2
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=17.4727 s  (setup 0.0338)  compute max/mean=17.1131/16.2745  halo max/mean=0.3714/0.2949  allreduce max/mean=1.9107/0.8552
+impl=mpi dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=32 threads=1 dims=4x4x2
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=4.2755 s  (setup 0.0333)  compute max/mean=4.0066/3.0811  halo max/mean=2.8249/1.1853  allreduce max/mean=0.0621/0.0237
+impl=mpi dim=2 n=801x534x1 solver=cg exchange=isend ranks=32 threads=1 dims=8x4x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=0.0456 s  (setup 0.0005)  compute max/mean=0.0376/0.0285  halo max/mean=0.0030/0.0026  allreduce max/mean=0.0219/0.0138
+impl=mpi dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=32 threads=1 dims=8x4x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.0374 s  (setup 0.0002)  compute max/mean=0.0318/0.0197  halo max/mean=0.0276/0.0176  allreduce max/mean=0.0026/0.0013
+impl=mpi dim=3 n=801x534x365 solver=cg exchange=isend ranks=32 threads=1 dims=4x4x2
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=17.4550 s  (setup 0.0335)  compute max/mean=17.1017/16.2678  halo max/mean=0.3534/0.2912  allreduce max/mean=1.8997/0.8475
+impl=mpi dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=32 threads=1 dims=4x4x2
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=4.2668 s  (setup 0.0336)  compute max/mean=3.9997/3.0833  halo max/mean=2.8137/1.1747  allreduce max/mean=0.0556/0.0231
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=64 threads=1 dims=8x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.3829 s  (setup 0.0445)  compute max/mean=1.3634/1.0770  halo max/mean=0.6527/0.3022  allreduce max/mean=0.0361/0.0240
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=64 threads=1 dims=4x4x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.2773 s  (setup 0.1094)  compute max/mean=2.0801/1.6356  halo max/mean=1.3120/0.6391  allreduce max/mean=0.0648/0.0450
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=64 threads=1 dims=8x8x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415438e-08 linf_err=7.218258e-08
+t_total=26.8076 s  (setup 0.0093)  compute max/mean=26.3975/23.3814  halo max/mean=1.0048/0.3302  allreduce max/mean=6.9455/3.0750
+impl=mpi dim=3 n=256x256x256 solver=cg exchange=isend ranks=64 threads=1 dims=4x4x4
+iters=446 converged=1 rel_resid=9.397e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=1.9606 s  (setup 0.0101)  compute max/mean=1.8308/1.6278  halo max/mean=0.1487/0.0895  allreduce max/mean=0.5357/0.2359
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=64 threads=1 dims=8x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.3801 s  (setup 0.0289)  compute max/mean=1.3686/1.0815  halo max/mean=0.7099/0.2949  allreduce max/mean=0.0165/0.0086
+impl=mpi dim=3 n=256x256x256 solver=jacobi exchange=isend ranks=64 threads=1 dims=4x4x4
+iters=200 converged=0 rel_resid=9.798e-01 l2_err=5.929208e-01 linf_err=1.706315e+00
+t_total=0.2450 s  (setup 0.0100)  compute max/mean=0.2066/0.1567  halo max/mean=0.1513/0.0880  allreduce max/mean=0.0087/0.0049
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=64 threads=1 dims=8x8x1
+iters=300 converged=0 rel_resid=3.133e+01 l2_err=3.371411e-01 linf_err=6.840917e-01
+t_total=1.4047 s  (setup 0.0075)  compute max/mean=1.3638/1.2056  halo max/mean=0.0608/0.0175  allreduce max/mean=0.3814/0.1654
+impl=mpi dim=3 n=192x192x192 solver=cg exchange=isend ranks=64 threads=1 dims=4x4x4
+iters=300 converged=0 rel_resid=8.616e-04 l2_err=1.183917e-05 linf_err=3.478698e-05
+t_total=0.2306 s  (setup 0.0042)  compute max/mean=0.1914/0.1710  halo max/mean=0.0277/0.0206  allreduce max/mean=0.0667/0.0358
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=64 threads=1 dims=8x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.3808 s  (setup 0.0294)  compute max/mean=1.3661/1.0779  halo max/mean=0.7029/0.2992  allreduce max/mean=0.0137/0.0073
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=64 threads=1 dims=4x4x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.2843 s  (setup 0.0821)  compute max/mean=2.1041/1.6625  halo max/mean=1.2819/0.6193  allreduce max/mean=0.0393/0.0236
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=64 threads=1 dims=8x8x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415438e-08 linf_err=7.218258e-08
+t_total=26.7387 s  (setup 0.0079)  compute max/mean=26.3667/23.3511  halo max/mean=0.9746/0.3270  allreduce max/mean=6.8705/3.0396
+impl=mpi dim=3 n=256x256x256 solver=cg exchange=isend ranks=64 threads=1 dims=4x4x4
+iters=446 converged=1 rel_resid=9.397e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=1.9560 s  (setup 0.0100)  compute max/mean=1.8247/1.6267  halo max/mean=0.1513/0.0895  allreduce max/mean=0.5208/0.2326
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=64 threads=1 dims=8x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.3767 s  (setup 0.0309)  compute max/mean=1.3641/1.0776  halo max/mean=0.7022/0.2955  allreduce max/mean=0.0173/0.0093
+impl=mpi dim=3 n=256x256x256 solver=jacobi exchange=isend ranks=64 threads=1 dims=4x4x4
+iters=200 converged=0 rel_resid=9.798e-01 l2_err=5.929208e-01 linf_err=1.706315e+00
+t_total=0.2454 s  (setup 0.0101)  compute max/mean=0.2047/0.1554  halo max/mean=0.1522/0.0896  allreduce max/mean=0.0095/0.0060
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=64 threads=1 dims=8x8x1
+iters=300 converged=0 rel_resid=3.133e+01 l2_err=3.371411e-01 linf_err=6.840917e-01
+t_total=1.4053 s  (setup 0.0077)  compute max/mean=1.3629/1.2056  halo max/mean=0.0517/0.0174  allreduce max/mean=0.3798/0.1676
+impl=mpi dim=3 n=192x192x192 solver=cg exchange=isend ranks=64 threads=1 dims=4x4x4
+iters=300 converged=0 rel_resid=8.616e-04 l2_err=1.183917e-05 linf_err=3.478698e-05
+t_total=0.2308 s  (setup 0.0042)  compute max/mean=0.1907/0.1713  halo max/mean=0.0282/0.0206  allreduce max/mean=0.0660/0.0356
+impl=mpi dim=2 n=801x534x1 solver=cg exchange=isend ranks=64 threads=1 dims=8x8x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=0.0275 s  (setup 0.0009)  compute max/mean=0.0189/0.0136  halo max/mean=0.0034/0.0025  allreduce max/mean=0.0167/0.0118
+impl=mpi dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=64 threads=1 dims=8x8x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.0292 s  (setup 0.0007)  compute max/mean=0.0239/0.0097  halo max/mean=0.0244/0.0193  allreduce max/mean=0.0036/0.0013
+impl=mpi dim=3 n=801x534x365 solver=cg exchange=isend ranks=64 threads=1 dims=4x4x4
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=9.6088 s  (setup 0.0248)  compute max/mean=9.4008/8.1668  halo max/mean=0.5102/0.2418  allreduce max/mean=2.7416/1.1762
+impl=mpi dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=64 threads=1 dims=4x4x4
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=2.2080 s  (setup 0.0190)  compute max/mean=2.0793/1.5386  halo max/mean=1.5568/0.6630  allreduce max/mean=0.0423/0.0191
+impl=mpi dim=2 n=801x534x1 solver=cg exchange=isend ranks=64 threads=1 dims=8x8x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=0.0281 s  (setup 0.0028)  compute max/mean=0.0203/0.0135  halo max/mean=0.0032/0.0024  allreduce max/mean=0.0170/0.0124
+impl=mpi dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=64 threads=1 dims=8x8x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.0261 s  (setup 0.0018)  compute max/mean=0.0216/0.0098  halo max/mean=0.0212/0.0162  allreduce max/mean=0.0034/0.0013
+impl=mpi dim=3 n=801x534x365 solver=cg exchange=isend ranks=64 threads=1 dims=4x4x4
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=9.6019 s  (setup 0.0197)  compute max/mean=9.3919/8.1660  halo max/mean=0.5186/0.2417  allreduce max/mean=2.7540/1.1719
+impl=mpi dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=64 threads=1 dims=4x4x4
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=2.2106 s  (setup 0.0187)  compute max/mean=2.0826/1.5367  halo max/mean=1.5588/0.6677  allreduce max/mean=0.0488/0.0200
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=sendrecv ranks=64 threads=1 dims=8x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.3838 s  (setup 0.0541)  compute max/mean=1.3694/1.0976  halo max/mean=0.7681/0.2843  allreduce max/mean=0.0658/0.0574
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=sendrecv ranks=64 threads=1 dims=4x4x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.3500 s  (setup 0.0799)  compute max/mean=2.0911/1.8621  halo max/mean=0.8226/0.4878  allreduce max/mean=0.0383/0.0223
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=sendrecv ranks=64 threads=1 dims=8x8x1
+iters=300 converged=0 rel_resid=3.133e+01 l2_err=3.371411e-01 linf_err=6.840917e-01
+t_total=1.4082 s  (setup 0.0075)  compute max/mean=1.3620/1.1936  halo max/mean=0.0678/0.0306  allreduce max/mean=0.3959/0.1680
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=64 threads=1 dims=8x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.3757 s  (setup 0.0295)  compute max/mean=1.3649/1.0802  halo max/mean=0.7028/0.2918  allreduce max/mean=0.0173/0.0094
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=64 threads=1 dims=4x4x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.2831 s  (setup 0.0777)  compute max/mean=2.1030/1.6604  halo max/mean=1.2739/0.6200  allreduce max/mean=0.0362/0.0211
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=64 threads=1 dims=8x8x1
+iters=300 converged=0 rel_resid=3.133e+01 l2_err=3.371411e-01 linf_err=6.840917e-01
+t_total=1.4013 s  (setup 0.0086)  compute max/mean=1.3592/1.2014  halo max/mean=0.0594/0.0188  allreduce max/mean=0.3779/0.1660
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=overlap ranks=64 threads=1 dims=8x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.3674 s  (setup 0.0318)  compute max/mean=1.3546/1.0856  halo max/mean=0.6655/0.2786  allreduce max/mean=0.0180/0.0098
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=overlap ranks=64 threads=1 dims=4x4x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.6099 s  (setup 0.0799)  compute max/mean=2.4642/2.0729  halo max/mean=1.2013/0.5363  allreduce max/mean=0.0373/0.0218
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=overlap ranks=64 threads=1 dims=8x8x1
+iters=300 converged=0 rel_resid=3.133e+01 l2_err=3.371411e-01 linf_err=6.840917e-01
+t_total=1.4042 s  (setup 0.0077)  compute max/mean=1.3595/1.1884  halo max/mean=0.1548/0.0363  allreduce max/mean=0.3747/0.1638
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=rma ranks=64 threads=1 dims=8x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.9554 s  (setup 0.0304)  compute max/mean=1.3752/1.2479  halo max/mean=0.8618/0.7072  allreduce max/mean=0.0179/0.0103
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=rma ranks=64 threads=1 dims=4x4x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=13.1835 s  (setup 0.0794)  compute max/mean=2.2051/1.9625  halo max/mean=11.5889/11.2721  allreduce max/mean=0.0369/0.0207
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=rma ranks=64 threads=1 dims=8x8x1
+iters=300 converged=0 rel_resid=3.133e+01 l2_err=3.371411e-01 linf_err=6.840917e-01
+t_total=1.8182 s  (setup 0.0075)  compute max/mean=1.3629/1.2029  halo max/mean=0.4804/0.4484  allreduce max/mean=0.3147/0.1478
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=64 threads=1 dims=8x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.3759 s  (setup 0.0294)  compute max/mean=1.3649/1.0795  halo max/mean=0.7019/0.2927  allreduce max/mean=0.0174/0.0093
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=64 threads=1 dims=4x4x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.2837 s  (setup 0.0795)  compute max/mean=2.0938/1.6524  halo max/mean=1.2872/0.6287  allreduce max/mean=0.0392/0.0222
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=64 threads=1 dims=8x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=2.7979 s  (setup 0.0303)  compute max/mean=2.7701/2.4873  halo max/mean=0.2645/0.0552  allreduce max/mean=0.6403/0.2634
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=64 threads=1 dims=4x4x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=4.5869 s  (setup 0.0797)  compute max/mean=4.2196/3.6922  halo max/mean=0.7943/0.4465  allreduce max/mean=1.3483/0.4707
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=64 threads=1 dims=8x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.5194 s  (setup 0.0297)  compute max/mean=1.5062/1.2470  halo max/mean=0.4883/0.1997  allreduce max/mean=0.2663/0.0809
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=64 threads=1 dims=4x4x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.5157 s  (setup 0.0790)  compute max/mean=2.3115/1.8737  halo max/mean=1.0732/0.5721  allreduce max/mean=0.2441/0.0918
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=64 threads=1 dims=8x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.3951 s  (setup 0.0688)  compute max/mean=1.3840/1.0942  halo max/mean=0.7016/0.2932  allreduce max/mean=0.0949/0.0724
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=64 threads=1 dims=4x4x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.3089 s  (setup 0.0783)  compute max/mean=2.1217/1.6811  halo max/mean=1.2741/0.6214  allreduce max/mean=0.0471/0.0273
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=sendrecv ranks=64 threads=1 dims=8x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.3801 s  (setup 0.0300)  compute max/mean=1.3665/1.0984  halo max/mean=0.7560/0.2799  allreduce max/mean=0.0142/0.0082
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=sendrecv ranks=64 threads=1 dims=4x4x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.3502 s  (setup 0.0795)  compute max/mean=2.0908/1.8616  halo max/mean=0.8173/0.4884  allreduce max/mean=0.0388/0.0224
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=sendrecv ranks=64 threads=1 dims=8x8x1
+iters=300 converged=0 rel_resid=3.133e+01 l2_err=3.371411e-01 linf_err=6.840917e-01
+t_total=1.4071 s  (setup 0.0074)  compute max/mean=1.3636/1.1976  halo max/mean=0.0609/0.0280  allreduce max/mean=0.3847/0.1658
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=64 threads=1 dims=8x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.3760 s  (setup 0.0313)  compute max/mean=1.3655/1.0825  halo max/mean=0.7029/0.2899  allreduce max/mean=0.0180/0.0098
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=64 threads=1 dims=4x4x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.2849 s  (setup 0.1725)  compute max/mean=2.1060/1.6555  halo max/mean=1.2854/0.6268  allreduce max/mean=0.2069/0.1869
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=64 threads=1 dims=8x8x1
+iters=300 converged=0 rel_resid=3.133e+01 l2_err=3.371411e-01 linf_err=6.840917e-01
+t_total=1.4081 s  (setup 0.0089)  compute max/mean=1.3700/1.1972  halo max/mean=0.0608/0.0187  allreduce max/mean=0.4090/0.1774
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=overlap ranks=64 threads=1 dims=8x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.3675 s  (setup 0.0297)  compute max/mean=1.3545/1.0868  halo max/mean=0.6774/0.2779  allreduce max/mean=0.0177/0.0097
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=overlap ranks=64 threads=1 dims=4x4x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.6125 s  (setup 0.0795)  compute max/mean=2.4652/2.0720  halo max/mean=1.2006/0.5387  allreduce max/mean=0.0371/0.0214
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=overlap ranks=64 threads=1 dims=8x8x1
+iters=300 converged=0 rel_resid=3.133e+01 l2_err=3.371411e-01 linf_err=6.840917e-01
+t_total=1.4037 s  (setup 0.0084)  compute max/mean=1.3557/1.1899  halo max/mean=0.1515/0.0354  allreduce max/mean=0.3796/0.1631
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=rma ranks=64 threads=1 dims=8x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.9508 s  (setup 0.0427)  compute max/mean=1.3690/1.2460  halo max/mean=0.8554/0.7048  allreduce max/mean=0.0508/0.0429
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=rma ranks=64 threads=1 dims=4x4x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=13.2157 s  (setup 0.0777)  compute max/mean=2.1723/1.9581  halo max/mean=11.5594/11.3092  allreduce max/mean=0.0345/0.0194
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=rma ranks=64 threads=1 dims=8x8x1
+iters=300 converged=0 rel_resid=3.133e+01 l2_err=3.371411e-01 linf_err=6.840917e-01
+t_total=1.8128 s  (setup 0.0075)  compute max/mean=1.3662/1.2053  halo max/mean=0.4779/0.4375  allreduce max/mean=0.3355/0.1513
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=64 threads=1 dims=8x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.3767 s  (setup 0.0324)  compute max/mean=1.3659/1.0805  halo max/mean=0.7052/0.2925  allreduce max/mean=0.0198/0.0116
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=64 threads=1 dims=4x4x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.2856 s  (setup 0.0775)  compute max/mean=2.0993/1.6576  halo max/mean=1.2859/0.6254  allreduce max/mean=0.0360/0.0205
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=64 threads=1 dims=8x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=2.7905 s  (setup 0.0319)  compute max/mean=2.7663/2.4842  halo max/mean=0.2617/0.0548  allreduce max/mean=0.6279/0.2601
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=64 threads=1 dims=4x4x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=4.5866 s  (setup 0.0801)  compute max/mean=4.2292/3.6932  halo max/mean=0.8054/0.4453  allreduce max/mean=1.3595/0.4716
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=64 threads=1 dims=8x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.5160 s  (setup 0.0299)  compute max/mean=1.5007/1.2452  halo max/mean=0.4867/0.1988  allreduce max/mean=0.2646/0.0809
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=64 threads=1 dims=4x4x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.5118 s  (setup 0.0796)  compute max/mean=2.3084/1.8711  halo max/mean=1.0596/0.5707  allreduce max/mean=0.2433/0.0920
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=64 threads=1 dims=8x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.3958 s  (setup 0.0316)  compute max/mean=1.3844/1.0931  halo max/mean=0.7055/0.2949  allreduce max/mean=0.0383/0.0170
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=64 threads=1 dims=4x4x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.3091 s  (setup 0.0827)  compute max/mean=2.1253/1.6773  halo max/mean=1.2862/0.6253  allreduce max/mean=0.0505/0.0306
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=64 threads=1 dims=64x1x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.5126 s  (setup 0.0305)  compute max/mean=1.4389/1.1279  halo max/mean=0.7442/0.3563  allreduce max/mean=0.0133/0.0068
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=64 threads=1 dims=16x4x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.3935 s  (setup 0.0296)  compute max/mean=1.3775/1.0756  halo max/mean=0.6978/0.3109  allreduce max/mean=0.0177/0.0095
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=64 threads=1 dims=8x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.3775 s  (setup 0.0310)  compute max/mean=1.3656/1.0768  halo max/mean=0.7026/0.2970  allreduce max/mean=0.0172/0.0097
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=64 threads=1 dims=4x16x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.3620 s  (setup 0.0313)  compute max/mean=1.3520/1.0794  halo max/mean=0.6895/0.2806  allreduce max/mean=0.0177/0.0105
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=64 threads=1 dims=1x64x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.3483 s  (setup 0.0288)  compute max/mean=1.3312/1.0865  halo max/mean=0.5357/0.2389  allreduce max/mean=0.0156/0.0088
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=64 threads=1 dims=64x1x1
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=6.1692 s  (setup 0.0772)  compute max/mean=1.9196/1.6586  halo max/mean=4.7777/4.4158  allreduce max/mean=0.0301/0.0134
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=64 threads=1 dims=1x1x64
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=3.1807 s  (setup 0.0740)  compute max/mean=2.7511/2.1401  halo max/mean=1.6986/0.9884  allreduce max/mean=0.0211/0.0101
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=64 threads=1 dims=8x8x1
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.5600 s  (setup 0.0790)  compute max/mean=2.1157/1.6480  halo max/mean=1.5290/0.9070  allreduce max/mean=0.0332/0.0202
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=64 threads=1 dims=4x4x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.2829 s  (setup 0.0793)  compute max/mean=2.1027/1.6601  halo max/mean=1.2736/0.6202  allreduce max/mean=0.0381/0.0224
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=64 threads=1 dims=1x8x8
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.1189 s  (setup 0.0753)  compute max/mean=2.0002/1.6244  halo max/mean=1.0247/0.4900  allreduce max/mean=0.0262/0.0151
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=64 threads=1 dims=64x1x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.5163 s  (setup 0.0346)  compute max/mean=1.4407/1.1312  halo max/mean=0.7533/0.3572  allreduce max/mean=0.0154/0.0075
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=64 threads=1 dims=16x4x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.3932 s  (setup 0.0347)  compute max/mean=1.3768/1.0765  halo max/mean=0.6952/0.3097  allreduce max/mean=0.0166/0.0092
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=64 threads=1 dims=8x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.3760 s  (setup 0.0297)  compute max/mean=1.3637/1.0812  halo max/mean=0.7015/0.2912  allreduce max/mean=0.0174/0.0096
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=64 threads=1 dims=4x16x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.3643 s  (setup 0.0303)  compute max/mean=1.3499/1.0755  halo max/mean=0.6825/0.2866  allreduce max/mean=0.0176/0.0106
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=64 threads=1 dims=1x64x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.3472 s  (setup 0.0295)  compute max/mean=1.3320/1.0897  halo max/mean=0.5344/0.2353  allreduce max/mean=0.0140/0.0070
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=64 threads=1 dims=64x1x1
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=6.2507 s  (setup 0.0765)  compute max/mean=1.8998/1.6352  halo max/mean=4.8905/4.5158  allreduce max/mean=0.0315/0.0154
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=64 threads=1 dims=1x1x64
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=3.1807 s  (setup 0.1108)  compute max/mean=2.7423/2.1392  halo max/mean=1.6998/0.9895  allreduce max/mean=0.1240/0.1118
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=64 threads=1 dims=8x8x1
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.5604 s  (setup 0.0793)  compute max/mean=2.1203/1.6536  halo max/mean=1.5247/0.9010  allreduce max/mean=0.0339/0.0205
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=64 threads=1 dims=4x4x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.2830 s  (setup 0.0807)  compute max/mean=2.1080/1.6583  halo max/mean=1.2741/0.6221  allreduce max/mean=0.0386/0.0222
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=64 threads=1 dims=1x8x8
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.1188 s  (setup 0.0781)  compute max/mean=2.0016/1.6256  halo max/mean=1.0259/0.4885  allreduce max/mean=0.0274/0.0160
+impl=mpi_omp dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=64 threads=1 dims=8x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.3738 s  (setup 0.0340)  compute max/mean=1.3629/1.0773  halo max/mean=0.7007/0.2928  allreduce max/mean=0.0215/0.0130
+impl=mpi_omp dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=64 threads=1 dims=4x4x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.2811 s  (setup 0.0790)  compute max/mean=2.1099/1.6633  halo max/mean=1.2793/0.6152  allreduce max/mean=0.0378/0.0233
+impl=mpi_omp dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=64 threads=1 dims=8x8x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415438e-08 linf_err=7.218258e-08
+t_total=26.9495 s  (setup 0.0103)  compute max/mean=26.6656/23.4394  halo max/mean=0.9651/0.3328  allreduce max/mean=7.1197/3.1558
+impl=mpi_omp dim=3 n=256x256x256 solver=cg exchange=isend ranks=64 threads=1 dims=4x4x4
+iters=446 converged=1 rel_resid=9.397e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=1.9596 s  (setup 0.0101)  compute max/mean=1.8294/1.6298  halo max/mean=0.1503/0.0885  allreduce max/mean=0.5209/0.2343
+impl=mpi_omp dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=64 threads=1 dims=8x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.3751 s  (setup 0.0306)  compute max/mean=1.3641/1.0799  halo max/mean=0.7009/0.2914  allreduce max/mean=0.0171/0.0091
+impl=mpi_omp dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=64 threads=1 dims=4x4x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.2775 s  (setup 0.0779)  compute max/mean=2.0985/1.6547  halo max/mean=1.2760/0.6201  allreduce max/mean=0.0371/0.0205
+impl=mpi_omp dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=64 threads=1 dims=8x8x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415438e-08 linf_err=7.218258e-08
+t_total=26.8202 s  (setup 0.0082)  compute max/mean=26.4461/23.4268  halo max/mean=1.0339/0.3267  allreduce max/mean=6.9838/3.0445
+impl=mpi_omp dim=3 n=256x256x256 solver=cg exchange=isend ranks=64 threads=1 dims=4x4x4
+iters=446 converged=1 rel_resid=9.397e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=1.9654 s  (setup 0.0096)  compute max/mean=1.8282/1.6264  halo max/mean=0.1521/0.0895  allreduce max/mean=0.5397/0.2420
+impl=mpi_omp dim=3 n=801x534x365 solver=cg exchange=isend ranks=64 threads=1 dims=4x4x4
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=9.6207 s  (setup 0.0228)  compute max/mean=9.4022/8.1785  halo max/mean=0.5169/0.2405  allreduce max/mean=2.7826/1.1804
+impl=mpi_omp dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=32 threads=2 dims=8x4x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.3720 s  (setup 0.0346)  compute max/mean=1.3567/1.0730  halo max/mean=0.7001/0.2952  allreduce max/mean=0.0136/0.0076
+impl=mpi_omp dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=32 threads=2 dims=4x4x2
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.3880 s  (setup 0.0844)  compute max/mean=1.9526/1.5516  halo max/mean=1.3992/0.8342  allreduce max/mean=0.0338/0.0199
+impl=mpi_omp dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=32 threads=2 dims=8x4x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415438e-08 linf_err=7.218258e-08
+t_total=26.9048 s  (setup 0.0125)  compute max/mean=26.5752/23.5077  halo max/mean=0.9474/0.3327  allreduce max/mean=6.7149/3.0410
+impl=mpi_omp dim=3 n=256x256x256 solver=cg exchange=isend ranks=32 threads=2 dims=4x4x2
+iters=446 converged=1 rel_resid=9.397e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=2.0221 s  (setup 0.0150)  compute max/mean=1.8421/1.6335  halo max/mean=0.1836/0.1265  allreduce max/mean=0.5914/0.2556
+impl=mpi_omp dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=32 threads=2 dims=8x4x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.3727 s  (setup 0.0342)  compute max/mean=1.3581/1.0742  halo max/mean=0.7009/0.2950  allreduce max/mean=0.0136/0.0072
+impl=mpi_omp dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=32 threads=2 dims=4x4x2
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.3825 s  (setup 0.0845)  compute max/mean=1.9272/1.5339  halo max/mean=1.3836/0.8457  allreduce max/mean=0.0317/0.0170
+impl=mpi_omp dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=32 threads=2 dims=8x4x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415438e-08 linf_err=7.218258e-08
+t_total=27.0753 s  (setup 0.0125)  compute max/mean=26.7627/23.5069  halo max/mean=1.0690/0.3381  allreduce max/mean=7.1793/3.2073
+impl=mpi_omp dim=3 n=256x256x256 solver=cg exchange=isend ranks=32 threads=2 dims=4x4x2
+iters=446 converged=1 rel_resid=9.397e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=2.0229 s  (setup 0.0152)  compute max/mean=1.8504/1.6337  halo max/mean=0.1901/0.1267  allreduce max/mean=0.5891/0.2558
+impl=mpi_omp dim=3 n=801x534x365 solver=cg exchange=isend ranks=32 threads=2 dims=4x4x2
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=9.7020 s  (setup 0.0261)  compute max/mean=9.4608/8.1835  halo max/mean=0.6316/0.3232  allreduce max/mean=2.7949/1.1681
+impl=mpi_omp dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=16 threads=4 dims=4x4x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.3687 s  (setup 0.0351)  compute max/mean=1.3553/1.0817  halo max/mean=0.6988/0.2850  allreduce max/mean=0.0155/0.0081
+impl=mpi_omp dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=16 threads=4 dims=4x2x2
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.7386 s  (setup 0.0818)  compute max/mean=1.8593/1.4986  halo max/mean=1.7156/1.2384  allreduce max/mean=0.0219/0.0130
+impl=mpi_omp dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=16 threads=4 dims=4x4x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415439e-08 linf_err=7.218259e-08
+t_total=26.7759 s  (setup 0.0126)  compute max/mean=26.4730/23.2933  halo max/mean=0.9457/0.4123  allreduce max/mean=7.0448/3.0435
+impl=mpi_omp dim=3 n=256x256x256 solver=cg exchange=isend ranks=16 threads=4 dims=4x2x2
+iters=446 converged=1 rel_resid=9.391e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=2.0735 s  (setup 0.0155)  compute max/mean=1.8357/1.6119  halo max/mean=0.2632/0.2017  allreduce max/mean=0.6324/0.2519
+impl=mpi_omp dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=16 threads=4 dims=4x4x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.3679 s  (setup 0.0355)  compute max/mean=1.3543/1.0828  halo max/mean=0.6990/0.2832  allreduce max/mean=0.0160/0.0088
+impl=mpi_omp dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=16 threads=4 dims=4x2x2
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.7318 s  (setup 0.0813)  compute max/mean=1.8555/1.4987  halo max/mean=1.7197/1.2323  allreduce max/mean=0.0225/0.0122
+impl=mpi_omp dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=16 threads=4 dims=4x4x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415439e-08 linf_err=7.218258e-08
+t_total=26.7233 s  (setup 0.0126)  compute max/mean=26.4329/23.3203  halo max/mean=1.0028/0.4116  allreduce max/mean=6.7798/2.9636
+impl=mpi_omp dim=3 n=256x256x256 solver=cg exchange=isend ranks=16 threads=4 dims=4x2x2
+iters=446 converged=1 rel_resid=9.391e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=2.0714 s  (setup 0.0148)  compute max/mean=1.8502/1.6107  halo max/mean=0.2714/0.1995  allreduce max/mean=0.6527/0.2525
+impl=mpi_omp dim=3 n=801x534x365 solver=cg exchange=isend ranks=16 threads=4 dims=4x2x2
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=10.0682 s  (setup 0.0253)  compute max/mean=9.5379/8.2207  halo max/mean=0.8822/0.6190  allreduce max/mean=2.5621/1.1912
+impl=mpi_omp dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=8 threads=8 dims=4x2x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.4318 s  (setup 0.0386)  compute max/mean=1.3968/1.0486  halo max/mean=0.6561/0.3819  allreduce max/mean=0.0104/0.0066
+impl=mpi_omp dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=8 threads=8 dims=2x2x2
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.7437 s  (setup 0.0836)  compute max/mean=1.9200/1.5893  halo max/mean=1.5055/1.1523  allreduce max/mean=0.0155/0.0092
+impl=mpi_omp dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=8 threads=8 dims=4x2x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415438e-08 linf_err=7.218257e-08
+t_total=27.3365 s  (setup 0.0131)  compute max/mean=26.7757/23.8382  halo max/mean=1.0623/0.5311  allreduce max/mean=7.8311/2.9314
+impl=mpi_omp dim=3 n=256x256x256 solver=cg exchange=isend ranks=8 threads=8 dims=2x2x2
+iters=446 converged=1 rel_resid=9.396e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=2.0572 s  (setup 0.0150)  compute max/mean=1.8452/1.6234  halo max/mean=0.2372/0.1833  allreduce max/mean=0.4670/0.2385
+impl=mpi_omp dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=8 threads=8 dims=4x2x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.4312 s  (setup 0.0380)  compute max/mean=1.3962/1.0516  halo max/mean=0.6610/0.3783  allreduce max/mean=0.0097/0.0063
+impl=mpi_omp dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=8 threads=8 dims=2x2x2
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.7618 s  (setup 0.0843)  compute max/mean=1.9248/1.5724  halo max/mean=1.5719/1.1894  allreduce max/mean=0.0159/0.0106
+impl=mpi_omp dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=8 threads=8 dims=4x2x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415437e-08 linf_err=7.218256e-08
+t_total=27.4688 s  (setup 0.0137)  compute max/mean=26.9752/23.9223  halo max/mean=1.1011/0.5381  allreduce max/mean=8.1118/2.9745
+impl=mpi_omp dim=3 n=256x256x256 solver=cg exchange=isend ranks=8 threads=8 dims=2x2x2
+iters=446 converged=1 rel_resid=9.396e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=2.0617 s  (setup 0.0169)  compute max/mean=1.8341/1.6259  halo max/mean=0.2437/0.1871  allreduce max/mean=0.4785/0.2379
+impl=mpi_omp dim=3 n=801x534x365 solver=cg exchange=isend ranks=8 threads=8 dims=2x2x2
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=10.0121 s  (setup 0.0302)  compute max/mean=9.2687/8.4667  halo max/mean=0.9059/0.6447  allreduce max/mean=1.9763/0.8432
+impl=mpi_omp dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=4 threads=16 dims=2x2x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.4388 s  (setup 0.0385)  compute max/mean=1.4183/1.2253  halo max/mean=0.2957/0.2131  allreduce max/mean=0.0079/0.0047
+impl=mpi_omp dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=4 threads=16 dims=2x2x1
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=3.6974 s  (setup 0.0897)  compute max/mean=2.0071/1.8235  halo max/mean=2.0296/1.8794  allreduce max/mean=0.0087/0.0056
+impl=mpi_omp dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=4 threads=16 dims=2x2x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415441e-08 linf_err=7.218263e-08
+t_total=27.3580 s  (setup 0.0140)  compute max/mean=26.6969/24.7018  halo max/mean=1.0161/0.4767  allreduce max/mean=7.1444/2.1198
+impl=mpi_omp dim=3 n=256x256x256 solver=cg exchange=isend ranks=4 threads=16 dims=2x2x1
+iters=446 converged=1 rel_resid=9.396e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=2.1985 s  (setup 0.0158)  compute max/mean=1.8285/1.6714  halo max/mean=0.3575/0.3198  allreduce max/mean=0.4492/0.1877
+impl=mpi_omp dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=4 threads=16 dims=2x2x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.4399 s  (setup 0.0398)  compute max/mean=1.4186/1.2257  halo max/mean=0.2995/0.2138  allreduce max/mean=0.0089/0.0051
+impl=mpi_omp dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=4 threads=16 dims=2x2x1
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=3.6452 s  (setup 0.0869)  compute max/mean=2.0118/1.8237  halo max/mean=1.9764/1.8240  allreduce max/mean=0.0100/0.0058
+impl=mpi_omp dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=4 threads=16 dims=2x2x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415439e-08 linf_err=7.218259e-08
+t_total=27.4212 s  (setup 0.0131)  compute max/mean=26.9060/24.8453  halo max/mean=1.0897/0.4924  allreduce max/mean=7.2231/2.0232
+impl=mpi_omp dim=3 n=256x256x256 solver=cg exchange=isend ranks=4 threads=16 dims=2x2x1
+iters=446 converged=1 rel_resid=9.396e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=2.1975 s  (setup 0.0165)  compute max/mean=1.8651/1.6932  halo max/mean=0.3412/0.3042  allreduce max/mean=0.4515/0.1801
+impl=mpi_omp dim=3 n=801x534x365 solver=cg exchange=isend ranks=4 threads=16 dims=2x2x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=10.8299 s  (setup 0.0367)  compute max/mean=9.2520/8.6280  halo max/mean=1.4624/1.3275  allreduce max/mean=2.1781/0.7512
+impl=mpi_omp dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=2 threads=32 dims=2x1x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.4284 s  (setup 0.0401)  compute max/mean=1.3998/1.3350  halo max/mean=0.1581/0.0934  allreduce max/mean=0.0066/0.0033
+impl=mpi_omp dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=2 threads=32 dims=2x1x1
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=6.1505 s  (setup 0.0870)  compute max/mean=2.8792/2.8401  halo max/mean=3.3655/3.3264  allreduce max/mean=0.0105/0.0054
+impl=mpi_omp dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=2 threads=32 dims=2x1x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415442e-08 linf_err=7.218264e-08
+t_total=27.5220 s  (setup 0.0170)  compute max/mean=26.8258/26.6450  halo max/mean=0.4408/0.4227  allreduce max/mean=0.5029/0.3444
+impl=mpi_omp dim=3 n=256x256x256 solver=cg exchange=isend ranks=2 threads=32 dims=2x1x1
+iters=446 converged=1 rel_resid=9.395e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=2.7534 s  (setup 0.0173)  compute max/mean=1.9148/1.8796  halo max/mean=0.7940/0.7840  allreduce max/mean=0.0819/0.0541
+impl=mpi_omp dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=2 threads=32 dims=2x1x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=1.4303 s  (setup 0.0427)  compute max/mean=1.4017/1.3291  halo max/mean=0.1733/0.1010  allreduce max/mean=0.0097/0.0049
+impl=mpi_omp dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=2 threads=32 dims=2x1x1
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=6.1293 s  (setup 0.0870)  compute max/mean=2.8767/2.8298  halo max/mean=3.3629/3.3158  allreduce max/mean=0.0192/0.0097
+impl=mpi_omp dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=2 threads=32 dims=2x1x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415444e-08 linf_err=7.218268e-08
+t_total=27.7000 s  (setup 0.0169)  compute max/mean=27.0331/26.8441  halo max/mean=0.4213/0.4105  allreduce max/mean=0.5105/0.3369
+impl=mpi_omp dim=3 n=256x256x256 solver=cg exchange=isend ranks=2 threads=32 dims=2x1x1
+iters=446 converged=1 rel_resid=9.395e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=2.7751 s  (setup 0.0170)  compute max/mean=1.8941/1.8477  halo max/mean=0.8600/0.8425  allreduce max/mean=0.0825/0.0507
+impl=mpi_omp dim=3 n=801x534x365 solver=cg exchange=isend ranks=2 threads=32 dims=2x1x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=12.6809 s  (setup 0.0381)  compute max/mean=9.7801/9.6948  halo max/mean=2.4048/2.4017  allreduce max/mean=0.3522/0.2847
+impl=mpi_omp dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=1 threads=64 dims=1x1x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=2.2774 s  (setup 0.0409)  compute max/mean=2.2769/2.2769  halo max/mean=0.0004/0.0004  allreduce max/mean=0.0000/0.0000
+impl=mpi_omp dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=1 threads=64 dims=1x1x1
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=5.0446 s  (setup 0.0904)  compute max/mean=5.0440/5.0440  halo max/mean=0.0005/0.0005  allreduce max/mean=0.0000/0.0000
+impl=mpi_omp dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=1 threads=64 dims=1x1x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415440e-08 linf_err=7.218262e-08
+t_total=33.4414 s  (setup 0.0153)  compute max/mean=33.2052/33.2052  halo max/mean=0.0097/0.0097  allreduce max/mean=0.0070/0.0070
+impl=mpi_omp dim=3 n=256x256x256 solver=cg exchange=isend ranks=1 threads=64 dims=1x1x1
+iters=446 converged=1 rel_resid=9.398e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=2.9809 s  (setup 0.0175)  compute max/mean=2.9061/2.9061  halo max/mean=0.0010/0.0010  allreduce max/mean=0.0005/0.0005
+impl=mpi_omp dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=1 threads=64 dims=1x1x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=2.2364 s  (setup 0.0410)  compute max/mean=2.2359/2.2359  halo max/mean=0.0004/0.0004  allreduce max/mean=0.0000/0.0000
+impl=mpi_omp dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=1 threads=64 dims=1x1x1
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=5.0918 s  (setup 0.0898)  compute max/mean=5.0911/5.0911  halo max/mean=0.0005/0.0005  allreduce max/mean=0.0000/0.0000
+impl=mpi_omp dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=1 threads=64 dims=1x1x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415438e-08 linf_err=7.218257e-08
+t_total=35.5118 s  (setup 0.0151)  compute max/mean=35.2751/35.2751  halo max/mean=0.0095/0.0095  allreduce max/mean=0.0069/0.0069
+impl=mpi_omp dim=3 n=256x256x256 solver=cg exchange=isend ranks=1 threads=64 dims=1x1x1
+iters=446 converged=1 rel_resid=9.395e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=2.9812 s  (setup 0.0167)  compute max/mean=2.9052/2.9052  halo max/mean=0.0009/0.0009  allreduce max/mean=0.0006/0.0006
+impl=mpi_omp dim=3 n=801x534x365 solver=cg exchange=isend ranks=1 threads=64 dims=1x1x1
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=18.4183 s  (setup 0.0356)  compute max/mean=17.7746/17.7746  halo max/mean=0.0007/0.0007  allreduce max/mean=0.0004/0.0004
+=== node_1 finished Sat Nov  7 12:47:04 PM +08 2026

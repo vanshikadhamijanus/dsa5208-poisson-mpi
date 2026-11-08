@@ -1,0 +1,132 @@
+=== build started Fri Nov  6 10:49:45 PM +08 2026 on CN-161
+rm -rf bin
+mkdir -p bin
+g++ -O3 -std=c++17 -Wall -Wextra -march=x86-64-v3 -Isrc src/serial_main.cpp -o bin/poisson_serial
+In file included from src/solver.hpp:22,
+                 from src/serial_main.cpp:9:
+src/kernels.hpp:31: warning: ignoring ‘#pragma omp parallel’ [-Wunknown-pragmas]
+   31 | #pragma omp parallel for collapse(2) schedule(static)
+      | 
+src/kernels.hpp:35: warning: ignoring ‘#pragma omp simd’ [-Wunknown-pragmas]
+   35 | #pragma omp simd
+      | 
+src/kernels.hpp:49: warning: ignoring ‘#pragma omp parallel’ [-Wunknown-pragmas]
+   49 | #pragma omp parallel for collapse(2) schedule(static)
+      | 
+src/kernels.hpp:53: warning: ignoring ‘#pragma omp simd’ [-Wunknown-pragmas]
+   53 | #pragma omp simd
+      | 
+src/kernels.hpp:69: warning: ignoring ‘#pragma omp parallel’ [-Wunknown-pragmas]
+   69 | #pragma omp parallel for collapse(2) schedule(static) reduction(+:sum)
+      | 
+src/kernels.hpp:105: warning: ignoring ‘#pragma omp parallel’ [-Wunknown-pragmas]
+  105 | #pragma omp parallel for collapse(2) schedule(static)
+      | 
+src/kernels.hpp:122: warning: ignoring ‘#pragma omp parallel’ [-Wunknown-pragmas]
+  122 | #pragma omp parallel for collapse(2) schedule(static)
+      | 
+src/kernels.hpp:140: warning: ignoring ‘#pragma omp parallel’ [-Wunknown-pragmas]
+  140 | #pragma omp parallel for collapse(2) schedule(static) reduction(+:sum)
+      | 
+src/kernels.hpp:162: warning: ignoring ‘#pragma omp parallel’ [-Wunknown-pragmas]
+  162 | #pragma omp parallel for collapse(2) schedule(static) reduction(+:sum)
+      | 
+src/kernels.hpp:173: warning: ignoring ‘#pragma omp parallel’ [-Wunknown-pragmas]
+  173 | #pragma omp parallel for collapse(2) schedule(static)
+      | 
+src/kernels.hpp:177: warning: ignoring ‘#pragma omp simd’ [-Wunknown-pragmas]
+  177 | #pragma omp simd
+      | 
+src/kernels.hpp:184: warning: ignoring ‘#pragma omp parallel’ [-Wunknown-pragmas]
+  184 | #pragma omp parallel for collapse(2) schedule(static)
+      | 
+src/kernels.hpp:188: warning: ignoring ‘#pragma omp simd’ [-Wunknown-pragmas]
+  188 | #pragma omp simd
+      | 
+src/kernels.hpp:195: warning: ignoring ‘#pragma omp parallel’ [-Wunknown-pragmas]
+  195 | #pragma omp parallel for collapse(2) schedule(static)
+      | 
+src/kernels.hpp:205: warning: ignoring ‘#pragma omp parallel’ [-Wunknown-pragmas]
+  205 | #pragma omp parallel for collapse(2) schedule(static) reduction(+:s) reduction(max:m)
+      | 
+In file included from src/solver.hpp:23:
+src/gridio.hpp:199: warning: ignoring ‘#pragma omp parallel’ [-Wunknown-pragmas]
+  199 | #pragma omp parallel for collapse(2) schedule(static)
+      | 
+g++ -O3 -std=c++17 -Wall -Wextra -march=x86-64-v3 -fopenmp -Isrc src/serial_main.cpp -o bin/poisson_omp -fopenmp
+mpicxx -O3 -std=c++17 -Wall -Wextra -march=x86-64-v3 -Isrc src/mpi_main.cpp -o bin/poisson_mpi
+In file included from src/decomp.hpp:17,
+                 from src/mpi_main.cpp:6:
+src/kernels.hpp:31: warning: ignoring ‘#pragma omp parallel’ [-Wunknown-pragmas]
+   31 | #pragma omp parallel for collapse(2) schedule(static)
+      | 
+src/kernels.hpp:35: warning: ignoring ‘#pragma omp simd’ [-Wunknown-pragmas]
+   35 | #pragma omp simd
+      | 
+src/kernels.hpp:49: warning: ignoring ‘#pragma omp parallel’ [-Wunknown-pragmas]
+   49 | #pragma omp parallel for collapse(2) schedule(static)
+      | 
+src/kernels.hpp:53: warning: ignoring ‘#pragma omp simd’ [-Wunknown-pragmas]
+   53 | #pragma omp simd
+      | 
+src/kernels.hpp:69: warning: ignoring ‘#pragma omp parallel’ [-Wunknown-pragmas]
+   69 | #pragma omp parallel for collapse(2) schedule(static) reduction(+:sum)
+      | 
+src/kernels.hpp:105: warning: ignoring ‘#pragma omp parallel’ [-Wunknown-pragmas]
+  105 | #pragma omp parallel for collapse(2) schedule(static)
+      | 
+src/kernels.hpp:122: warning: ignoring ‘#pragma omp parallel’ [-Wunknown-pragmas]
+  122 | #pragma omp parallel for collapse(2) schedule(static)
+      | 
+src/kernels.hpp:140: warning: ignoring ‘#pragma omp parallel’ [-Wunknown-pragmas]
+  140 | #pragma omp parallel for collapse(2) schedule(static) reduction(+:sum)
+      | 
+src/kernels.hpp:162: warning: ignoring ‘#pragma omp parallel’ [-Wunknown-pragmas]
+  162 | #pragma omp parallel for collapse(2) schedule(static) reduction(+:sum)
+      | 
+src/kernels.hpp:173: warning: ignoring ‘#pragma omp parallel’ [-Wunknown-pragmas]
+  173 | #pragma omp parallel for collapse(2) schedule(static)
+      | 
+src/kernels.hpp:177: warning: ignoring ‘#pragma omp simd’ [-Wunknown-pragmas]
+  177 | #pragma omp simd
+      | 
+src/kernels.hpp:184: warning: ignoring ‘#pragma omp parallel’ [-Wunknown-pragmas]
+  184 | #pragma omp parallel for collapse(2) schedule(static)
+      | 
+src/kernels.hpp:188: warning: ignoring ‘#pragma omp simd’ [-Wunknown-pragmas]
+  188 | #pragma omp simd
+      | 
+src/kernels.hpp:195: warning: ignoring ‘#pragma omp parallel’ [-Wunknown-pragmas]
+  195 | #pragma omp parallel for collapse(2) schedule(static)
+      | 
+src/kernels.hpp:205: warning: ignoring ‘#pragma omp parallel’ [-Wunknown-pragmas]
+  205 | #pragma omp parallel for collapse(2) schedule(static) reduction(+:s) reduction(max:m)
+      | 
+In file included from src/decomp.hpp:164:
+src/gridio.hpp:199: warning: ignoring ‘#pragma omp parallel’ [-Wunknown-pragmas]
+  199 | #pragma omp parallel for collapse(2) schedule(static)
+      | 
+mpicxx -O3 -std=c++17 -Wall -Wextra -march=x86-64-v3 -fopenmp -Isrc src/mpi_main.cpp -o bin/poisson_mpi_omp -fopenmp
+g++ -O3 -std=c++17 -Wall -Wextra -march=x86-64-v3 -Isrc tools/gridtool.cpp -o bin/gridtool
+In file included from tools/gridtool.cpp:32:
+src/gridio.hpp:199: warning: ignoring ‘#pragma omp parallel’ [-Wunknown-pragmas]
+  199 | #pragma omp parallel for collapse(2) schedule(static)
+      | 
+nvcc -O3 -std=c++17 -gencode arch=compute_70,code=sm_70 -gencode arch=compute_80,code=sm_80 -gencode arch=compute_86,code=sm_86 -gencode arch=compute_89,code=sm_89 -gencode arch=compute_90,code=sm_90 -ccbin mpicxx -Isrc src/cuda/mpi_cuda_main.cu -o bin/poisson_mpi_cuda
+total 1696
+-rwxr-x--- 1 e1621744 svuusers   78008 Nov  6 22:49 gridtool
+-rwxr-x--- 1 e1621744 svuusers   97928 Nov  6 22:49 poisson_mpi
+-rwxr-x--- 1 e1621744 svuusers 1412712 Nov  6 22:50 poisson_mpi_cuda
+-rwxr-x--- 1 e1621744 svuusers   90800 Nov  6 22:49 poisson_mpi_omp
+-rwxr-x--- 1 e1621744 svuusers   75936 Nov  6 22:49 poisson_omp
+-rwxr-x--- 1 e1621744 svuusers   74464 Nov  6 22:49 poisson_serial
+=== smoke test: both lines must show iters=183 and l2_err=3.445134e-05
+iters=183 converged=1 rel_resid=4.448e-09 l2_err=3.445134e-05 linf_err=7.280365e-05
+[CN-161:527858] mca_base_component_repository_open: unable to open mca_plm_tm: libpbs.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-161:527858] mca_base_component_repository_open: unable to open mca_ras_tm: libpbs.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-161:527865] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-161:527866] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-161:527863] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+[CN-161:527864] mca_base_component_repository_open: unable to open mca_osc_ucx: libucp.so.0: cannot open shared object file: No such file or directory (ignored)
+iters=183 converged=1 rel_resid=4.468e-09 l2_err=3.445134e-05 linf_err=7.280365e-05
+=== build finished Fri Nov  6 10:50:11 PM +08 2026

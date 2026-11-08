@@ -1,0 +1,107 @@
+=== mpi_128 started Sat Nov  7 10:25:00 AM +08 2026 on CN-105
+Warning: Permanently added 'cn-108' (ED25519) to the list of known hosts.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=128 threads=1 dims=16x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=0.7069 s  (setup 0.0217)  compute max/mean=0.6902/0.5510  halo max/mean=0.3280/0.1526  allreduce max/mean=0.0180/0.0117
+Authorized users only. All activity may be monitored and reported.
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=128 threads=1 dims=8x4x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=1.2910 s  (setup 0.0605)  compute max/mean=1.0712/0.7950  halo max/mean=0.7656/0.4924  allreduce max/mean=0.0619/0.0474
+Authorized users only. All activity may be monitored and reported.
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=128 threads=1 dims=16x8x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415438e-08 linf_err=7.218258e-08
+t_total=9.9970 s  (setup 0.0097)  compute max/mean=7.9943/6.9204  halo max/mean=0.6523/0.2640  allreduce max/mean=4.1797/2.7976
+Authorized users only. All activity may be monitored and reported.
+impl=mpi dim=3 n=256x256x256 solver=cg exchange=isend ranks=128 threads=1 dims=8x4x4
+iters=446 converged=1 rel_resid=9.398e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=0.6738 s  (setup 0.0051)  compute max/mean=0.4633/0.4057  halo max/mean=0.1036/0.0632  allreduce max/mean=0.3003/0.2027
+Authorized users only. All activity may be monitored and reported.
+impl=mpi dim=2 n=16384x8192x1 solver=jacobi exchange=isend ranks=128 threads=1 dims=16x8x1
+iters=200 converged=0 rel_resid=9.998e-01 l2_err=8.515569e-01 linf_err=1.732962e+00
+t_total=1.3838 s  (setup 0.0304)  compute max/mean=1.3667/1.0613  halo max/mean=0.7125/0.3171  allreduce max/mean=0.0181/0.0109
+Authorized users only. All activity may be monitored and reported.
+impl=mpi dim=3 n=512x256x256 solver=jacobi exchange=isend ranks=128 threads=1 dims=8x4x4
+iters=200 converged=0 rel_resid=9.890e-01 l2_err=5.975019e-01 linf_err=1.719533e+00
+t_total=0.2533 s  (setup 0.0115)  compute max/mean=0.2030/0.1497  halo max/mean=0.1542/0.1026  allreduce max/mean=0.0101/0.0064
+Authorized users only. All activity may be monitored and reported.
+impl=mpi dim=2 n=8192x4096x1 solver=cg exchange=isend ranks=128 threads=1 dims=16x8x1
+iters=300 converged=0 rel_resid=5.336e+01 l2_err=4.069842e-01 linf_err=8.265725e-01
+t_total=1.4806 s  (setup 0.0076)  compute max/mean=1.3726/1.2005  halo max/mean=0.0874/0.0243  allreduce max/mean=0.4647/0.2423
+Authorized users only. All activity may be monitored and reported.
+impl=mpi dim=3 n=384x192x192 solver=cg exchange=isend ranks=128 threads=1 dims=8x4x4
+iters=300 converged=0 rel_resid=6.700e-02 l2_err=9.844454e-04 linf_err=4.078976e-03
+t_total=0.3090 s  (setup 0.0045)  compute max/mean=0.1858/0.1721  halo max/mean=0.0511/0.0287  allreduce max/mean=0.1330/0.1066
+Authorized users only. All activity may be monitored and reported.
+impl=mpi dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=128 threads=1 dims=16x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=0.6780 s  (setup 0.0154)  compute max/mean=0.6607/0.5155  halo max/mean=0.3438/0.1595  allreduce max/mean=0.0101/0.0066
+Authorized users only. All activity may be monitored and reported.
+impl=mpi dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=128 threads=1 dims=8x4x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=1.2488 s  (setup 0.0421)  compute max/mean=1.0477/0.7708  halo max/mean=0.7700/0.4745  allreduce max/mean=0.0241/0.0146
+Authorized users only. All activity may be monitored and reported.
+impl=mpi dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=128 threads=1 dims=16x8x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415438e-08 linf_err=7.218258e-08
+t_total=9.7553 s  (setup 0.0066)  compute max/mean=7.9690/6.8423  halo max/mean=0.6258/0.2294  allreduce max/mean=3.8678/2.6723
+Authorized users only. All activity may be monitored and reported.
+impl=mpi dim=3 n=256x256x256 solver=cg exchange=isend ranks=128 threads=1 dims=8x4x4
+iters=446 converged=1 rel_resid=9.398e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=0.6621 s  (setup 0.0074)  compute max/mean=0.4642/0.4071  halo max/mean=0.1126/0.0606  allreduce max/mean=0.2819/0.1938
+Authorized users only. All activity may be monitored and reported.
+impl=mpi dim=2 n=16384x8192x1 solver=jacobi exchange=isend ranks=128 threads=1 dims=16x8x1
+iters=200 converged=0 rel_resid=9.998e-01 l2_err=8.515569e-01 linf_err=1.732962e+00
+t_total=1.3822 s  (setup 0.0311)  compute max/mean=1.3651/1.0618  halo max/mean=0.7160/0.3153  allreduce max/mean=0.0196/0.0120
+Authorized users only. All activity may be monitored and reported.
+impl=mpi dim=3 n=512x256x256 solver=jacobi exchange=isend ranks=128 threads=1 dims=8x4x4
+iters=200 converged=0 rel_resid=9.890e-01 l2_err=5.975019e-01 linf_err=1.719533e+00
+t_total=0.2536 s  (setup 0.0111)  compute max/mean=0.2007/0.1475  halo max/mean=0.1553/0.1051  allreduce max/mean=0.0115/0.0071
+Authorized users only. All activity may be monitored and reported.
+impl=mpi dim=2 n=8192x4096x1 solver=cg exchange=isend ranks=128 threads=1 dims=16x8x1
+iters=300 converged=0 rel_resid=5.336e+01 l2_err=4.069842e-01 linf_err=8.265725e-01
+t_total=1.4768 s  (setup 0.0089)  compute max/mean=1.3664/1.1989  halo max/mean=0.0717/0.0250  allreduce max/mean=0.4520/0.2414
+Authorized users only. All activity may be monitored and reported.
+impl=mpi dim=3 n=384x192x192 solver=cg exchange=isend ranks=128 threads=1 dims=8x4x4
+iters=300 converged=0 rel_resid=6.700e-02 l2_err=9.844454e-04 linf_err=4.078976e-03
+t_total=0.3053 s  (setup 0.0083)  compute max/mean=0.1899/0.1725  halo max/mean=0.0540/0.0291  allreduce max/mean=0.1438/0.1097
+Authorized users only. All activity may be monitored and reported.
+impl=mpi dim=2 n=801x534x1 solver=cg exchange=isend ranks=128 threads=1 dims=16x8x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=0.1825 s  (setup 0.0370)  compute max/mean=0.0094/0.0071  halo max/mean=0.0440/0.0123  allreduce max/mean=0.2290/0.1925
+Authorized users only. All activity may be monitored and reported.
+impl=mpi dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=128 threads=1 dims=16x8x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.0930 s  (setup 0.0021)  compute max/mean=0.0114/0.0051  halo max/mean=0.0899/0.0868  allreduce max/mean=0.0053/0.0038
+Authorized users only. All activity may be monitored and reported.
+impl=mpi dim=3 n=801x534x365 solver=cg exchange=isend ranks=128 threads=1 dims=8x4x4
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=5.0709 s  (setup 0.0180)  compute max/mean=4.8228/4.0994  halo max/mean=0.3647/0.1967  allreduce max/mean=2.8478/1.3002
+Authorized users only. All activity may be monitored and reported.
+impl=mpi dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=128 threads=1 dims=8x4x4
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=1.2447 s  (setup 0.0222)  compute max/mean=1.1260/0.7554  halo max/mean=0.9676/0.4822  allreduce max/mean=0.0448/0.0202
+Authorized users only. All activity may be monitored and reported.
+impl=mpi dim=2 n=801x534x1 solver=cg exchange=isend ranks=128 threads=1 dims=16x8x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)
+t_total=0.1739 s  (setup 0.0012)  compute max/mean=0.0104/0.0071  halo max/mean=0.0512/0.0124  allreduce max/mean=0.1702/0.1582
+Authorized users only. All activity may be monitored and reported.
+impl=mpi dim=2 n=801x534x1 solver=jacobi exchange=isend ranks=128 threads=1 dims=16x8x1
+data=data/india_2025.grid pixels: observed=89607 missing=184848 hidden=10732 land=142547  mean_obs=29.125
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223)
+t_total=0.0702 s  (setup 0.0009)  compute max/mean=0.0082/0.0050  halo max/mean=0.0675/0.0645  allreduce max/mean=0.0057/0.0041
+Authorized users only. All activity may be monitored and reported.
+impl=mpi dim=3 n=801x534x365 solver=cg exchange=isend ranks=128 threads=1 dims=8x4x4
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=4.9663 s  (setup 0.0364)  compute max/mean=4.7960/4.0627  halo max/mean=0.3400/0.1890  allreduce max/mean=1.5947/0.7195
+Authorized users only. All activity may be monitored and reported.
+impl=mpi dim=3 n=801x534x365 solver=jacobi exchange=isend ranks=128 threads=1 dims=8x4x4
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679)
+t_total=1.2410 s  (setup 0.0238)  compute max/mean=1.1202/0.7562  halo max/mean=0.9645/0.4784  allreduce max/mean=0.0462/0.0205
+=== mpi_128 finished Sat Nov  7 10:26:39 AM +08 2026

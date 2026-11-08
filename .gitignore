@@ -1,0 +1,7 @@
+# large or regenerated files (see README: "Not in this repository")
+data/
+results/fields/
+bin/
+*.o
+.DS_Store
+report/report.html

@@ -1,0 +1,555 @@
+=== hybrid_256_8x32 started Sun Nov  8 08:45:44 AM +08 2026 on CN-015
+Warning: Permanently added 'gn-a40-079' (ED25519) to the list of known hosts.
+Warning: Permanently added 'gn-a40-082' (ED25519) to the list of known hosts.
+Warning: Permanently added 'gn-a40-080' (ED25519) to the list of known hosts.
+Warning: Permanently added 'gn-a40-084' (ED25519) to the list of known hosts.
+Warning: Permanently added 'gn-a40-086' (ED25519) to the list of known hosts.
+Warning: Permanently added 'cn-150' (ED25519) to the list of known hosts.
+Warning: Permanently added 'gn-a40-085' (ED25519) to the list of known hosts.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=256 threads=1 dims=16x16x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=3.6699 s  (setup 0.0320)  compute max/mean=0.4843/0.1724  halo max/mean=3.5227/3.4089  allreduce max/mean=0.1887/0.1889
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=256 threads=1 dims=8x8x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=0.6598 s  (setup 0.0317)  compute max/mean=0.4745/0.3815  halo max/mean=0.3689/0.2762  allreduce max/mean=0.0305/0.0151
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=256 threads=1 dims=16x16x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415440e-08 linf_err=7.218261e-08
+t_total=7.5550 s  (setup 0.0032)  compute max/mean=4.3555/2.2845  halo max/mean=0.7767/0.2308  allreduce max/mean=5.8283/5.0318
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=3 n=256x256x256 solver=cg exchange=isend ranks=256 threads=1 dims=8x8x4
+iters=446 converged=1 rel_resid=9.396e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=0.9243 s  (setup 0.0040)  compute max/mean=0.3930/0.1702  halo max/mean=0.3186/0.0863  allreduce max/mean=0.7400/0.6674
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=256 threads=1 dims=16x16x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=0.8483 s  (setup 0.0875)  compute max/mean=0.7791/0.2513  halo max/mean=0.6596/0.5924  allreduce max/mean=0.0901/0.0862
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=256 threads=1 dims=8x8x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=1.1442 s  (setup 0.0278)  compute max/mean=0.6510/0.4058  halo max/mean=0.8601/0.7372  allreduce max/mean=0.0203/0.0129
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=256 threads=1 dims=16x16x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415440e-08 linf_err=7.218261e-08
+t_total=7.4451 s  (setup 0.0030)  compute max/mean=4.1446/2.1836  halo max/mean=0.7024/0.2301  allreduce max/mean=5.6818/5.0237
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=3 n=256x256x256 solver=cg exchange=isend ranks=256 threads=1 dims=8x8x4
+iters=446 converged=1 rel_resid=9.396e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=0.4498 s  (setup 0.0039)  compute max/mean=0.2556/0.1687  halo max/mean=0.1295/0.0760  allreduce max/mean=0.2863/0.2046
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=3 n=801x534x365 solver=cg exchange=isend ranks=256 threads=1 dims=8x8x4
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=2.7387 s  (setup 0.1670)  compute max/mean=2.4269/2.0970  halo max/mean=0.1739/0.1122  allreduce max/mean=1.1295/0.6747
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=128 threads=2 dims=16x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=0.3488 s  (setup 0.0143)  compute max/mean=0.3340/0.2618  halo max/mean=0.1498/0.0856  allreduce max/mean=0.0135/0.0108
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=128 threads=2 dims=8x4x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=1.2298 s  (setup 0.0300)  compute max/mean=0.6872/0.4261  halo max/mean=0.9404/0.8036  allreduce max/mean=0.0225/0.0147
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=128 threads=2 dims=16x8x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415440e-08 linf_err=7.218261e-08
+t_total=8.7654 s  (setup 0.0517)  compute max/mean=2.8100/2.1775  halo max/mean=0.7628/0.3995  allreduce max/mean=6.6196/6.2293
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=3 n=256x256x256 solver=cg exchange=isend ranks=128 threads=2 dims=8x4x4
+iters=446 converged=1 rel_resid=9.396e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=0.5168 s  (setup 0.0076)  compute max/mean=0.1965/0.1602  halo max/mean=0.1380/0.0924  allreduce max/mean=0.3127/0.2649
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=128 threads=2 dims=16x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=0.3513 s  (setup 0.0147)  compute max/mean=0.3342/0.2675  halo max/mean=0.1507/0.0802  allreduce max/mean=0.0152/0.0121
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=128 threads=2 dims=8x4x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=0.8685 s  (setup 0.0489)  compute max/mean=0.5150/0.4160  halo max/mean=0.5370/0.4516  allreduce max/mean=0.0430/0.0353
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=128 threads=2 dims=16x8x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415440e-08 linf_err=7.218261e-08
+t_total=6.4192 s  (setup 0.0057)  compute max/mean=2.5592/1.9582  halo max/mean=0.8356/0.3230  allreduce max/mean=4.4423/4.1330
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=3 n=256x256x256 solver=cg exchange=isend ranks=128 threads=2 dims=8x4x4
+iters=446 converged=1 rel_resid=9.396e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=0.4921 s  (setup 0.0074)  compute max/mean=0.1741/0.1467  halo max/mean=0.1354/0.0919  allreduce max/mean=0.3162/0.2542
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=3 n=801x534x365 solver=cg exchange=isend ranks=128 threads=2 dims=8x4x4
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=2.9841 s  (setup 0.0156)  compute max/mean=2.3893/2.0805  halo max/mean=0.2618/0.1542  allreduce max/mean=0.9842/0.7608
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=64 threads=4 dims=8x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=0.4162 s  (setup 0.1354)  compute max/mean=0.3231/0.2639  halo max/mean=0.2098/0.1510  allreduce max/mean=0.1445/0.1385
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=64 threads=4 dims=4x4x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=1.3224 s  (setup 0.0449)  compute max/mean=0.6146/0.4044  halo max/mean=1.0079/0.9175  allreduce max/mean=0.0342/0.0286
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=64 threads=4 dims=8x8x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415441e-08 linf_err=7.218263e-08
+t_total=8.1868 s  (setup 0.0063)  compute max/mean=2.6614/2.1280  halo max/mean=0.7630/0.5602  allreduce max/mean=5.7313/5.4913
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=3 n=256x256x256 solver=cg exchange=isend ranks=64 threads=4 dims=4x4x4
+iters=446 converged=1 rel_resid=9.398e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=0.6906 s  (setup 0.0073)  compute max/mean=0.3184/0.1638  halo max/mean=0.2529/0.1103  allreduce max/mean=0.4848/0.4154
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=64 threads=4 dims=8x8x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=0.3864 s  (setup 0.0149)  compute max/mean=0.3018/0.2607  halo max/mean=0.1660/0.1241  allreduce max/mean=0.0140/0.0110
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=64 threads=4 dims=4x4x4
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=0.9622 s  (setup 0.0500)  compute max/mean=0.5089/0.4110  halo max/mean=0.6263/0.5504  allreduce max/mean=0.0432/0.0354
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=64 threads=4 dims=8x8x1
+iters=5809 converged=1 rel_resid=1.489e-08 l2_err=3.415440e-08 linf_err=7.218261e-08
+t_total=6.9435 s  (setup 0.0968)  compute max/mean=2.3794/2.1084  halo max/mean=0.8036/0.5622  allreduce max/mean=4.6246/4.3543
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=3 n=256x256x256 solver=cg exchange=isend ranks=64 threads=4 dims=4x4x4
+iters=446 converged=1 rel_resid=9.398e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=0.9451 s  (setup 0.1723)  compute max/mean=0.2828/0.1824  halo max/mean=0.2158/0.1287  allreduce max/mean=0.8840/0.7940
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=3 n=801x534x365 solver=cg exchange=isend ranks=64 threads=4 dims=4x4x4
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=3.4839 s  (setup 0.0336)  compute max/mean=2.4117/2.1271  halo max/mean=0.2243/0.1739  allreduce max/mean=1.4386/1.2124
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=32 threads=8 dims=8x4x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=0.7249 s  (setup 0.0921)  compute max/mean=0.6075/0.3220  halo max/mean=0.4944/0.4026  allreduce max/mean=0.1092/0.1017
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=32 threads=8 dims=4x4x2
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=1.0381 s  (setup 0.0416)  compute max/mean=0.5978/0.4383  halo max/mean=0.7658/0.5975  allreduce max/mean=0.0387/0.0300
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=32 threads=8 dims=8x4x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415440e-08 linf_err=7.218260e-08
+t_total=7.4297 s  (setup 0.0072)  compute max/mean=2.5304/2.2173  halo max/mean=1.0821/0.7138  allreduce max/mean=4.9777/4.4874
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=3 n=256x256x256 solver=cg exchange=isend ranks=32 threads=8 dims=4x4x2
+iters=446 converged=1 rel_resid=9.398e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=0.6747 s  (setup 0.0074)  compute max/mean=0.2327/0.1720  halo max/mean=0.2819/0.1990  allreduce max/mean=0.3795/0.3006
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=32 threads=8 dims=8x4x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=0.4043 s  (setup 0.0142)  compute max/mean=0.3632/0.3044  halo max/mean=0.1814/0.0993  allreduce max/mean=0.0164/0.0123
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=32 threads=8 dims=4x4x2
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.4914 s  (setup 0.0295)  compute max/mean=0.9028/0.5656  halo max/mean=2.1801/1.9257  allreduce max/mean=0.0222/0.0145
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=32 threads=8 dims=8x4x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415439e-08 linf_err=7.218258e-08
+t_total=7.8854 s  (setup 0.0068)  compute max/mean=2.9377/2.2567  halo max/mean=1.1744/0.7193  allreduce max/mean=5.1619/4.8991
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=3 n=256x256x256 solver=cg exchange=isend ranks=32 threads=8 dims=4x4x2
+iters=446 converged=1 rel_resid=9.396e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=0.6780 s  (setup 0.0080)  compute max/mean=0.2214/0.1712  halo max/mean=0.2633/0.2051  allreduce max/mean=0.3784/0.3025
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=3 n=801x534x365 solver=cg exchange=isend ranks=32 threads=8 dims=4x4x2
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=3.4031 s  (setup 0.1178)  compute max/mean=2.4275/2.1439  halo max/mean=0.3374/0.2705  allreduce max/mean=1.3769/1.1098
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=16 threads=16 dims=4x4x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=0.5919 s  (setup 0.0143)  compute max/mean=0.4859/0.3063  halo max/mean=0.3468/0.2857  allreduce max/mean=0.0219/0.0167
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=16 threads=16 dims=4x2x2
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=1.9466 s  (setup 0.0299)  compute max/mean=0.6688/0.5311  halo max/mean=1.5599/1.4171  allreduce max/mean=0.0220/0.0152
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=16 threads=16 dims=4x4x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415440e-08 linf_err=7.218261e-08
+t_total=6.4377 s  (setup 0.0075)  compute max/mean=2.7535/2.4391  halo max/mean=0.9174/0.6175  allreduce max/mean=3.7549/3.3636
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=3 n=256x256x256 solver=cg exchange=isend ranks=16 threads=16 dims=4x2x2
+iters=446 converged=1 rel_resid=9.396e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=0.6097 s  (setup 0.0071)  compute max/mean=0.1713/0.1646  halo max/mean=0.2826/0.2517  allreduce max/mean=0.2234/0.1886
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=16 threads=16 dims=4x4x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=0.3486 s  (setup 0.0137)  compute max/mean=0.3205/0.2914  halo max/mean=0.0905/0.0573  allreduce max/mean=0.0211/0.0158
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=16 threads=16 dims=4x2x2
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=1.3439 s  (setup 0.1115)  compute max/mean=0.5662/0.4604  halo max/mean=0.9514/0.8839  allreduce max/mean=0.1054/0.0911
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=16 threads=16 dims=4x4x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415440e-08 linf_err=7.218262e-08
+t_total=6.7942 s  (setup 0.0068)  compute max/mean=2.8799/2.4397  halo max/mean=0.8651/0.6605  allreduce max/mean=4.2639/3.9368
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=3 n=256x256x256 solver=cg exchange=isend ranks=16 threads=16 dims=4x2x2
+iters=446 converged=1 rel_resid=9.396e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=1.0579 s  (setup 0.0086)  compute max/mean=0.3617/0.2056  halo max/mean=0.4397/0.3225  allreduce max/mean=0.6159/0.5258
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=3 n=801x534x365 solver=cg exchange=isend ranks=16 threads=16 dims=4x2x2
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=4.9087 s  (setup 0.0134)  compute max/mean=2.7761/2.3003  halo max/mean=0.6297/0.5189  allreduce max/mean=2.3934/2.1035
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=8 threads=32 dims=4x2x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=0.6488 s  (setup 0.0144)  compute max/mean=0.5355/0.3451  halo max/mean=0.3656/0.3034  allreduce max/mean=0.0225/0.0174
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=8 threads=32 dims=2x2x2
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=1.4458 s  (setup 0.0304)  compute max/mean=0.6416/0.5825  halo max/mean=0.9108/0.8648  allreduce max/mean=0.0384/0.0316
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=8 threads=32 dims=4x2x1
+iters=5809 converged=1 rel_resid=1.488e-08 l2_err=3.415439e-08 linf_err=7.218261e-08
+t_total=6.0968 s  (setup 0.0064)  compute max/mean=2.9785/2.4647  halo max/mean=0.9241/0.7919  allreduce max/mean=3.2845/2.8086
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=3 n=256x256x256 solver=cg exchange=isend ranks=8 threads=32 dims=2x2x2
+iters=446 converged=1 rel_resid=9.394e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=0.6246 s  (setup 0.0170)  compute max/mean=0.2036/0.1886  halo max/mean=0.2782/0.2657  allreduce max/mean=0.1955/0.1651
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=2 n=8192x8192x1 solver=jacobi exchange=isend ranks=8 threads=32 dims=4x2x1
+iters=200 converged=0 rel_resid=9.997e-01 l2_err=8.515490e-01 linf_err=1.732945e+00
+t_total=0.6025 s  (setup 0.0168)  compute max/mean=0.5256/0.3391  halo max/mean=0.3172/0.2634  allreduce max/mean=0.0275/0.0225
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=3 n=512x512x512 solver=jacobi exchange=isend ranks=8 threads=32 dims=2x2x2
+iters=200 converged=0 rel_resid=9.939e-01 l2_err=5.998158e-01 linf_err=1.726247e+00
+t_total=2.6519 s  (setup 0.0534)  compute max/mean=1.3092/0.7284  halo max/mean=2.0976/1.9256  allreduce max/mean=0.0555/0.0461
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=2 n=4096x4096x1 solver=cg exchange=isend ranks=8 threads=32 dims=4x2x1
+iters=5809 converged=1 rel_resid=1.489e-08 l2_err=3.415439e-08 linf_err=7.218260e-08
+t_total=6.7508 s  (setup 0.0066)  compute max/mean=3.2125/2.7598  halo max/mean=1.0836/0.8823  allreduce max/mean=3.5463/3.0741
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=3 n=256x256x256 solver=cg exchange=isend ranks=8 threads=32 dims=2x2x2
+iters=446 converged=1 rel_resid=9.397e-09 l2_err=6.601910e-06 linf_err=1.945940e-05
+t_total=1.8009 s  (setup 0.0089)  compute max/mean=0.7258/0.3304  halo max/mean=0.4923/0.3999  allreduce max/mean=1.2587/1.0606
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+Authorized users only. All activity may be monitored and reported.
+impl=mpi_omp dim=3 n=801x534x365 solver=cg exchange=isend ranks=8 threads=32 dims=2x2x2
+data=data/india_2025.grid pixels: observed=39805946 missing=59874401 hidden=4412908 land=52029655  mean_obs=28.423
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)
+t_total=3.5700 s  (setup 0.0159)  compute max/mean=2.4372/2.3202  halo max/mean=0.5694/0.5377  allreduce max/mean=0.9054/0.6886
+=== hybrid_256_8x32 finished Sun Nov  8 09:00:13 AM +08 2026

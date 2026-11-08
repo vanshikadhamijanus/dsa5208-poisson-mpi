@@ -1,0 +1,24 @@
+#!/bin/bash
+# Build every program on a Vanda compute node (the login node has a different CPU),
+# as a batch job, so nobody has to wait at an interactive prompt.
+#   BUILD=$(qsub scripts/vanda/build.pbs)
+# then submit the other jobs with  -W depend=afterok:$BUILD  so they start only after
+# this job has finished successfully (see README, Vanda step 2).
+# With a project instead of the free tier: replace "#PBS -q auto_free" by "#PBS -P <project>".
+#PBS -N poisson_build
+#PBS -q auto_free
+#PBS -l select=1:ncpus=4:mpiprocs=4:mem=16gb
+#PBS -l walltime=00:30:00
+#PBS -j oe
+#PBS -k oed
+cd $PBS_O_WORKDIR
+module load gcc/13.1.0 openmpi4/gcc/4.1.8 cuda12.4/toolkit/12.4.1
+echo "=== build started $(date) on $(hostname)"
+make clean
+make all || { echo "=== CPU build FAILED"; exit 1; }
+make cuda || echo "=== CUDA build FAILED: the CPU jobs still run, the GPU jobs will stop at once; send this log"
+ls -l bin/
+echo "=== smoke test: both lines must show iters=183 and l2_err=3.445134e-05"
+bin/poisson_serial --dim 2 --n 128 --solver cg --tol 1e-8 --iters 100000 | sed -n 2p
+mpirun -np 4 bin/poisson_mpi --dim 2 --n 128 --solver cg --tol 1e-8 --iters 100000 | sed -n 2p
+echo "=== build finished $(date)"

@@ -1,0 +1,2 @@
+/* Report-specific overrides: numbered sections flow without forced page breaks. */
+h1 { page-break-before: auto; margin-top: 22pt; }

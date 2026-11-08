@@ -1,0 +1,45 @@
+#!/bin/bash
+# MPI+CUDA on one Vanda GPU, against the MPI+OpenMP build on the same node's 36 cores.
+# Before the first submission, build on a GPU node (the login node has a different CPU):
+#   qsub -I -q auto_free -l select=1:ncpus=36:ngpus=1:mem=200gb -l walltime=01:00:00
+#   cd /scratch/$USER/poisson-mpi
+#   module load gcc/13.1.0 openmpi4/gcc/4.1.8 cuda12.4/toolkit/12.4.1
+#   nvidia-smi                 # which GPU this node has
+#   make all cuda              # CPU binaries + bin/poisson_mpi_cuda (fat binary: V100, A100, A40, L40, H100)
+#   exit
+# With a project instead of the free tier: replace "#PBS -q auto_free" by "#PBS -P <project>" (see: hpc project).
+#PBS -N poisson_gpu
+#PBS -q auto_free
+#PBS -l select=1:ncpus=36:mpiprocs=1:ompthreads=36:ngpus=1:mem=200gb
+#PBS -l walltime=04:00:00
+#PBS -j oe
+#PBS -k oed
+cd $PBS_O_WORKDIR
+module load gcc/13.1.0 openmpi4/gcc/4.1.8 cuda12.4/toolkit/12.4.1
+OUT=results/cluster; mkdir -p $OUT
+G=bin/poisson_mpi_cuda; MO=bin/poisson_mpi_omp
+[ -x $G ] || { echo "missing $G: build it on a GPU node first (see the top of this file)"; exit 1; }
+echo "=== $PBS_JOBNAME started $(date) on $(hostname)"
+nvidia-smi --query-gpu=name,memory.total --format=csv | tee -a $OUT/gpu_info.txt
+for r in 1 2; do
+# GPU, one rank, growing problem size
+for n in 1024 2048 4096 8192;  do mpirun -np 1 $G --dim 2 --n $n --iters 200 --csv $OUT/gpu.csv --tag jac2d; done
+for n in 64 128 256 512;       do mpirun -np 1 $G --dim 3 --n $n --iters 200 --csv $OUT/gpu.csv --tag jac3d; done
+for n in 1024 2048 4096;       do mpirun -np 1 $G --dim 2 --n $n --solver cg --tol 1e-8 --iters 1000000 --csv $OUT/gpu.csv --tag cg2d; done
+for n in 64 128 256;           do mpirun -np 1 $G --dim 3 --n $n --solver cg --tol 1e-8 --iters 1000000 --csv $OUT/gpu.csv --tag cg3d; done
+# CPU on the same node for comparison: all 36 cores of this allocation as OpenMP threads
+export OMP_NUM_THREADS=36 OMP_PROC_BIND=close OMP_PLACES=cores
+for n in 1024 2048 4096 8192;  do mpirun -np 1 --bind-to none $MO --threads 36 --dim 2 --n $n --iters 200 --csv $OUT/gpu.csv --tag jac2d; done
+for n in 64 128 256 512;       do mpirun -np 1 --bind-to none $MO --threads 36 --dim 3 --n $n --iters 200 --csv $OUT/gpu.csv --tag jac3d; done
+for n in 1024 2048 4096;       do mpirun -np 1 --bind-to none $MO --threads 36 --dim 2 --n $n --solver cg --tol 1e-8 --iters 1000000 --csv $OUT/gpu.csv --tag cg2d; done
+for n in 64 128 256;           do mpirun -np 1 --bind-to none $MO --threads 36 --dim 3 --n $n --solver cg --tol 1e-8 --iters 1000000 --csv $OUT/gpu.csv --tag cg3d; done
+done
+# satellite gap filling on the GPU and on the CPU node (needs data/india_2025.grid)
+GRID=data/india_2025.grid
+if [ -f $GRID ]; then for r in 1 2; do
+  mpirun -np 1 $G  --data $GRID --dim 2 --day 99 --holdout 0.1 --holdout-block 16 --solver cg --tol 1e-6 --iters 100000 --csv $OUT/gapfill_gpu.csv --tag sst2d_cg
+  mpirun -np 1 $G  --data $GRID --dim 3 --holdout 0.1 --holdout-block 16 --solver cg --tol 1e-6 --iters 100000 --csv $OUT/gapfill_gpu.csv --tag sst3d_cg
+  mpirun -np 1 --bind-to none $MO --threads 36 --data $GRID --dim 2 --day 99 --holdout 0.1 --holdout-block 16 --solver cg --tol 1e-6 --iters 100000 --csv $OUT/gapfill_gpu.csv --tag sst2d_cg
+  mpirun -np 1 --bind-to none $MO --threads 36 --data $GRID --dim 3 --holdout 0.1 --holdout-block 16 --solver cg --tol 1e-6 --iters 100000 --csv $OUT/gapfill_gpu.csv --tag sst3d_cg
+done; fi
+echo "=== $PBS_JOBNAME finished $(date)"

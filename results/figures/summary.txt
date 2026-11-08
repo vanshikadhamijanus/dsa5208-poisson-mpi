@@ -1,0 +1,41 @@
+machine: Apple M4 Max laptop, 16 cores
+order_2d_last: 2.00027
+order_2d_last: 2.00007
+order_2d_last: 2.00002
+order_2d_last: 2
+order_2d_last: 2
+order_3d_last: 2.00464
+order_3d_last: 2.00131
+order_3d_last: 2.00035
+order_3d_last: 2.00009
+max_l2_deviation_from_serial: 3.24379e-15
+serial_slope_total_jac2d: 1.04827
+serial_slope_per_iter_jac2d: 1.04827
+serial_slope_total_jac3d: 1.01094
+serial_slope_per_iter_jac3d: 1.01094
+serial_slope_total_cg2d: 1.51205
+serial_slope_per_iter_cg2d: 1.01329
+serial_slope_total_cg3d: 1.34906
+serial_slope_per_iter_cg3d: 1.00224
+strong_jac2d: max_cores=16 speedup=2.60486 efficiency=0.162804 serial_time=0.52891
+strong_jac3d: max_cores=16 speedup=2.24602 efficiency=0.140377 serial_time=0.676689
+strong_cg2d: max_cores=16 speedup=3.72792 efficiency=0.232995 serial_time=3.8648
+strong_cg3d: max_cores=16 speedup=2.88191 efficiency=0.180119 serial_time=1.14257
+weak_jac2d: max_cores=16 efficiency=0.121929
+weak_jac3d: max_cores=16 efficiency=0.11317
+weak_cg2d: max_cores=16 efficiency=0.137232
+weak_cg3d: max_cores=16 efficiency=0.196641
+exchange_best CG 2D p=8: sendrecv
+exchange_best CG 2D p=16: overlap
+exchange_best Jacobi 2D p=8: overlap
+exchange_best Jacobi 2D p=16: overlap
+exchange_best Jacobi 3D p=8: sendrecv
+exchange_best Jacobi 3D p=16: isend
+hybrid_best_split_jac2d: 8x2
+hybrid_best_split_jac3d: 4x4
+hybrid_best_split_cg2d: 8x2
+hybrid_best_split_cg3d: 8x2
+gapfill_sst2d_cg: max_cores=16 speedup=2.41677 efficiency=0.151048 serial_time=0.585075 iters=489 rmse_hidden=0.154646
+gapfill_sst2d_jac: max_cores=16 speedup=3.93575 efficiency=0.245984 serial_time=0.348979 iters=1000 rmse_hidden=0.159506
+gapfill_sst3d_cg: max_cores=16 speedup=4.99341 efficiency=0.312088 serial_time=97.8896 iters=199 rmse_hidden=0.231833
+gapfill_sst3d_jac: max_cores=16 speedup=5.57645 efficiency=0.348528 serial_time=37.1487 iters=200 rmse_hidden=0.233632

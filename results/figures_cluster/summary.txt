@@ -1,0 +1,46 @@
+machine: NUS Vanda, 4 nodes x 64 cores
+serial_slope_total_jac2d: 0.998645
+serial_slope_per_iter_jac2d: 0.998645
+serial_slope_total_jac3d: 1.08627
+serial_slope_per_iter_jac3d: 1.08627
+serial_slope_total_cg2d: 1.53779
+serial_slope_per_iter_cg2d: 1.03933
+serial_slope_total_cg3d: 1.36822
+serial_slope_per_iter_cg3d: 1.02117
+strong_jac2d: max_cores=256 speedup=73.8881 efficiency=0.288625 serial_time=23.3897
+strong_jac3d: max_cores=256 speedup=76.6175 efficiency=0.299287 serial_time=46.7263
+strong_cg2d: max_cores=256 speedup=137.246 efficiency=0.536118 serial_time=531.012
+strong_cg3d: max_cores=256 speedup=102.505 efficiency=0.400409 serial_time=38.9965
+weak_jac2d: max_cores=256 efficiency=0.214487
+weak_jac3d: max_cores=256 efficiency=0.187038
+weak_cg2d: max_cores=256 efficiency=0.218058
+weak_cg3d: max_cores=256 efficiency=0.291767
+exchange_best CG 2D p=64: isend
+exchange_best CG 2D p=256: overlap
+exchange_best Jacobi 2D p=64: overlap
+exchange_best Jacobi 2D p=256: sendrecv
+exchange_best Jacobi 3D p=64: isend
+exchange_best Jacobi 3D p=256: isend
+hybrid_best_split_jac2d_c64: 16x4
+hybrid_best_split_jac2d_c256: 256x1
+hybrid_best_split_jac3d_c64: 64x1
+hybrid_best_split_jac3d_c256: 256x1
+hybrid_best_split_cg2d_c64: 16x4
+hybrid_best_split_cg2d_c256: 256x1
+hybrid_best_split_cg3d_c64: 64x1
+hybrid_best_split_cg3d_c256: 256x1
+gapfill_sst2d_cg: max_cores=256 speedup=6.78435 efficiency=0.0265014 serial_time=1.17216 iters=489 rmse_hidden=0.154646
+gapfill_sst2d_jac: max_cores=256 speedup=3.67403 efficiency=0.0143517 serial_time=0.74933 iters=1000 rmse_hidden=0.159506
+gapfill_sst3d_cg: max_cores=256 speedup=66.4086 efficiency=0.259409 serial_time=197.288 iters=199 rmse_hidden=0.231833
+gapfill_sst3d_jac: max_cores=256 speedup=99.8289 efficiency=0.389957 serial_time=68.6506 iters=200 rmse_hidden=0.233632
+gapfill_gpu sst2d_cg 1 GPU: t_total=0.523973 rmse_hidden=0.154646
+gapfill_gpu sst2d_cg 36 CPU cores: t_total=0.07139 rmse_hidden=0.154646
+gapfill_gpu sst3d_cg 1 GPU: t_total=6.91603 rmse_hidden=0.231833
+gapfill_gpu sst3d_cg 36 CPU cores: t_total=18.3325 rmse_hidden=0.231833
+layout_strong: pairs=4 geomean_ratio_alt_over_main=8.30026
+layout_weak: pairs=4 geomean_ratio_alt_over_main=4.04627
+layout_exchange: pairs=12 geomean_ratio_alt_over_main=6.07676
+layout_checkevery: pairs=8 geomean_ratio_alt_over_main=3.16793
+layout_decomp: pairs=11 geomean_ratio_alt_over_main=2.52748
+layout_hybrid: pairs=24 geomean_ratio_alt_over_main=1.39168
+layout_gapfill: pairs=32 geomean_ratio_alt_over_main=3.62711

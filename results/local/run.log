@@ -1,0 +1,551 @@
+=== run_all.sh started Sat Oct 31 17:19:12 +08 2026  maxcores=16 repeats=2
+--- validation: convergence order (serial CG to tight tolerance) (17:19:12)
+--- validation: jacobi to convergence on a small grid (serial, 4 ranks) (17:19:18)
+--- validation: serial vs every parallel variant, fixed 300 Jacobi sweeps and CG to 1e-9 (17:19:18)
+--- validation: CUDA driver through the CPU emulation layer (17:19:22)
+--- serial scaling: jacobi 2D (17:19:23)
+iters=200 converged=0 rel_resid=9.156e-01 l2_err=8.003547e-01 linf_err=1.628069e+00 t_total=0.0014 s  (setup 0.0001)  compute max/mean=0.0014/0.0014  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=200 converged=0 rel_resid=9.156e-01 l2_err=8.003547e-01 linf_err=1.628069e+00 t_total=0.0015 s  (setup 0.0001)  compute max/mean=0.0015/0.0015  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=200 converged=0 rel_resid=9.728e-01 l2_err=8.383151e-01 linf_err=1.705930e+00 t_total=0.0060 s  (setup 0.0004)  compute max/mean=0.0060/0.0060  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=200 converged=0 rel_resid=9.728e-01 l2_err=8.383151e-01 linf_err=1.705930e+00 t_total=0.0060 s  (setup 0.0004)  compute max/mean=0.0060/0.0060  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=200 converged=0 rel_resid=9.905e-01 l2_err=8.482146e-01 linf_err=1.726144e+00 t_total=0.0275 s  (setup 0.0016)  compute max/mean=0.0275/0.0275  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=200 converged=0 rel_resid=9.905e-01 l2_err=8.482146e-01 linf_err=1.726144e+00 t_total=0.0276 s  (setup 0.0015)  compute max/mean=0.0276/0.0276  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=200 converged=0 rel_resid=9.964e-01 l2_err=8.507222e-01 linf_err=1.731261e+00 t_total=0.1136 s  (setup 0.0064)  compute max/mean=0.1136/0.1136  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=200 converged=0 rel_resid=9.964e-01 l2_err=8.507222e-01 linf_err=1.731261e+00 t_total=0.1134 s  (setup 0.0062)  compute max/mean=0.1134/0.1134  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=200 converged=0 rel_resid=9.985e-01 l2_err=8.513519e-01 linf_err=1.732543e+00 t_total=0.5143 s  (setup 0.0251)  compute max/mean=0.5143/0.5143  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=200 converged=0 rel_resid=9.985e-01 l2_err=8.513519e-01 linf_err=1.732543e+00 t_total=0.5117 s  (setup 0.0248)  compute max/mean=0.5117/0.5117  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=200 converged=0 rel_resid=9.993e-01 l2_err=8.515096e-01 linf_err=1.732865e+00 t_total=1.9566 s  (setup 0.1031)  compute max/mean=1.9566/1.9566  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=200 converged=0 rel_resid=9.993e-01 l2_err=8.515096e-01 linf_err=1.732865e+00 t_total=2.4771 s  (setup 0.1013)  compute max/mean=2.4771/2.4771  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+--- serial scaling: jacobi 3D (17:19:29)
+iters=200 converged=0 rel_resid=3.011e-02 l2_err=1.769410e-02 linf_err=4.963397e-02 t_total=0.0004 s  (setup 0.0000)  compute max/mean=0.0004/0.0004  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=200 converged=0 rel_resid=3.011e-02 l2_err=1.769410e-02 linf_err=4.963397e-02 t_total=0.0004 s  (setup 0.0000)  compute max/mean=0.0004/0.0004  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=200 converged=0 rel_resid=3.800e-01 l2_err=2.394382e-01 linf_err=6.797188e-01 t_total=0.0030 s  (setup 0.0002)  compute max/mean=0.0030/0.0030  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=200 converged=0 rel_resid=3.800e-01 l2_err=2.394382e-01 linf_err=6.797188e-01 t_total=0.0029 s  (setup 0.0002)  compute max/mean=0.0029/0.0029  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=200 converged=0 rel_resid=7.672e-01 l2_err=4.737377e-01 linf_err=1.360159e+00 t_total=0.0244 s  (setup 0.0016)  compute max/mean=0.0244/0.0244  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=200 converged=0 rel_resid=7.672e-01 l2_err=4.737377e-01 linf_err=1.360159e+00 t_total=0.0246 s  (setup 0.0016)  compute max/mean=0.0246/0.0246  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=200 converged=0 rel_resid=9.302e-01 l2_err=5.664111e-01 linf_err=1.629585e+00 t_total=0.2027 s  (setup 0.0132)  compute max/mean=0.2027/0.2027  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=200 converged=0 rel_resid=9.302e-01 l2_err=5.664111e-01 linf_err=1.629585e+00 t_total=0.1985 s  (setup 0.0131)  compute max/mean=0.1985/0.1985  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=200 converged=0 rel_resid=9.798e-01 l2_err=5.929208e-01 linf_err=1.706315e+00 t_total=1.5807 s  (setup 0.0997)  compute max/mean=1.5806/1.5806  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=200 converged=0 rel_resid=9.798e-01 l2_err=5.929208e-01 linf_err=1.706315e+00 t_total=1.5926 s  (setup 0.1018)  compute max/mean=1.5926/1.5926  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+--- serial scaling: cg 2D (17:19:34)
+iters=183 converged=1 rel_resid=4.451e-09 l2_err=3.445134e-05 linf_err=7.280365e-05 t_total=0.0073 s  (setup 0.0001)  compute max/mean=0.0072/0.0072  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=183 converged=1 rel_resid=4.451e-09 l2_err=3.445134e-05 linf_err=7.280365e-05 t_total=0.0071 s  (setup 0.0001)  compute max/mean=0.0070/0.0070  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=366 converged=1 rel_resid=7.234e-09 l2_err=8.679887e-06 linf_err=1.834381e-05 t_total=0.0569 s  (setup 0.0004)  compute max/mean=0.0566/0.0566  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=366 converged=1 rel_resid=7.234e-09 l2_err=8.679887e-06 linf_err=1.834381e-05 t_total=0.0559 s  (setup 0.0004)  compute max/mean=0.0556/0.0556  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=731 converged=1 rel_resid=6.407e-09 l2_err=2.178433e-06 linf_err=4.603923e-06 t_total=0.4598 s  (setup 0.0016)  compute max/mean=0.4587/0.4587  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=731 converged=1 rel_resid=6.407e-09 l2_err=2.178433e-06 linf_err=4.603923e-06 t_total=0.4656 s  (setup 0.0015)  compute max/mean=0.4645/0.4645  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=1458 converged=1 rel_resid=7.236e-09 l2_err=5.456709e-07 linf_err=1.153231e-06 t_total=3.7953 s  (setup 0.0061)  compute max/mean=3.7910/3.7910  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=1458 converged=1 rel_resid=7.236e-09 l2_err=5.456709e-07 linf_err=1.153231e-06 t_total=3.7482 s  (setup 0.0064)  compute max/mean=3.7439/3.7439  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=2909 converged=1 rel_resid=9.584e-09 l2_err=1.365503e-07 linf_err=2.885883e-07 t_total=30.8505 s  (setup 0.0252)  compute max/mean=30.8330/30.8330  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=2909 converged=1 rel_resid=9.584e-09 l2_err=1.365503e-07 linf_err=2.885883e-07 t_total=31.0197 s  (setup 0.0254)  compute max/mean=31.0018/31.0018  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+--- serial scaling: cg 3D (17:20:44)
+iters=51 converged=1 rel_resid=2.758e-09 l2_err=4.005375e-04 linf_err=1.177921e-03 t_total=0.0043 s  (setup 0.0002)  compute max/mean=0.0042/0.0042  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=51 converged=1 rel_resid=2.758e-09 l2_err=4.005375e-04 linf_err=1.177921e-03 t_total=0.0040 s  (setup 0.0002)  compute max/mean=0.0040/0.0040  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=109 converged=1 rel_resid=4.617e-09 l2_err=1.032149e-04 linf_err=3.039839e-04 t_total=0.0697 s  (setup 0.0017)  compute max/mean=0.0692/0.0692  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=109 converged=1 rel_resid=4.617e-09 l2_err=1.032149e-04 linf_err=3.039839e-04 t_total=0.0701 s  (setup 0.0017)  compute max/mean=0.0696/0.0696  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=222 converged=1 rel_resid=6.477e-09 l2_err=2.620373e-05 linf_err=7.722213e-05 t_total=1.1454 s  (setup 0.0128)  compute max/mean=1.1414/1.1414  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=222 converged=1 rel_resid=6.477e-09 l2_err=2.620373e-05 linf_err=7.722213e-05 t_total=1.1481 s  (setup 0.0130)  compute max/mean=1.1440/1.1440  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=334 converged=1 rel_resid=9.522e-09 l2_err=1.170639e-05 linf_err=3.450347e-05 t_total=5.8127 s  (setup 0.0432)  compute max/mean=5.7991/5.7991  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=334 converged=1 rel_resid=9.522e-09 l2_err=1.170639e-05 linf_err=3.450347e-05 t_total=5.7657 s  (setup 0.0432)  compute max/mean=5.7521/5.7521  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=446 converged=1 rel_resid=9.382e-09 l2_err=6.601910e-06 linf_err=1.945940e-05 t_total=18.4077 s  (setup 0.1025)  compute max/mean=18.3745/18.3745  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=446 converged=1 rel_resid=9.382e-09 l2_err=6.601910e-06 linf_err=1.945940e-05 t_total=18.8849 s  (setup 0.1029)  compute max/mean=18.8525/18.8525  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=200 converged=0 rel_resid=9.985e-01 l2_err=8.513519e-01 linf_err=1.732543e+00 t_total=0.5272 s  (setup 0.0260)  compute max/mean=0.5272/0.5272  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=200 converged=0 rel_resid=9.985e-01 l2_err=8.513519e-01 linf_err=1.732543e+00 t_total=0.5375 s  (setup 0.0254)  compute max/mean=0.5375/0.5375  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=200 converged=0 rel_resid=9.663e-01 l2_err=5.858925e-01 linf_err=1.686032e+00 t_total=0.6720 s  (setup 0.0436)  compute max/mean=0.6720/0.6720  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=200 converged=0 rel_resid=9.663e-01 l2_err=5.858925e-01 linf_err=1.686032e+00 t_total=0.6710 s  (setup 0.0449)  compute max/mean=0.6710/0.6710  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=1458 converged=1 rel_resid=7.236e-09 l2_err=5.456709e-07 linf_err=1.153231e-06 t_total=3.9445 s  (setup 0.0063)  compute max/mean=3.9400/3.9400  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=1458 converged=1 rel_resid=7.236e-09 l2_err=5.456709e-07 linf_err=1.153231e-06 t_total=3.9438 s  (setup 0.0065)  compute max/mean=3.9393/3.9393  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=222 converged=1 rel_resid=6.477e-09 l2_err=2.620373e-05 linf_err=7.722213e-05 t_total=1.1604 s  (setup 0.0129)  compute max/mean=1.1562/1.1562  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=222 converged=1 rel_resid=6.477e-09 l2_err=2.620373e-05 linf_err=7.722213e-05 t_total=1.1440 s  (setup 0.0130)  compute max/mean=1.1398/1.1398  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+--- strong scaling np=1 (17:21:49)
+t_total=0.5272 s  (setup 0.0318)  compute max/mean=0.5271/0.5271  halo max/mean=0.0001/0.0001  allreduce max/mean=0.0000/0.0000
+t_total=0.5349 s  (setup 0.0310)  compute max/mean=0.5348/0.5348  halo max/mean=0.0001/0.0001  allreduce max/mean=0.0000/0.0000
+t_total=0.6684 s  (setup 0.0718)  compute max/mean=0.6683/0.6683  halo max/mean=0.0001/0.0001  allreduce max/mean=0.0000/0.0000
+t_total=0.6722 s  (setup 0.0704)  compute max/mean=0.6721/0.6721  halo max/mean=0.0001/0.0001  allreduce max/mean=0.0000/0.0000
+t_total=3.9380 s  (setup 0.0078)  compute max/mean=3.9326/3.9326  halo max/mean=0.0004/0.0004  allreduce max/mean=0.0005/0.0005
+t_total=3.9507 s  (setup 0.0080)  compute max/mean=3.9451/3.9451  halo max/mean=0.0004/0.0004  allreduce max/mean=0.0004/0.0004
+t_total=1.1543 s  (setup 0.0208)  compute max/mean=1.1499/1.1499  halo max/mean=0.0001/0.0001  allreduce max/mean=0.0001/0.0001
+t_total=1.1724 s  (setup 0.0210)  compute max/mean=1.1679/1.1679  halo max/mean=0.0002/0.0002  allreduce max/mean=0.0002/0.0002
+--- strong scaling np=2 (17:22:03)
+t_total=0.2417 s  (setup 0.0167)  compute max/mean=0.2365/0.2360  halo max/mean=0.0063/0.0057  allreduce max/mean=0.0018/0.0009
+t_total=0.2348 s  (setup 0.0215)  compute max/mean=0.2319/0.2318  halo max/mean=0.0029/0.0029  allreduce max/mean=0.0054/0.0032
+t_total=0.3797 s  (setup 0.0361)  compute max/mean=0.3492/0.3461  halo max/mean=0.0368/0.0337  allreduce max/mean=0.0013/0.0012
+t_total=0.3862 s  (setup 0.0351)  compute max/mean=0.3458/0.3457  halo max/mean=0.0405/0.0405  allreduce max/mean=0.0019/0.0010
+t_total=1.9490 s  (setup 0.0041)  compute max/mean=1.9293/1.9283  halo max/mean=0.0051/0.0050  allreduce max/mean=0.0141/0.0132
+t_total=1.9703 s  (setup 0.0041)  compute max/mean=1.9454/1.9446  halo max/mean=0.0064/0.0060  allreduce max/mean=0.0174/0.0172
+t_total=0.6410 s  (setup 0.0106)  compute max/mean=0.6219/0.6185  halo max/mean=0.0135/0.0127  allreduce max/mean=0.0106/0.0077
+t_total=0.6324 s  (setup 0.0107)  compute max/mean=0.6121/0.6118  halo max/mean=0.0118/0.0117  allreduce max/mean=0.0078/0.0070
+--- strong scaling np=4 (17:22:10)
+t_total=0.1337 s  (setup 0.0082)  compute max/mean=0.1275/0.1254  halo max/mean=0.0106/0.0083  allreduce max/mean=0.0013/0.0006
+t_total=0.1750 s  (setup 0.0083)  compute max/mean=0.1610/0.1486  halo max/mean=0.0332/0.0263  allreduce max/mean=0.0007/0.0005
+t_total=0.2322 s  (setup 0.0181)  compute max/mean=0.2048/0.2037  halo max/mean=0.0300/0.0286  allreduce max/mean=0.0017/0.0009
+t_total=0.2381 s  (setup 0.0195)  compute max/mean=0.2032/0.2016  halo max/mean=0.0373/0.0365  allreduce max/mean=0.0022/0.0010
+t_total=1.0367 s  (setup 0.0021)  compute max/mean=1.0046/0.9992  halo max/mean=0.0092/0.0089  allreduce max/mean=0.0366/0.0270
+t_total=1.0562 s  (setup 0.0020)  compute max/mean=1.0262/1.0241  halo max/mean=0.0064/0.0061  allreduce max/mean=0.0271/0.0244
+t_total=0.3489 s  (setup 0.0053)  compute max/mean=0.3243/0.3220  halo max/mean=0.0192/0.0190  allreduce max/mean=0.0089/0.0070
+t_total=0.3489 s  (setup 0.0053)  compute max/mean=0.3212/0.3152  halo max/mean=0.0207/0.0203  allreduce max/mean=0.0197/0.0124
+--- strong scaling np=8 (17:22:15)
+t_total=0.1053 s  (setup 0.0042)  compute max/mean=0.0992/0.0977  halo max/mean=0.0099/0.0076  allreduce max/mean=0.0012/0.0005
+t_total=0.1052 s  (setup 0.0042)  compute max/mean=0.0987/0.0945  halo max/mean=0.0153/0.0106  allreduce max/mean=0.0011/0.0005
+t_total=0.1774 s  (setup 0.0091)  compute max/mean=0.1204/0.1163  halo max/mean=0.0656/0.0611  allreduce max/mean=0.0011/0.0007
+t_total=0.1812 s  (setup 0.0090)  compute max/mean=0.1206/0.1162  halo max/mean=0.0692/0.0650  allreduce max/mean=0.0013/0.0007
+t_total=0.5669 s  (setup 0.0010)  compute max/mean=0.5360/0.5233  halo max/mean=0.0079/0.0067  allreduce max/mean=0.0529/0.0360
+t_total=0.5711 s  (setup 0.0010)  compute max/mean=0.5417/0.5212  halo max/mean=0.0089/0.0068  allreduce max/mean=0.0734/0.0421
+t_total=0.2687 s  (setup 0.0027)  compute max/mean=0.2154/0.1971  halo max/mean=0.0243/0.0196  allreduce max/mean=0.0617/0.0517
+t_total=0.1984 s  (setup 0.0027)  compute max/mean=0.1794/0.1770  halo max/mean=0.0137/0.0126  allreduce max/mean=0.0118/0.0083
+--- strong scaling np=16 (17:22:18)
+t_total=0.3121 s  (setup 0.0065)  compute max/mean=0.0848/0.0708  halo max/mean=0.2504/0.2404  allreduce max/mean=0.0101/0.0080
+t_total=0.3023 s  (setup 0.0072)  compute max/mean=0.0928/0.0748  halo max/mean=0.2392/0.2267  allreduce max/mean=0.0184/0.0141
+t_total=0.2921 s  (setup 0.0113)  compute max/mean=0.1185/0.0939  halo max/mean=0.2123/0.1977  allreduce max/mean=0.0139/0.0104
+t_total=0.3146 s  (setup 0.0151)  compute max/mean=0.1277/0.0955  halo max/mean=0.2431/0.2187  allreduce max/mean=0.0180/0.0146
+t_total=1.2681 s  (setup 0.0019)  compute max/mean=0.4170/0.3927  halo max/mean=0.1225/0.0942  allreduce max/mean=0.8192/0.7819
+t_total=1.2293 s  (setup 0.0058)  compute max/mean=0.4461/0.3923  halo max/mean=0.1336/0.0850  allreduce max/mean=0.8260/0.7564
+t_total=0.4931 s  (setup 0.0046)  compute max/mean=0.1610/0.1461  halo max/mean=0.0722/0.0576  allreduce max/mean=0.3240/0.2932
+t_total=0.3381 s  (setup 0.0047)  compute max/mean=0.1601/0.1406  halo max/mean=0.0437/0.0365  allreduce max/mean=0.1845/0.1646
+--- weak scaling np=1 (17:22:24)
+t_total=0.1124 s  (setup 0.0081)  compute max/mean=0.1124/0.1124  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.1174 s  (setup 0.0078)  compute max/mean=0.1173/0.1173  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.0250 s  (setup 0.0027)  compute max/mean=0.0249/0.0249  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.0251 s  (setup 0.0026)  compute max/mean=0.0250/0.0250  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.2047 s  (setup 0.0021)  compute max/mean=0.2034/0.2034  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.2037 s  (setup 0.0021)  compute max/mean=0.2024/0.2024  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.0820 s  (setup 0.0012)  compute max/mean=0.0816/0.0816  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.0806 s  (setup 0.0012)  compute max/mean=0.0803/0.0803  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+--- weak scaling np=2 (17:22:25)
+t_total=0.1187 s  (setup 0.0083)  compute max/mean=0.1177/0.1176  halo max/mean=0.0012/0.0011  allreduce max/mean=0.0011/0.0005
+t_total=0.1191 s  (setup 0.0080)  compute max/mean=0.1176/0.1173  halo max/mean=0.0021/0.0018  allreduce max/mean=0.0007/0.0004
+t_total=0.0304 s  (setup 0.0026)  compute max/mean=0.0252/0.0252  halo max/mean=0.0052/0.0052  allreduce max/mean=0.0001/0.0000
+t_total=0.0321 s  (setup 0.0027)  compute max/mean=0.0260/0.0260  halo max/mean=0.0061/0.0061  allreduce max/mean=0.0001/0.0001
+t_total=0.2070 s  (setup 0.0021)  compute max/mean=0.2012/0.2010  halo max/mean=0.0006/0.0006  allreduce max/mean=0.0045/0.0043
+t_total=0.2046 s  (setup 0.0020)  compute max/mean=0.1991/0.1990  halo max/mean=0.0005/0.0005  allreduce max/mean=0.0040/0.0040
+t_total=0.0857 s  (setup 0.0011)  compute max/mean=0.0809/0.0807  halo max/mean=0.0010/0.0010  allreduce max/mean=0.0040/0.0038
+t_total=0.0860 s  (setup 0.0011)  compute max/mean=0.0814/0.0812  halo max/mean=0.0010/0.0010  allreduce max/mean=0.0038/0.0036
+--- weak scaling np=4 (17:22:27)
+t_total=0.1307 s  (setup 0.0083)  compute max/mean=0.1245/0.1238  halo max/mean=0.0076/0.0069  allreduce max/mean=0.0012/0.0007
+t_total=0.1296 s  (setup 0.0082)  compute max/mean=0.1249/0.1235  halo max/mean=0.0079/0.0061  allreduce max/mean=0.0009/0.0005
+t_total=0.0342 s  (setup 0.0027)  compute max/mean=0.0258/0.0257  halo max/mean=0.0085/0.0084  allreduce max/mean=0.0002/0.0001
+t_total=0.0355 s  (setup 0.0027)  compute max/mean=0.0259/0.0258  halo max/mean=0.0097/0.0097  allreduce max/mean=0.0003/0.0001
+t_total=0.2155 s  (setup 0.0021)  compute max/mean=0.2088/0.2085  halo max/mean=0.0009/0.0009  allreduce max/mean=0.0054/0.0048
+t_total=0.2190 s  (setup 0.0021)  compute max/mean=0.2084/0.2078  halo max/mean=0.0027/0.0023  allreduce max/mean=0.0085/0.0076
+t_total=0.0897 s  (setup 0.0012)  compute max/mean=0.0831/0.0829  halo max/mean=0.0020/0.0019  allreduce max/mean=0.0049/0.0046
+t_total=0.0959 s  (setup 0.0011)  compute max/mean=0.0874/0.0863  halo max/mean=0.0024/0.0023  allreduce max/mean=0.0086/0.0071
+--- weak scaling np=8 (17:22:29)
+t_total=0.2352 s  (setup 0.0086)  compute max/mean=0.2294/0.2254  halo max/mean=0.0152/0.0098  allreduce max/mean=0.0023/0.0010
+t_total=0.2992 s  (setup 0.0087)  compute max/mean=0.2461/0.2353  halo max/mean=0.0745/0.0638  allreduce max/mean=0.0021/0.0009
+t_total=0.0625 s  (setup 0.0028)  compute max/mean=0.0407/0.0357  halo max/mean=0.0287/0.0268  allreduce max/mean=0.0006/0.0003
+t_total=0.0429 s  (setup 0.0027)  compute max/mean=0.0289/0.0281  halo max/mean=0.0157/0.0148  allreduce max/mean=0.0003/0.0001
+t_total=0.3853 s  (setup 0.0021)  compute max/mean=0.2885/0.2830  halo max/mean=0.0202/0.0136  allreduce max/mean=0.0965/0.0872
+t_total=0.2505 s  (setup 0.0021)  compute max/mean=0.2380/0.2369  halo max/mean=0.0039/0.0027  allreduce max/mean=0.0114/0.0094
+t_total=0.0963 s  (setup 0.0011)  compute max/mean=0.0855/0.0849  halo max/mean=0.0047/0.0038  allreduce max/mean=0.0087/0.0074
+t_total=0.0975 s  (setup 0.0012)  compute max/mean=0.0865/0.0854  halo max/mean=0.0049/0.0040  allreduce max/mean=0.0103/0.0078
+--- weak scaling np=16 (17:22:31)
+t_total=0.9275 s  (setup 0.0119)  compute max/mean=0.4325/0.2972  halo max/mean=0.7208/0.6264  allreduce max/mean=0.0320/0.0227
+t_total=0.8576 s  (setup 0.0197)  compute max/mean=0.4627/0.2879  halo max/mean=0.6516/0.5652  allreduce max/mean=0.0482/0.0437
+t_total=0.2801 s  (setup 0.0096)  compute max/mean=0.1553/0.0546  halo max/mean=0.2399/0.2240  allreduce max/mean=0.0201/0.0174
+t_total=0.8392 s  (setup 0.0150)  compute max/mean=0.1661/0.0738  halo max/mean=0.7881/0.7596  allreduce max/mean=0.0205/0.0165
+t_total=1.7068 s  (setup 0.0111)  compute max/mean=0.6903/0.4976  halo max/mean=0.2416/0.1343  allreduce max/mean=1.2249/1.0967
+t_total=1.7396 s  (setup 0.0111)  compute max/mean=0.5780/0.4839  halo max/mean=0.2265/0.1599  allreduce max/mean=1.2613/1.1046
+t_total=0.4325 s  (setup 0.0097)  compute max/mean=0.1879/0.1564  halo max/mean=0.0484/0.0383  allreduce max/mean=0.2659/0.2457
+t_total=0.5572 s  (setup 0.0061)  compute max/mean=0.1832/0.1615  halo max/mean=0.0683/0.0564  allreduce max/mean=0.3647/0.3443
+=== run_all.sh started Sat Oct 31 17:25:28 +08 2026  maxcores=16 repeats=2 stages=design,hybrid,omp
+--- exchange mode sendrecv np=8 (17:25:28)
+t_total=0.1187 s  (setup 0.0042)  compute max/mean=0.1069/0.1035  halo max/mean=0.0182/0.0152  allreduce max/mean=0.0011/0.0004
+t_total=0.1187 s  (setup 0.0041)  compute max/mean=0.1076/0.1043  halo max/mean=0.0176/0.0144  allreduce max/mean=0.0010/0.0004
+t_total=0.1568 s  (setup 0.0093)  compute max/mean=0.1196/0.1178  halo max/mean=0.0407/0.0392  allreduce max/mean=0.0014/0.0006
+t_total=0.1637 s  (setup 0.0089)  compute max/mean=0.1237/0.1191  halo max/mean=0.0474/0.0447  allreduce max/mean=0.0010/0.0005
+t_total=0.1401 s  (setup 0.0010)  compute max/mean=0.1278/0.1140  halo max/mean=0.0022/0.0020  allreduce max/mean=0.0312/0.0234
+t_total=0.1228 s  (setup 0.0011)  compute max/mean=0.1119/0.1091  halo max/mean=0.0039/0.0033  allreduce max/mean=0.0137/0.0097
+--- exchange mode isend np=8 (17:25:30)
+t_total=0.1137 s  (setup 0.0041)  compute max/mean=0.1064/0.1030  halo max/mean=0.0122/0.0106  allreduce max/mean=0.0014/0.0007
+t_total=0.1178 s  (setup 0.0040)  compute max/mean=0.1100/0.1018  halo max/mean=0.0241/0.0159  allreduce max/mean=0.0008/0.0003
+t_total=0.1875 s  (setup 0.0091)  compute max/mean=0.1187/0.1165  halo max/mean=0.0734/0.0710  allreduce max/mean=0.0013/0.0007
+t_total=0.1760 s  (setup 0.0090)  compute max/mean=0.1188/0.1155  halo max/mean=0.0630/0.0605  allreduce max/mean=0.0008/0.0005
+t_total=0.1322 s  (setup 0.0010)  compute max/mean=0.1190/0.1145  halo max/mean=0.0039/0.0025  allreduce max/mean=0.0192/0.0145
+t_total=0.1370 s  (setup 0.0010)  compute max/mean=0.1163/0.1139  halo max/mean=0.0047/0.0030  allreduce max/mean=0.0230/0.0194
+--- exchange mode overlap np=8 (17:25:31)
+t_total=0.1107 s  (setup 0.0042)  compute max/mean=0.1039/0.0996  halo max/mean=0.0129/0.0110  allreduce max/mean=0.0010/0.0004
+t_total=0.1065 s  (setup 0.0042)  compute max/mean=0.1010/0.0998  halo max/mean=0.0079/0.0067  allreduce max/mean=0.0010/0.0004
+t_total=0.2188 s  (setup 0.0143)  compute max/mean=0.1489/0.1460  halo max/mean=0.0766/0.0727  allreduce max/mean=0.0052/0.0026
+t_total=0.2138 s  (setup 0.0090)  compute max/mean=0.1498/0.1448  halo max/mean=0.0735/0.0690  allreduce max/mean=0.0010/0.0006
+t_total=0.1246 s  (setup 0.0010)  compute max/mean=0.1131/0.1093  halo max/mean=0.0071/0.0039  allreduce max/mean=0.0145/0.0106
+t_total=0.1283 s  (setup 0.0010)  compute max/mean=0.1164/0.1134  halo max/mean=0.0045/0.0039  allreduce max/mean=0.0113/0.0100
+--- exchange mode rma np=8 (17:25:33)
+t_total=0.5909 s  (setup 0.0078)  compute max/mean=0.1268/0.1208  halo max/mean=0.4760/0.4629  allreduce max/mean=0.0050/0.0027
+t_total=0.5951 s  (setup 0.0041)  compute max/mean=0.1299/0.1226  halo max/mean=0.4738/0.4674  allreduce max/mean=0.0013/0.0005
+t_total=1.3028 s  (setup 0.0090)  compute max/mean=0.1432/0.1401  halo max/mean=1.1641/1.1605  allreduce max/mean=0.0032/0.0020
+t_total=1.2860 s  (setup 0.0092)  compute max/mean=0.1438/0.1392  halo max/mean=1.1495/1.1443  allreduce max/mean=0.0011/0.0007
+t_total=0.4148 s  (setup 0.0010)  compute max/mean=0.1295/0.1270  halo max/mean=0.2619/0.2609  allreduce max/mean=0.0211/0.0182
+t_total=0.4194 s  (setup 0.0010)  compute max/mean=0.1277/0.1248  halo max/mean=0.2635/0.2620  allreduce max/mean=0.0286/0.0254
+--- exchange mode sendrecv np=16 (17:25:39)
+t_total=0.4921 s  (setup 0.0108)  compute max/mean=0.1504/0.0978  halo max/mean=0.4202/0.3898  allreduce max/mean=0.0232/0.0206
+t_total=0.4609 s  (setup 0.0079)  compute max/mean=0.1393/0.0904  halo max/mean=0.3995/0.3701  allreduce max/mean=0.0114/0.0092
+t_total=0.5237 s  (setup 0.0104)  compute max/mean=0.1322/0.1172  halo max/mean=0.4311/0.4157  allreduce max/mean=0.0209/0.0153
+t_total=0.4793 s  (setup 0.0107)  compute max/mean=0.1388/0.1227  halo max/mean=0.3900/0.3579  allreduce max/mean=0.0169/0.0125
+t_total=0.3676 s  (setup 0.0019)  compute max/mean=0.0921/0.0815  halo max/mean=0.0857/0.0492  allreduce max/mean=0.2627/0.2381
+t_total=0.3292 s  (setup 0.0017)  compute max/mean=0.1064/0.0824  halo max/mean=0.0555/0.0402  allreduce max/mean=0.2374/0.2111
+--- exchange mode isend np=16 (17:25:43)
+t_total=0.2360 s  (setup 0.0099)  compute max/mean=0.0981/0.0684  halo max/mean=0.1838/0.1672  allreduce max/mean=0.0142/0.0114
+t_total=0.2403 s  (setup 0.0083)  compute max/mean=0.1021/0.0695  halo max/mean=0.1962/0.1693  allreduce max/mean=0.0106/0.0081
+t_total=0.3756 s  (setup 0.0125)  compute max/mean=0.1178/0.0935  halo max/mean=0.2969/0.2802  allreduce max/mean=0.0199/0.0167
+t_total=0.3543 s  (setup 0.0141)  compute max/mean=0.1245/0.0948  halo max/mean=0.2755/0.2575  allreduce max/mean=0.0242/0.0191
+t_total=0.3521 s  (setup 0.0023)  compute max/mean=0.1199/0.0844  halo max/mean=0.0379/0.0267  allreduce max/mean=0.2569/0.2428
+t_total=0.4859 s  (setup 0.0019)  compute max/mean=0.1099/0.0881  halo max/mean=0.0869/0.0574  allreduce max/mean=0.3806/0.3604
+--- exchange mode overlap np=16 (17:25:46)
+t_total=0.2136 s  (setup 0.0055)  compute max/mean=0.0948/0.0689  halo max/mean=0.1646/0.1443  allreduce max/mean=0.0102/0.0084
+t_total=0.2430 s  (setup 0.0091)  compute max/mean=0.0952/0.0709  halo max/mean=0.1900/0.1714  allreduce max/mean=0.0123/0.0098
+t_total=0.4728 s  (setup 0.0109)  compute max/mean=0.1756/0.1550  halo max/mean=0.3453/0.3171  allreduce max/mean=0.0174/0.0137
+t_total=0.4112 s  (setup 0.0133)  compute max/mean=0.1727/0.1561  halo max/mean=0.2787/0.2545  allreduce max/mean=0.0141/0.0111
+t_total=0.2227 s  (setup 0.0020)  compute max/mean=0.0890/0.0802  halo max/mean=0.0421/0.0316  allreduce max/mean=0.1290/0.1138
+t_total=0.2392 s  (setup 0.0021)  compute max/mean=0.0967/0.0815  halo max/mean=0.0502/0.0365  allreduce max/mean=0.1526/0.1228
+--- exchange mode rma np=16 (17:25:48)
+t_total=0.6312 s  (setup 0.0052)  compute max/mean=0.1327/0.1247  halo max/mean=0.4973/0.4894  allreduce max/mean=0.0155/0.0132
+t_total=0.5926 s  (setup 0.0098)  compute max/mean=0.1360/0.1201  halo max/mean=0.4826/0.4606  allreduce max/mean=0.0122/0.0095
+t_total=32.7142 s  (setup 0.0162)  compute max/mean=0.1507/0.1365  halo max/mean=32.7574/32.7473  allreduce max/mean=0.0182/0.0146
+t_total=28.9843 s  (setup 0.0135)  compute max/mean=0.1564/0.1383  halo max/mean=28.9899/28.9779  allreduce max/mean=0.0196/0.0159
+t_total=0.5780 s  (setup 0.0034)  compute max/mean=0.0972/0.0897  halo max/mean=0.3186/0.3089  allreduce max/mean=0.1800/0.1671
+t_total=0.6124 s  (setup 0.0017)  compute max/mean=0.1022/0.0920  halo max/mean=0.3556/0.3506  allreduce max/mean=0.1701/0.1630
+--- decomposition shape, np=16 (17:27:45)
+t_total=0.2102 s  (setup 0.0099)  compute max/mean=0.0862/0.0628  halo max/mean=0.1650/0.1457  allreduce max/mean=0.0144/0.0117
+t_total=0.2078 s  (setup 0.0076)  compute max/mean=0.0948/0.0645  halo max/mean=0.1735/0.1413  allreduce max/mean=0.0107/0.0083
+t_total=0.2310 s  (setup 0.0066)  compute max/mean=0.0873/0.0637  halo max/mean=0.1828/0.1660  allreduce max/mean=0.0136/0.0110
+t_total=0.2256 s  (setup 0.0082)  compute max/mean=0.1014/0.0649  halo max/mean=0.1816/0.1597  allreduce max/mean=0.0111/0.0083
+t_total=0.2389 s  (setup 0.0098)  compute max/mean=0.0954/0.0692  halo max/mean=0.1888/0.1687  allreduce max/mean=0.0128/0.0097
+t_total=0.1896 s  (setup 0.0090)  compute max/mean=0.0877/0.0670  halo max/mean=0.1415/0.1213  allreduce max/mean=0.0112/0.0087
+t_total=0.2075 s  (setup 0.0109)  compute max/mean=0.0809/0.0636  halo max/mean=0.1562/0.1424  allreduce max/mean=0.0138/0.0107
+t_total=0.2015 s  (setup 0.0113)  compute max/mean=0.0841/0.0658  halo max/mean=0.1571/0.1338  allreduce max/mean=0.0166/0.0132
+t_total=0.1906 s  (setup 0.0076)  compute max/mean=0.0862/0.0681  halo max/mean=0.1416/0.1215  allreduce max/mean=0.0135/0.0107
+t_total=0.2010 s  (setup 0.0052)  compute max/mean=0.0983/0.0699  halo max/mean=0.1495/0.1275  allreduce max/mean=0.0119/0.0095
+t_total=0.4268 s  (setup 0.0154)  compute max/mean=0.1128/0.0913  halo max/mean=0.3642/0.3335  allreduce max/mean=0.0194/0.0151
+t_total=0.4198 s  (setup 0.0118)  compute max/mean=0.1093/0.0891  halo max/mean=0.3507/0.3279  allreduce max/mean=0.0126/0.0092
+t_total=0.2949 s  (setup 0.0127)  compute max/mean=0.1098/0.0906  halo max/mean=0.2163/0.2024  allreduce max/mean=0.0169/0.0134
+t_total=0.3039 s  (setup 0.0122)  compute max/mean=0.1217/0.0896  halo max/mean=0.2421/0.2078  allreduce max/mean=0.0192/0.0150
+t_total=0.3341 s  (setup 0.0120)  compute max/mean=0.1176/0.0980  halo max/mean=0.2480/0.2354  allreduce max/mean=0.0144/0.0109
+t_total=0.3941 s  (setup 0.0156)  compute max/mean=0.1259/0.0991  halo max/mean=0.3121/0.2938  allreduce max/mean=0.0187/0.0151
+t_total=0.3066 s  (setup 0.0140)  compute max/mean=0.1120/0.0948  halo max/mean=0.2229/0.2119  allreduce max/mean=0.0168/0.0137
+t_total=0.2981 s  (setup 0.0114)  compute max/mean=0.1188/0.0925  halo max/mean=0.2196/0.2047  allreduce max/mean=0.0142/0.0110
+t_total=0.3352 s  (setup 0.0161)  compute max/mean=0.1571/0.0862  halo max/mean=0.2742/0.2465  allreduce max/mean=0.0194/0.0154
+t_total=0.3038 s  (setup 0.0127)  compute max/mean=0.0964/0.0834  halo max/mean=0.2323/0.2187  allreduce max/mean=0.0193/0.0147
+t_total=0.2844 s  (setup 0.0106)  compute max/mean=0.1049/0.0863  halo max/mean=0.2107/0.1967  allreduce max/mean=0.0126/0.0096
+t_total=0.2927 s  (setup 0.0119)  compute max/mean=0.1063/0.0874  halo max/mean=0.2230/0.2047  allreduce max/mean=0.0125/0.0094
+--- residual check interval, np=16 (17:27:55)
+t_total=0.2479 s  (setup 0.0073)  compute max/mean=0.0950/0.0677  halo max/mean=0.1988/0.1792  allreduce max/mean=0.0110/0.0083
+t_total=0.2159 s  (setup 0.0044)  compute max/mean=0.0872/0.0695  halo max/mean=0.1703/0.1451  allreduce max/mean=0.0118/0.0093
+t_total=0.3135 s  (setup 0.0143)  compute max/mean=0.1063/0.0950  halo max/mean=0.2441/0.2176  allreduce max/mean=0.0165/0.0128
+t_total=0.3170 s  (setup 0.0109)  compute max/mean=0.1218/0.0957  halo max/mean=0.2359/0.2208  allreduce max/mean=0.0132/0.0103
+t_total=0.5663 s  (setup 0.0068)  compute max/mean=0.2296/0.1823  halo max/mean=0.1661/0.1271  allreduce max/mean=0.3453/0.2679
+t_total=0.5995 s  (setup 0.0093)  compute max/mean=0.2789/0.1893  halo max/mean=0.1962/0.1220  allreduce max/mean=0.4048/0.2993
+t_total=1.0341 s  (setup 0.0121)  compute max/mean=0.3106/0.2294  halo max/mean=0.3861/0.3060  allreduce max/mean=0.6167/0.5129
+t_total=0.6951 s  (setup 0.0105)  compute max/mean=0.2537/0.2184  halo max/mean=0.2681/0.2312  allreduce max/mean=0.3200/0.2570
+t_total=0.2049 s  (setup 0.0093)  compute max/mean=0.0933/0.0796  halo max/mean=0.1225/0.1095  allreduce max/mean=0.0297/0.0247
+t_total=0.2757 s  (setup 0.0076)  compute max/mean=0.0960/0.0801  halo max/mean=0.1871/0.1641  allreduce max/mean=0.0537/0.0416
+t_total=0.4957 s  (setup 0.0224)  compute max/mean=0.1245/0.1072  halo max/mean=0.3747/0.3403  allreduce max/mean=0.1374/0.0736
+t_total=0.3438 s  (setup 0.0134)  compute max/mean=0.1320/0.1086  halo max/mean=0.2284/0.2135  allreduce max/mean=0.0437/0.0339
+t_total=0.2192 s  (setup 0.0065)  compute max/mean=0.0803/0.0703  halo max/mean=0.1646/0.1468  allreduce max/mean=0.0146/0.0093
+t_total=0.2033 s  (setup 0.0077)  compute max/mean=0.1077/0.0698  halo max/mean=0.1524/0.1320  allreduce max/mean=0.0138/0.0115
+t_total=0.3296 s  (setup 0.0041)  compute max/mean=0.1154/0.0985  halo max/mean=0.2477/0.2270  allreduce max/mean=0.0229/0.0153
+t_total=0.3352 s  (setup 0.0114)  compute max/mean=0.1168/0.0964  halo max/mean=0.2534/0.2369  allreduce max/mean=0.0185/0.0131
+--- hybrid ranks=16 threads=1 (17:28:04)
+t_total=0.2351 s  (setup 0.0090)  compute max/mean=0.0951/0.0767  halo max/mean=0.1660/0.1563  allreduce max/mean=0.0165/0.0094
+t_total=0.2141 s  (setup 0.0084)  compute max/mean=0.0944/0.0778  halo max/mean=0.1477/0.1352  allreduce max/mean=0.0106/0.0079
+t_total=0.3681 s  (setup 0.0140)  compute max/mean=0.1178/0.1050  halo max/mean=0.2709/0.2604  allreduce max/mean=0.0229/0.0189
+t_total=0.3064 s  (setup 0.0116)  compute max/mean=0.1204/0.1062  halo max/mean=0.2071/0.1996  allreduce max/mean=0.0144/0.0110
+t_total=1.1861 s  (setup 0.0023)  compute max/mean=0.4806/0.4391  halo max/mean=0.0958/0.0655  allreduce max/mean=0.7292/0.6821
+t_total=1.2443 s  (setup 0.0022)  compute max/mean=0.5283/0.4408  halo max/mean=0.0914/0.0665  allreduce max/mean=0.7880/0.7380
+t_total=0.4307 s  (setup 0.0083)  compute max/mean=0.1764/0.1613  halo max/mean=0.0640/0.0497  allreduce max/mean=0.2631/0.2290
+t_total=0.4383 s  (setup 0.0078)  compute max/mean=0.1793/0.1624  halo max/mean=0.0573/0.0448  allreduce max/mean=0.2490/0.2372
+--- hybrid ranks=8 threads=2 (17:28:10)
+t_total=0.1137 s  (setup 0.0036)  compute max/mean=0.0952/0.0893  halo max/mean=0.0293/0.0242  allreduce max/mean=0.0027/0.0016
+t_total=0.1153 s  (setup 0.0035)  compute max/mean=0.0980/0.0913  halo max/mean=0.0303/0.0239  allreduce max/mean=0.0027/0.0015
+t_total=0.1801 s  (setup 0.0076)  compute max/mean=0.1097/0.1029  halo max/mean=0.0832/0.0771  allreduce max/mean=0.0045/0.0028
+t_total=0.1837 s  (setup 0.0073)  compute max/mean=0.1093/0.1041  halo max/mean=0.0842/0.0796  allreduce max/mean=0.0048/0.0027
+t_total=0.7894 s  (setup 0.0018)  compute max/mean=0.6485/0.6401  halo max/mean=0.0265/0.0238  allreduce max/mean=0.1351/0.1245
+t_total=0.7803 s  (setup 0.0009)  compute max/mean=0.6414/0.6328  halo max/mean=0.0284/0.0232  allreduce max/mean=0.1336/0.1234
+t_total=0.2172 s  (setup 0.0023)  compute max/mean=0.1700/0.1666  halo max/mean=0.0166/0.0152  allreduce max/mean=0.0379/0.0355
+t_total=0.2310 s  (setup 0.0023)  compute max/mean=0.1805/0.1788  halo max/mean=0.0205/0.0197  allreduce max/mean=0.0355/0.0326
+--- hybrid ranks=4 threads=4 (17:28:14)
+t_total=0.1270 s  (setup 0.0035)  compute max/mean=0.1128/0.1058  halo max/mean=0.0296/0.0210  allreduce max/mean=0.0015/0.0007
+t_total=0.1270 s  (setup 0.0033)  compute max/mean=0.1139/0.1064  halo max/mean=0.0284/0.0204  allreduce max/mean=0.0016/0.0009
+t_total=0.1696 s  (setup 0.0074)  compute max/mean=0.1212/0.1097  halo max/mean=0.0716/0.0598  allreduce max/mean=0.0035/0.0022
+t_total=0.1699 s  (setup 0.0080)  compute max/mean=0.1214/0.1117  halo max/mean=0.0676/0.0582  allreduce max/mean=0.0038/0.0024
+t_total=0.8250 s  (setup 0.0011)  compute max/mean=0.7144/0.7121  halo max/mean=0.0164/0.0162  allreduce max/mean=0.0992/0.0954
+t_total=0.8328 s  (setup 0.0009)  compute max/mean=0.7263/0.7190  halo max/mean=0.0163/0.0161  allreduce max/mean=0.1068/0.0962
+t_total=0.2453 s  (setup 0.0025)  compute max/mean=0.1973/0.1960  halo max/mean=0.0207/0.0198  allreduce max/mean=0.0298/0.0290
+t_total=0.2448 s  (setup 0.0024)  compute max/mean=0.1965/0.1951  halo max/mean=0.0212/0.0204  allreduce max/mean=0.0308/0.0290
+--- hybrid ranks=2 threads=8 (17:28:17)
+t_total=0.1297 s  (setup 0.0034)  compute max/mean=0.1216/0.1214  halo max/mean=0.0084/0.0082  allreduce max/mean=0.0013/0.0007
+t_total=0.1267 s  (setup 0.0038)  compute max/mean=0.1206/0.1202  halo max/mean=0.0068/0.0064  allreduce max/mean=0.0015/0.0008
+t_total=0.1969 s  (setup 0.0077)  compute max/mean=0.1581/0.1575  halo max/mean=0.0402/0.0395  allreduce max/mean=0.0004/0.0003
+t_total=0.1946 s  (setup 0.0077)  compute max/mean=0.1547/0.1546  halo max/mean=0.0401/0.0400  allreduce max/mean=0.0031/0.0017
+t_total=0.9677 s  (setup 0.0011)  compute max/mean=0.9049/0.9025  halo max/mean=0.0135/0.0135  allreduce max/mean=0.0520/0.0495
+t_total=0.9642 s  (setup 0.0011)  compute max/mean=0.9012/0.8997  halo max/mean=0.0138/0.0136  allreduce max/mean=0.0500/0.0486
+t_total=0.2878 s  (setup 0.0024)  compute max/mean=0.2459/0.2448  halo max/mean=0.0243/0.0242  allreduce max/mean=0.0186/0.0177
+t_total=0.2858 s  (setup 0.0027)  compute max/mean=0.2429/0.2412  halo max/mean=0.0257/0.0257  allreduce max/mean=0.0192/0.0180
+--- hybrid ranks=1 threads=16 (17:28:22)
+t_total=0.1261 s  (setup 0.0037)  compute max/mean=0.1259/0.1259  halo max/mean=0.0001/0.0001  allreduce max/mean=0.0000/0.0000
+t_total=0.1300 s  (setup 0.0037)  compute max/mean=0.1298/0.1298  halo max/mean=0.0001/0.0001  allreduce max/mean=0.0000/0.0000
+t_total=0.1700 s  (setup 0.0087)  compute max/mean=0.1698/0.1698  halo max/mean=0.0002/0.0002  allreduce max/mean=0.0000/0.0000
+t_total=0.1705 s  (setup 0.0079)  compute max/mean=0.1703/0.1703  halo max/mean=0.0002/0.0002  allreduce max/mean=0.0000/0.0000
+t_total=1.0300 s  (setup 0.0011)  compute max/mean=1.0250/1.0250  halo max/mean=0.0005/0.0005  allreduce max/mean=0.0004/0.0004
+t_total=1.0224 s  (setup 0.0012)  compute max/mean=1.0176/1.0176  halo max/mean=0.0004/0.0004  allreduce max/mean=0.0003/0.0003
+t_total=0.2742 s  (setup 0.0025)  compute max/mean=0.2713/0.2713  halo max/mean=0.0001/0.0001  allreduce max/mean=0.0001/0.0001
+t_total=0.2775 s  (setup 0.0029)  compute max/mean=0.2745/0.2745  halo max/mean=0.0001/0.0001  allreduce max/mean=0.0001/0.0001
+--- openmp threads=1 (17:28:26)
+t_total=0.6450 s  (setup 0.0312)  compute max/mean=0.6450/0.6450  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.6647 s  (setup 0.0314)  compute max/mean=0.6647/0.6647  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.8928 s  (setup 0.0700)  compute max/mean=0.8928/0.8928  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.8805 s  (setup 0.0703)  compute max/mean=0.8805/0.8805  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=4.4135 s  (setup 0.0078)  compute max/mean=4.4093/4.4093  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=4.4083 s  (setup 0.0077)  compute max/mean=4.4040/4.4040  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=1.3300 s  (setup 0.0208)  compute max/mean=1.3260/1.3260  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=1.3336 s  (setup 0.0207)  compute max/mean=1.3297/1.3297  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+--- openmp threads=2 (17:28:41)
+t_total=0.3291 s  (setup 0.0160)  compute max/mean=0.3291/0.3291  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.3299 s  (setup 0.0158)  compute max/mean=0.3299/0.3299  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.4472 s  (setup 0.0366)  compute max/mean=0.4472/0.4472  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.4516 s  (setup 0.0359)  compute max/mean=0.4516/0.4516  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=2.3029 s  (setup 0.0040)  compute max/mean=2.2991/2.2991  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=2.3127 s  (setup 0.0040)  compute max/mean=2.3089/2.3089  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.6882 s  (setup 0.0108)  compute max/mean=0.6850/0.6850  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.6871 s  (setup 0.0111)  compute max/mean=0.6838/0.6838  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+--- openmp threads=4 (17:28:49)
+t_total=0.1975 s  (setup 0.0085)  compute max/mean=0.1975/0.1975  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.2089 s  (setup 0.0084)  compute max/mean=0.2088/0.2088  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.2564 s  (setup 0.0188)  compute max/mean=0.2564/0.2564  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.2575 s  (setup 0.0186)  compute max/mean=0.2575/0.2575  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=1.2739 s  (setup 0.0021)  compute max/mean=1.2701/1.2701  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=1.2699 s  (setup 0.0021)  compute max/mean=1.2663/1.2663  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.3928 s  (setup 0.0056)  compute max/mean=0.3899/0.3899  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.3949 s  (setup 0.0056)  compute max/mean=0.3921/0.3921  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+--- openmp threads=8 (17:28:53)
+t_total=0.1482 s  (setup 0.0054)  compute max/mean=0.1482/0.1482  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.1438 s  (setup 0.0043)  compute max/mean=0.1438/0.1438  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.2000 s  (setup 0.0096)  compute max/mean=0.2000/0.2000  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.2003 s  (setup 0.0097)  compute max/mean=0.2003/0.2003  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.9784 s  (setup 0.0012)  compute max/mean=0.9747/0.9747  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.9762 s  (setup 0.0012)  compute max/mean=0.9724/0.9724  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.2627 s  (setup 0.0029)  compute max/mean=0.2600/0.2600  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.2660 s  (setup 0.0030)  compute max/mean=0.2633/0.2633  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+--- openmp threads=16 (17:28:57)
+t_total=0.1281 s  (setup 0.0039)  compute max/mean=0.1281/0.1281  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.1269 s  (setup 0.0037)  compute max/mean=0.1269/0.1269  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.1663 s  (setup 0.0080)  compute max/mean=0.1663/0.1663  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.1696 s  (setup 0.0080)  compute max/mean=0.1696/0.1696  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=1.0218 s  (setup 0.0012)  compute max/mean=1.0177/1.0177  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=1.0225 s  (setup 0.0011)  compute max/mean=1.0187/1.0187  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.2749 s  (setup 0.0025)  compute max/mean=0.2723/0.2723  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.2809 s  (setup 0.0025)  compute max/mean=0.2783/0.2783  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+=== run_all.sh finished Sat Oct 31 17:29:00 +08 2026
+=== run_all.sh started Sat Oct 31 17:29:36 +08 2026  maxcores=16 repeats=2 stages=strong,weak
+iters=200 converged=0 rel_resid=9.985e-01 l2_err=8.513519e-01 linf_err=1.732543e+00 t_total=0.5289 s  (setup 0.0259)  compute max/mean=0.5289/0.5289  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=200 converged=0 rel_resid=9.985e-01 l2_err=8.513519e-01 linf_err=1.732543e+00 t_total=0.5312 s  (setup 0.0256)  compute max/mean=0.5312/0.5312  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=200 converged=0 rel_resid=9.663e-01 l2_err=5.858925e-01 linf_err=1.686032e+00 t_total=0.6789 s  (setup 0.0445)  compute max/mean=0.6789/0.6789  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=200 converged=0 rel_resid=9.663e-01 l2_err=5.858925e-01 linf_err=1.686032e+00 t_total=0.6767 s  (setup 0.0434)  compute max/mean=0.6767/0.6767  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=1458 converged=1 rel_resid=7.236e-09 l2_err=5.456709e-07 linf_err=1.153231e-06 t_total=3.8879 s  (setup 0.0065)  compute max/mean=3.8835/3.8835  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=1458 converged=1 rel_resid=7.236e-09 l2_err=5.456709e-07 linf_err=1.153231e-06 t_total=3.8648 s  (setup 0.0065)  compute max/mean=3.8607/3.8607  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=222 converged=1 rel_resid=6.477e-09 l2_err=2.620373e-05 linf_err=7.722213e-05 t_total=1.1426 s  (setup 0.0133)  compute max/mean=1.1383/1.1383  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=222 converged=1 rel_resid=6.477e-09 l2_err=2.620373e-05 linf_err=7.722213e-05 t_total=1.1451 s  (setup 0.0131)  compute max/mean=1.1409/1.1409  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+--- strong scaling np=1 (17:29:49)
+t_total=0.5148 s  (setup 0.0312)  compute max/mean=0.5147/0.5147  halo max/mean=0.0001/0.0001  allreduce max/mean=0.0000/0.0000
+t_total=0.5244 s  (setup 0.0333)  compute max/mean=0.5243/0.5243  halo max/mean=0.0001/0.0001  allreduce max/mean=0.0000/0.0000
+t_total=0.6666 s  (setup 0.0739)  compute max/mean=0.6665/0.6665  halo max/mean=0.0001/0.0001  allreduce max/mean=0.0000/0.0000
+t_total=0.6658 s  (setup 0.0696)  compute max/mean=0.6658/0.6658  halo max/mean=0.0001/0.0001  allreduce max/mean=0.0000/0.0000
+t_total=3.7647 s  (setup 0.0081)  compute max/mean=3.7601/3.7601  halo max/mean=0.0002/0.0002  allreduce max/mean=0.0001/0.0001
+t_total=3.7334 s  (setup 0.0078)  compute max/mean=3.7285/3.7285  halo max/mean=0.0002/0.0002  allreduce max/mean=0.0001/0.0001
+t_total=1.1081 s  (setup 0.0213)  compute max/mean=1.1037/1.1037  halo max/mean=0.0001/0.0001  allreduce max/mean=0.0000/0.0000
+t_total=1.1070 s  (setup 0.0205)  compute max/mean=1.1029/1.1029  halo max/mean=0.0001/0.0001  allreduce max/mean=0.0000/0.0000
+--- strong scaling np=2 (17:30:02)
+t_total=0.2266 s  (setup 0.0162)  compute max/mean=0.2239/0.2238  halo max/mean=0.0028/0.0027  allreduce max/mean=0.0005/0.0003
+t_total=0.2310 s  (setup 0.0161)  compute max/mean=0.2274/0.2264  halo max/mean=0.0055/0.0045  allreduce max/mean=0.0016/0.0008
+t_total=0.3605 s  (setup 0.0356)  compute max/mean=0.3354/0.3349  halo max/mean=0.0261/0.0257  allreduce max/mean=0.0032/0.0016
+t_total=0.3578 s  (setup 0.0355)  compute max/mean=0.3337/0.3337  halo max/mean=0.0244/0.0243  allreduce max/mean=0.0022/0.0011
+t_total=1.9351 s  (setup 0.0039)  compute max/mean=1.9078/1.9072  halo max/mean=0.0051/0.0050  allreduce max/mean=0.0211/0.0206
+t_total=1.9228 s  (setup 0.0039)  compute max/mean=1.9014/1.9012  halo max/mean=0.0048/0.0047  allreduce max/mean=0.0145/0.0144
+t_total=0.6047 s  (setup 0.0105)  compute max/mean=0.5885/0.5882  halo max/mean=0.0099/0.0099  allreduce max/mean=0.0050/0.0050
+t_total=0.6003 s  (setup 0.0105)  compute max/mean=0.5861/0.5859  halo max/mean=0.0080/0.0080  allreduce max/mean=0.0046/0.0044
+--- strong scaling np=4 (17:30:09)
+t_total=0.1316 s  (setup 0.0089)  compute max/mean=0.1249/0.1247  halo max/mean=0.0070/0.0069  allreduce max/mean=0.0014/0.0007
+t_total=0.1317 s  (setup 0.0084)  compute max/mean=0.1248/0.1241  halo max/mean=0.0091/0.0077  allreduce max/mean=0.0014/0.0006
+t_total=0.2182 s  (setup 0.0176)  compute max/mean=0.1890/0.1877  halo max/mean=0.0317/0.0305  allreduce max/mean=0.0012/0.0006
+t_total=0.2220 s  (setup 0.0182)  compute max/mean=0.1929/0.1914  halo max/mean=0.0320/0.0307  allreduce max/mean=0.0021/0.0011
+t_total=1.0473 s  (setup 0.0021)  compute max/mean=1.0159/1.0148  halo max/mean=0.0067/0.0066  allreduce max/mean=0.0255/0.0243
+t_total=1.0490 s  (setup 0.0020)  compute max/mean=1.0169/1.0160  halo max/mean=0.0060/0.0058  allreduce max/mean=0.0263/0.0257
+t_total=0.3484 s  (setup 0.0053)  compute max/mean=0.3233/0.3220  halo max/mean=0.0198/0.0197  allreduce max/mean=0.0067/0.0058
+t_total=0.3438 s  (setup 0.0053)  compute max/mean=0.3125/0.3100  halo max/mean=0.0209/0.0208  allreduce max/mean=0.0144/0.0121
+--- strong scaling np=8 (17:30:14)
+t_total=0.1084 s  (setup 0.0042)  compute max/mean=0.1021/0.0992  halo max/mean=0.0128/0.0092  allreduce max/mean=0.0012/0.0004
+t_total=0.1089 s  (setup 0.0040)  compute max/mean=0.1008/0.0985  halo max/mean=0.0132/0.0104  allreduce max/mean=0.0009/0.0004
+t_total=0.1921 s  (setup 0.0091)  compute max/mean=0.1236/0.1193  halo max/mean=0.0779/0.0728  allreduce max/mean=0.0012/0.0007
+t_total=0.1959 s  (setup 0.0090)  compute max/mean=0.1273/0.1224  halo max/mean=0.0796/0.0736  allreduce max/mean=0.0015/0.0007
+t_total=0.5858 s  (setup 0.0011)  compute max/mean=0.5367/0.5203  halo max/mean=0.0143/0.0105  allreduce max/mean=0.0711/0.0541
+t_total=0.5666 s  (setup 0.0010)  compute max/mean=0.5375/0.5203  halo max/mean=0.0096/0.0072  allreduce max/mean=0.0472/0.0381
+t_total=0.1922 s  (setup 0.0027)  compute max/mean=0.1753/0.1731  halo max/mean=0.0126/0.0107  allreduce max/mean=0.0112/0.0079
+t_total=0.1997 s  (setup 0.0028)  compute max/mean=0.1802/0.1760  halo max/mean=0.0152/0.0132  allreduce max/mean=0.0158/0.0102
+--- strong scaling np=12 (17:30:17)
+t_total=0.1138 s  (setup 0.0027)  compute max/mean=0.0961/0.0900  halo max/mean=0.0311/0.0238  allreduce max/mean=0.0007/0.0003
+t_total=0.1096 s  (setup 0.0027)  compute max/mean=0.0982/0.0953  halo max/mean=0.0164/0.0143  allreduce max/mean=0.0007/0.0003
+t_total=0.2349 s  (setup 0.0061)  compute max/mean=0.1130/0.1082  halo max/mean=0.1299/0.1268  allreduce max/mean=0.0010/0.0005
+t_total=0.2002 s  (setup 0.0061)  compute max/mean=0.1116/0.1094  halo max/mean=0.0935/0.0909  allreduce max/mean=0.0008/0.0005
+t_total=0.4632 s  (setup 0.0007)  compute max/mean=0.3978/0.3905  halo max/mean=0.0205/0.0153  allreduce max/mean=0.0699/0.0567
+t_total=0.4659 s  (setup 0.0007)  compute max/mean=0.4054/0.3996  halo max/mean=0.0166/0.0110  allreduce max/mean=0.0640/0.0545
+t_total=0.1770 s  (setup 0.0018)  compute max/mean=0.1369/0.1332  halo max/mean=0.0246/0.0157  allreduce max/mean=0.0372/0.0276
+t_total=0.1746 s  (setup 0.0020)  compute max/mean=0.1380/0.1352  halo max/mean=0.0190/0.0131  allreduce max/mean=0.0332/0.0262
+--- strong scaling np=16 (17:30:20)
+t_total=0.2403 s  (setup 0.0080)  compute max/mean=0.1049/0.0679  halo max/mean=0.1902/0.1714  allreduce max/mean=0.0109/0.0087
+t_total=0.2030 s  (setup 0.0121)  compute max/mean=0.1001/0.0684  halo max/mean=0.1495/0.1335  allreduce max/mean=0.0177/0.0152
+t_total=0.3213 s  (setup 0.0145)  compute max/mean=0.1286/0.0931  halo max/mean=0.2481/0.2277  allreduce max/mean=0.0185/0.0149
+t_total=0.3013 s  (setup 0.0114)  compute max/mean=0.1076/0.0947  halo max/mean=0.2258/0.2059  allreduce max/mean=0.0135/0.0104
+t_total=1.0918 s  (setup 0.0028)  compute max/mean=0.4175/0.3834  halo max/mean=0.1218/0.0754  allreduce max/mean=0.6716/0.6334
+t_total=1.0367 s  (setup 0.0021)  compute max/mean=0.4987/0.3882  halo max/mean=0.0905/0.0690  allreduce max/mean=0.6105/0.5805
+t_total=0.3968 s  (setup 0.0048)  compute max/mean=0.1551/0.1404  halo max/mean=0.0583/0.0458  allreduce max/mean=0.2434/0.2184
+t_total=0.3965 s  (setup 0.0069)  compute max/mean=0.1627/0.1411  halo max/mean=0.0581/0.0463  allreduce max/mean=0.2476/0.2152
+--- weak scaling np=1 (17:30:25)
+t_total=0.1156 s  (setup 0.0078)  compute max/mean=0.1155/0.1155  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.1159 s  (setup 0.0081)  compute max/mean=0.1159/0.1159  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.0246 s  (setup 0.0026)  compute max/mean=0.0246/0.0246  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.0247 s  (setup 0.0027)  compute max/mean=0.0246/0.0246  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.1988 s  (setup 0.0021)  compute max/mean=0.1976/0.1976  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.1992 s  (setup 0.0020)  compute max/mean=0.1980/0.1980  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.0803 s  (setup 0.0011)  compute max/mean=0.0799/0.0799  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.0802 s  (setup 0.0011)  compute max/mean=0.0799/0.0799  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+--- weak scaling np=2 (17:30:27)
+t_total=0.1190 s  (setup 0.0080)  compute max/mean=0.1177/0.1176  halo max/mean=0.0014/0.0014  allreduce max/mean=0.0006/0.0003
+t_total=0.1188 s  (setup 0.0080)  compute max/mean=0.1172/0.1172  halo max/mean=0.0016/0.0016  allreduce max/mean=0.0007/0.0003
+t_total=0.0306 s  (setup 0.0027)  compute max/mean=0.0251/0.0251  halo max/mean=0.0055/0.0055  allreduce max/mean=0.0001/0.0001
+t_total=0.0309 s  (setup 0.0026)  compute max/mean=0.0249/0.0249  halo max/mean=0.0060/0.0060  allreduce max/mean=0.0002/0.0001
+t_total=0.2034 s  (setup 0.0020)  compute max/mean=0.1982/0.1979  halo max/mean=0.0005/0.0005  allreduce max/mean=0.0043/0.0040
+t_total=0.2038 s  (setup 0.0020)  compute max/mean=0.1984/0.1984  halo max/mean=0.0004/0.0004  allreduce max/mean=0.0040/0.0039
+t_total=0.0865 s  (setup 0.0011)  compute max/mean=0.0817/0.0817  halo max/mean=0.0010/0.0010  allreduce max/mean=0.0036/0.0036
+t_total=0.0860 s  (setup 0.0011)  compute max/mean=0.0811/0.0808  halo max/mean=0.0010/0.0010  allreduce max/mean=0.0042/0.0039
+--- weak scaling np=4 (17:30:28)
+t_total=0.1364 s  (setup 0.0081)  compute max/mean=0.1289/0.1268  halo max/mean=0.0115/0.0095  allreduce max/mean=0.0008/0.0004
+t_total=0.1289 s  (setup 0.0081)  compute max/mean=0.1248/0.1244  halo max/mean=0.0051/0.0045  allreduce max/mean=0.0011/0.0006
+t_total=0.0348 s  (setup 0.0027)  compute max/mean=0.0261/0.0261  halo max/mean=0.0087/0.0087  allreduce max/mean=0.0002/0.0001
+t_total=0.0339 s  (setup 0.0027)  compute max/mean=0.0258/0.0258  halo max/mean=0.0082/0.0081  allreduce max/mean=0.0002/0.0001
+t_total=0.2132 s  (setup 0.0020)  compute max/mean=0.2075/0.2072  halo max/mean=0.0009/0.0008  allreduce max/mean=0.0041/0.0038
+t_total=0.2169 s  (setup 0.0020)  compute max/mean=0.2091/0.2087  halo max/mean=0.0013/0.0012  allreduce max/mean=0.0059/0.0056
+t_total=0.0883 s  (setup 0.0012)  compute max/mean=0.0822/0.0819  halo max/mean=0.0017/0.0017  allreduce max/mean=0.0052/0.0045
+t_total=0.0916 s  (setup 0.0011)  compute max/mean=0.0833/0.0830  halo max/mean=0.0030/0.0022  allreduce max/mean=0.0063/0.0061
+--- weak scaling np=8 (17:30:30)
+t_total=0.2342 s  (setup 0.0082)  compute max/mean=0.2252/0.2231  halo max/mean=0.0153/0.0110  allreduce max/mean=0.0021/0.0009
+t_total=0.2376 s  (setup 0.0082)  compute max/mean=0.2297/0.2227  halo max/mean=0.0198/0.0147  allreduce max/mean=0.0024/0.0011
+t_total=0.0422 s  (setup 0.0027)  compute max/mean=0.0284/0.0276  halo max/mean=0.0160/0.0146  allreduce max/mean=0.0004/0.0002
+t_total=0.0442 s  (setup 0.0027)  compute max/mean=0.0302/0.0291  halo max/mean=0.0175/0.0151  allreduce max/mean=0.0004/0.0002
+t_total=0.2600 s  (setup 0.0021)  compute max/mean=0.2466/0.2416  halo max/mean=0.0052/0.0033  allreduce max/mean=0.0179/0.0137
+t_total=0.2618 s  (setup 0.0020)  compute max/mean=0.2475/0.2432  halo max/mean=0.0053/0.0038  allreduce max/mean=0.0187/0.0133
+t_total=0.0970 s  (setup 0.0011)  compute max/mean=0.0890/0.0867  halo max/mean=0.0030/0.0029  allreduce max/mean=0.0100/0.0072
+t_total=0.0971 s  (setup 0.0012)  compute max/mean=0.0873/0.0859  halo max/mean=0.0032/0.0031  allreduce max/mean=0.0091/0.0079
+--- weak scaling np=12 (17:30:32)
+t_total=0.3560 s  (setup 0.0084)  compute max/mean=0.3113/0.2932  halo max/mean=0.0841/0.0627  allreduce max/mean=0.0024/0.0009
+t_total=0.3445 s  (setup 0.0085)  compute max/mean=0.3280/0.3211  halo max/mean=0.0291/0.0234  allreduce max/mean=0.0025/0.0009
+t_total=0.0611 s  (setup 0.0027)  compute max/mean=0.0416/0.0402  halo max/mean=0.0214/0.0209  allreduce max/mean=0.0003/0.0002
+t_total=0.0638 s  (setup 0.0027)  compute max/mean=0.0412/0.0400  halo max/mean=0.0244/0.0238  allreduce max/mean=0.0004/0.0002
+t_total=0.4030 s  (setup 0.0021)  compute max/mean=0.3407/0.3352  halo max/mean=0.0163/0.0101  allreduce max/mean=0.0661/0.0559
+t_total=0.5804 s  (setup 0.0020)  compute max/mean=0.3640/0.3460  halo max/mean=0.0604/0.0389  allreduce max/mean=0.2240/0.1942
+t_total=0.1195 s  (setup 0.0012)  compute max/mean=0.0996/0.0976  halo max/mean=0.0076/0.0062  allreduce max/mean=0.0178/0.0155
+t_total=0.1324 s  (setup 0.0012)  compute max/mean=0.1006/0.0987  halo max/mean=0.0113/0.0078  allreduce max/mean=0.0300/0.0257
+--- weak scaling np=16 (17:30:35)
+t_total=0.9479 s  (setup 0.0201)  compute max/mean=0.4185/0.2716  halo max/mean=0.7548/0.6608  allreduce max/mean=0.0630/0.0528
+t_total=0.9487 s  (setup 0.0197)  compute max/mean=0.3879/0.2853  halo max/mean=0.7311/0.6628  allreduce max/mean=0.0439/0.0337
+t_total=0.2178 s  (setup 0.0071)  compute max/mean=0.0652/0.0526  halo max/mean=0.1757/0.1640  allreduce max/mean=0.0104/0.0081
+t_total=0.4035 s  (setup 0.0114)  compute max/mean=0.0724/0.0558  halo max/mean=0.3649/0.3479  allreduce max/mean=0.0149/0.0113
+t_total=1.6638 s  (setup 0.0112)  compute max/mean=0.5541/0.4650  halo max/mean=0.2414/0.1505  allreduce max/mean=1.1862/1.0562
+t_total=1.4488 s  (setup 0.0084)  compute max/mean=0.6160/0.4652  halo max/mean=0.1536/0.1169  allreduce max/mean=0.9773/0.8812
+t_total=0.5129 s  (setup 0.0041)  compute max/mean=0.1735/0.1541  halo max/mean=0.0628/0.0510  allreduce max/mean=0.3367/0.3111
+t_total=0.4081 s  (setup 0.0040)  compute max/mean=0.1640/0.1503  halo max/mean=0.0502/0.0381  allreduce max/mean=0.2344/0.2227
+=== run_all.sh finished Sat Oct 31 17:30:43 +08 2026
+=== run_all.sh started Mon Nov  2 16:20:05 +08 2026  maxcores=16 repeats=2 stages=data
+--- gap filling: serial baselines (CG to 1e-6, Jacobi 1000 sweeps) (16:20:05)
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223) t_total=0.5991 s  (setup 0.0019)  compute max/mean=0.5958/0.5958  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223) t_total=0.5851 s  (setup 0.0008)  compute max/mean=0.5834/0.5834  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223) t_total=0.3582 s  (setup 0.0008)  compute max/mean=0.3582/0.3582  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=1000 converged=0 rel_resid=8.949e-04  hidden-pixel error: rmse=0.1595 mae=0.1100 max=1.4477  (baseline rmse=0.9223) t_total=0.3490 s  (setup 0.0009)  compute max/mean=0.3490/0.3490  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679) t_total=97.8896 s  (setup 0.3715)  compute max/mean=97.5672/97.5672  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679) t_total=98.5388 s  (setup 0.3717)  compute max/mean=98.2334/98.2334  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679) t_total=37.1487 s  (setup 0.3868)  compute max/mean=37.1487/37.1487  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+iters=200 converged=0 rel_resid=2.898e-03  hidden-pixel error: rmse=0.2336 mae=0.1681 max=6.5388  (baseline rmse=1.4679) t_total=37.3198 s  (setup 0.4027)  compute max/mean=37.3198/37.3198  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000 
+--- gap filling: strong scaling np=1 (16:24:44)
+t_total=0.6267 s  (setup 0.0009)  compute max/mean=0.6247/0.6247  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.6149 s  (setup 0.0008)  compute max/mean=0.6130/0.6130  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.3715 s  (setup 0.0008)  compute max/mean=0.3714/0.3714  halo max/mean=0.0001/0.0001  allreduce max/mean=0.0000/0.0000
+t_total=0.3617 s  (setup 0.0009)  compute max/mean=0.3616/0.3616  halo max/mean=0.0001/0.0001  allreduce max/mean=0.0000/0.0000
+t_total=102.1104 s  (setup 0.3885)  compute max/mean=101.8062/101.8062  halo max/mean=0.0005/0.0005  allreduce max/mean=0.0006/0.0006
+t_total=101.5651 s  (setup 0.3843)  compute max/mean=101.2553/101.2553  halo max/mean=0.0004/0.0004  allreduce max/mean=0.0005/0.0005
+t_total=37.1785 s  (setup 0.3846)  compute max/mean=37.1781/37.1781  halo max/mean=0.0003/0.0003  allreduce max/mean=0.0000/0.0000
+t_total=37.1642 s  (setup 0.3877)  compute max/mean=37.1638/37.1638  halo max/mean=0.0003/0.0003  allreduce max/mean=0.0000/0.0000
+--- gap filling: strong scaling np=2 (16:29:29)
+t_total=0.3339 s  (setup 0.0006)  compute max/mean=0.3258/0.3186  halo max/mean=0.0058/0.0048  allreduce max/mean=0.0160/0.0096
+t_total=0.3323 s  (setup 0.0005)  compute max/mean=0.3257/0.3175  halo max/mean=0.0054/0.0043  allreduce max/mean=0.0166/0.0096
+t_total=0.2119 s  (setup 0.0005)  compute max/mean=0.2073/0.1810  halo max/mean=0.0571/0.0308  allreduce max/mean=0.0002/0.0001
+t_total=0.2086 s  (setup 0.0005)  compute max/mean=0.2034/0.1792  halo max/mean=0.0536/0.0293  allreduce max/mean=0.0001/0.0001
+t_total=53.2299 s  (setup 0.2194)  compute max/mean=52.7544/51.5805  halo max/mean=0.5918/0.4229  allreduce max/mean=2.1085/1.0827
+t_total=53.6466 s  (setup 0.2084)  compute max/mean=53.1419/52.0854  halo max/mean=0.5941/0.4275  allreduce max/mean=1.8774/0.9786
+t_total=19.7315 s  (setup 0.2102)  compute max/mean=19.4711/18.7787  halo max/mean=1.6396/0.9506  allreduce max/mean=0.0220/0.0114
+t_total=19.8052 s  (setup 0.2093)  compute max/mean=19.5428/18.8447  halo max/mean=1.6568/0.9603  allreduce max/mean=0.0183/0.0102
+--- gap filling: strong scaling np=4 (16:32:01)
+t_total=0.1768 s  (setup 0.0003)  compute max/mean=0.1685/0.1579  halo max/mean=0.0023/0.0017  allreduce max/mean=0.0314/0.0168
+t_total=0.1802 s  (setup 0.0003)  compute max/mean=0.1714/0.1606  halo max/mean=0.0024/0.0019  allreduce max/mean=0.0296/0.0172
+t_total=0.1283 s  (setup 0.0005)  compute max/mean=0.1229/0.0877  halo max/mean=0.0801/0.0405  allreduce max/mean=0.0003/0.0002
+t_total=0.1289 s  (setup 0.0003)  compute max/mean=0.1226/0.0883  halo max/mean=0.0802/0.0405  allreduce max/mean=0.0008/0.0004
+t_total=31.4624 s  (setup 0.1256)  compute max/mean=30.9607/28.3527  halo max/mean=0.2092/0.2052  allreduce max/mean=4.9182/2.8623
+t_total=31.6912 s  (setup 0.1275)  compute max/mean=31.1945/28.4896  halo max/mean=0.1982/0.1949  allreduce max/mean=5.1513/2.9663
+t_total=13.1033 s  (setup 0.1270)  compute max/mean=12.9375/10.0524  halo max/mean=5.2213/3.0316  allreduce max/mean=0.0926/0.0497
+t_total=13.0706 s  (setup 0.1276)  compute max/mean=12.8985/10.0629  halo max/mean=5.1900/2.9918  allreduce max/mean=0.0952/0.0508
+--- gap filling: strong scaling np=8 (16:33:34)
+t_total=0.1007 s  (setup 0.0028)  compute max/mean=0.0876/0.0804  halo max/mean=0.0024/0.0020  allreduce max/mean=0.0269/0.0187
+t_total=0.0980 s  (setup 0.0002)  compute max/mean=0.0855/0.0796  halo max/mean=0.0023/0.0020  allreduce max/mean=0.0238/0.0169
+t_total=0.0767 s  (setup 0.0002)  compute max/mean=0.0685/0.0460  halo max/mean=0.0538/0.0306  allreduce max/mean=0.0044/0.0010
+t_total=0.0872 s  (setup 0.0002)  compute max/mean=0.0750/0.0507  halo max/mean=0.0619/0.0364  allreduce max/mean=0.0033/0.0010
+t_total=20.0043 s  (setup 0.0662)  compute max/mean=19.6164/18.2457  halo max/mean=0.1396/0.1301  allreduce max/mean=2.6670/1.6067
+t_total=20.3793 s  (setup 0.0699)  compute max/mean=20.0043/18.5545  halo max/mean=0.1420/0.1359  allreduce max/mean=2.7375/1.6654
+t_total=8.0355 s  (setup 0.0642)  compute max/mean=7.9269/6.0466  halo max/mean=3.3999/1.9759  allreduce max/mean=0.0589/0.0338
+t_total=8.4141 s  (setup 0.0640)  compute max/mean=8.3010/6.2989  halo max/mean=3.6128/2.1025  allreduce max/mean=0.0543/0.0298
+--- gap filling: strong scaling np=12 (16:34:34)
+t_total=0.0822 s  (setup 0.0007)  compute max/mean=0.0672/0.0622  halo max/mean=0.0047/0.0030  allreduce max/mean=0.0238/0.0175
+t_total=0.0855 s  (setup 0.0004)  compute max/mean=0.0626/0.0582  halo max/mean=0.0043/0.0029  allreduce max/mean=0.0297/0.0252
+t_total=0.0549 s  (setup 0.0001)  compute max/mean=0.0468/0.0309  halo max/mean=0.0414/0.0239  allreduce max/mean=0.0058/0.0030
+t_total=0.0529 s  (setup 0.0001)  compute max/mean=0.0442/0.0294  halo max/mean=0.0400/0.0235  allreduce max/mean=0.0057/0.0030
+t_total=21.4269 s  (setup 0.0439)  compute max/mean=20.9866/19.2004  halo max/mean=0.2430/0.2070  allreduce max/mean=4.6861/2.0044
+t_total=22.7285 s  (setup 0.0434)  compute max/mean=22.1981/20.2949  halo max/mean=0.2747/0.2330  allreduce max/mean=5.0346/2.1975
+t_total=8.2712 s  (setup 0.0438)  compute max/mean=8.1463/5.8228  halo max/mean=5.7440/2.4327  allreduce max/mean=0.0707/0.0305
+t_total=8.1248 s  (setup 0.0438)  compute max/mean=7.9967/5.7372  halo max/mean=5.6387/2.3709  allreduce max/mean=0.0630/0.0300
+--- gap filling: strong scaling np=16 (16:35:40)
+t_total=0.1525 s  (setup 0.0043)  compute max/mean=0.0745/0.0614  halo max/mean=0.0160/0.0105  allreduce max/mean=0.0937/0.0823
+t_total=0.1692 s  (setup 0.0051)  compute max/mean=0.0702/0.0564  halo max/mean=0.0163/0.0097  allreduce max/mean=0.1248/0.1090
+t_total=0.0887 s  (setup 0.0020)  compute max/mean=0.0486/0.0331  halo max/mean=0.0737/0.0555  allreduce max/mean=0.0084/0.0043
+t_total=0.1502 s  (setup 0.0093)  compute max/mean=0.0499/0.0347  halo max/mean=0.1336/0.1152  allreduce max/mean=0.0190/0.0148
+t_total=21.8347 s  (setup 0.0470)  compute max/mean=18.2692/16.6817  halo max/mean=0.8392/0.6548  allreduce max/mean=6.7131/4.4990
+t_total=20.8535 s  (setup 0.0456)  compute max/mean=17.6654/16.1800  halo max/mean=0.7768/0.6576  allreduce max/mean=6.0982/4.0257
+t_total=6.6617 s  (setup 0.0412)  compute max/mean=6.1235/4.5289  halo max/mean=4.2879/2.1142  allreduce max/mean=0.1028/0.0612
+t_total=6.7029 s  (setup 0.0470)  compute max/mean=6.1281/4.4269  halo max/mean=4.3346/2.2510  allreduce max/mean=0.0922/0.0547
+--- gap filling: OpenMP only and MPI+OpenMP at 16 cores (16:36:44)
+t_total=0.2493 s  (setup 0.0008)  compute max/mean=0.2476/0.2476  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=0.2421 s  (setup 0.0003)  compute max/mean=0.2405/0.2405  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=19.6204 s  (setup 0.0430)  compute max/mean=19.4331/19.4331  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=19.6038 s  (setup 0.0441)  compute max/mean=19.4098/19.4098  halo max/mean=0.0000/0.0000  allreduce max/mean=0.0000/0.0000
+t_total=18.8169 s  (setup 0.0494)  compute max/mean=17.2133/16.3399  halo max/mean=0.3340/0.3256  allreduce max/mean=3.0018/2.1103
+t_total=18.7362 s  (setup 0.0476)  compute max/mean=17.1956/16.2940  halo max/mean=0.3373/0.3239  allreduce max/mean=2.8113/2.0781
+--- gap filling: accuracy against the size of the hidden patches and the time weight (np=16) (16:38:05)
+iters=459 converged=1 rel_resid=9.928e-07  hidden-pixel error: rmse=0.0892 mae=0.0509 max=1.6028  (baseline rmse=0.9668)  vs reference: rmse_fill=0.2639 rmse_obs=0.3767
+iters=191 converged=1 rel_resid=9.709e-07  hidden-pixel error: rmse=0.1340 mae=0.0895 max=7.0684  (baseline rmse=1.4768)  vs reference: rmse_fill=0.2721 rmse_obs=0.2588
+iters=191 converged=1 rel_resid=9.709e-07  hidden-pixel error: rmse=0.1179 mae=0.0777 max=1.4377  (baseline rmse=1.2011)  vs reference: rmse_fill=0.2458 rmse_obs=0.3767
+iters=483 converged=1 rel_resid=9.832e-07  hidden-pixel error: rmse=0.1273 mae=0.0696 max=2.1130  (baseline rmse=1.0163)  vs reference: rmse_fill=0.2636 rmse_obs=0.3759
+iters=199 converged=1 rel_resid=9.550e-07  hidden-pixel error: rmse=0.1912 mae=0.1349 max=7.2393  (baseline rmse=1.4778)  vs reference: rmse_fill=0.2723 rmse_obs=0.2588
+iters=199 converged=1 rel_resid=9.550e-07  hidden-pixel error: rmse=0.1942 mae=0.1307 max=2.0516  (baseline rmse=1.2086)  vs reference: rmse_fill=0.2463 rmse_obs=0.3759
+iters=489 converged=1 rel_resid=9.863e-07  hidden-pixel error: rmse=0.1546 mae=0.1074 max=1.4477  (baseline rmse=0.9223)  vs reference: rmse_fill=0.2607 rmse_obs=0.3769
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2318 mae=0.1670 max=6.5388  (baseline rmse=1.4679)  vs reference: rmse_fill=0.2746 rmse_obs=0.2591
+iters=199 converged=1 rel_resid=9.829e-07  hidden-pixel error: rmse=0.2131 mae=0.1583 max=1.3479  (baseline rmse=1.1686)  vs reference: rmse_fill=0.2484 rmse_obs=0.3769
+iters=555 converged=1 rel_resid=9.802e-07  hidden-pixel error: rmse=0.3754 mae=0.2336 max=3.1625  (baseline rmse=0.9371)  vs reference: rmse_fill=0.2709 rmse_obs=0.3750
+iters=199 converged=1 rel_resid=9.564e-07  hidden-pixel error: rmse=0.2483 mae=0.1802 max=5.4914  (baseline rmse=1.4795)  vs reference: rmse_fill=0.2771 rmse_obs=0.2595
+iters=199 converged=1 rel_resid=9.564e-07  hidden-pixel error: rmse=0.2854 mae=0.2069 max=2.4162  (baseline rmse=1.2105)  vs reference: rmse_fill=0.2539 rmse_obs=0.3750
+iters=499 converged=1 rel_resid=9.941e-07  hidden-pixel error: rmse=0.1931 mae=0.1238 max=7.4030  (baseline rmse=1.4679)  vs reference: rmse_fill=0.2705 rmse_obs=0.2591
+iters=499 converged=1 rel_resid=9.941e-07  hidden-pixel error: rmse=0.1595 mae=0.1123 max=1.4643  (baseline rmse=1.1686)  vs reference: rmse_fill=0.2426 rmse_obs=0.3769
+iters=403 converged=1 rel_resid=9.790e-07  hidden-pixel error: rmse=0.1931 mae=0.1282 max=7.4009  (baseline rmse=1.4679)  vs reference: rmse_fill=0.2641 rmse_obs=0.2591
+iters=403 converged=1 rel_resid=9.790e-07  hidden-pixel error: rmse=0.1695 mae=0.1214 max=1.4631  (baseline rmse=1.1686)  vs reference: rmse_fill=0.2397 rmse_obs=0.3769
+iters=328 converged=1 rel_resid=9.895e-07  hidden-pixel error: rmse=0.2024 mae=0.1396 max=7.3168  (baseline rmse=1.4679)  vs reference: rmse_fill=0.2624 rmse_obs=0.2591
+iters=328 converged=1 rel_resid=9.895e-07  hidden-pixel error: rmse=0.1861 mae=0.1352 max=1.4216  (baseline rmse=1.1686)  vs reference: rmse_fill=0.2403 rmse_obs=0.3769
+iters=261 converged=1 rel_resid=9.854e-07  hidden-pixel error: rmse=0.2160 mae=0.1529 max=7.0730  (baseline rmse=1.4679)  vs reference: rmse_fill=0.2659 rmse_obs=0.2591
+iters=261 converged=1 rel_resid=9.854e-07  hidden-pixel error: rmse=0.2005 mae=0.1474 max=1.4171  (baseline rmse=1.1686)  vs reference: rmse_fill=0.2431 rmse_obs=0.3769
+iters=184 converged=1 rel_resid=9.904e-07  hidden-pixel error: rmse=0.2451 mae=0.1778 max=6.0645  (baseline rmse=1.4679)  vs reference: rmse_fill=0.2861 rmse_obs=0.2591
+iters=184 converged=1 rel_resid=9.904e-07  hidden-pixel error: rmse=0.2224 mae=0.1662 max=1.3977  (baseline rmse=1.1686)  vs reference: rmse_fill=0.2555 rmse_obs=0.3769
+--- gap filling: maps (16:46:52)
+=== run_all.sh finished Mon Nov  2 16:46:52 +08 2026
