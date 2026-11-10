@@ -72,7 +72,6 @@ dsa5208-poisson-mpi/
   results/cluster_round1/     the failed first round of Vanda runs (not used in the report)
   results/figures_cluster/    the Vanda figures and tables used in the report
   vanda_jobs/                 the exact PBS job files that produced results/cluster and results/cluster_8x32
-  logs_vanda/                 the Vanda job logs
   report/report.md, report.pdf  the project report (build with report/build.sh)
   report/report_laptop_version.md  an earlier, laptop-only version of the report, kept for comparison
   handbook/handbook.pdf       a long beginner's guide to the code, written during development
@@ -85,7 +84,9 @@ gnuplot for the figures. No Python is used.
 **Not in this repository.** The satellite data (`data/`, about 2.5 GB) and the
 filled fields (`results/fields/`, about 600 MB) are too large for GitHub. The
 commands in the Data section rebuild them. Compiled programs (`bin/`) are
-rebuilt with `make all`.
+rebuilt with `make all`. Job logs and terminal output (`logs_vanda/`, `*.log`,
+PBS `*.o<jobid>` files) are kept out of the repository, as the lecturer asked;
+the measurements themselves are in the CSV files under `results/`.
 
 ## Build
 

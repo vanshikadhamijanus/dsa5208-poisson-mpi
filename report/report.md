@@ -288,7 +288,7 @@ The same review added checks on every numeric option. Before, `--n 0` or `--n ab
 
 Table: Table 6. Difference between the two repeats of each configuration on Vanda (slower run divided by faster run, minus one), over all CSV files of the 4-node layout.
 
-**GPU node.** The GPU job ran on node GN-A40-003, which has NVIDIA A40 GPUs with 46 GB of memory each (job log and `results/cluster/gpu.csv`). We did not record its processor; an A40 node of the same type, GN-A40-074 above, has two 36-core Xeon Platinum 8452Y. The job used one GPU and 36 cores.
+**GPU node.** The GPU job ran on node GN-A40-003, which has NVIDIA A40 GPUs with 46 GB of memory each (the hostname column of `results/cluster/gpu.csv` and `results/cluster/gpu_info.txt`). We did not record its processor; an A40 node of the same type, GN-A40-074 above, has two 36-core Xeon Platinum 8452Y. The job used one GPU and 36 cores.
 
 ## Serial runtime against problem size
 

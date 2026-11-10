@@ -9,3 +9,10 @@ Slides_export/
 Code Samples/
 # a document from another course, kept here only as a writing reference
 DSS5202_*.docx
+# job logs and terminal output stay local (lecture 12: do not submit log files or terminal output)
+logs_vanda/
+*.log
+# PBS job output files (<jobname>.o<jobid>, .e<jobid>) and the rank-placement file of hwinfo.pbs
+*.o[0-9]*
+*.e[0-9]*
+hwinfo_ranks_*.txt
