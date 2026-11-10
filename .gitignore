@@ -1,7 +1,11 @@
 # large or regenerated files (see README: "Not in this repository")
-data/
+/data/
 results/fields/
 bin/
 *.o
 .DS_Store
 report/report.html
+Slides_export/
+Code Samples/
+# a document from another course, kept here only as a writing reference
+DSS5202_*.docx

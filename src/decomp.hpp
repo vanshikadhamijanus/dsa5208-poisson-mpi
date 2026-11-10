@@ -54,6 +54,15 @@ inline Decomp make_decomp(Params& P) {
     D.ndims_active = P.dim;
     for (int d = 0; d < 3; ++d) D.dims[d] = P.dims[d];
     if (P.dim == 2) D.dims[2] = 1;
+    // MPI_Dims_create fails with an MPI error if the fixed entries cannot be completed
+    // to a grid of exactly D.size ranks; check first and say why.
+    long fixed = 1; bool has_free = false;
+    for (int d = 0; d < 3; ++d) { if (D.dims[d] > 0) fixed *= D.dims[d]; else has_free = true; }
+    if ((has_free && D.size % fixed != 0) || (!has_free && fixed != D.size)) {
+        if (D.rank == 0) std::fprintf(stderr, "--dims %dx%dx%d does not fit %d ranks (the product must equal the rank count)\n",
+                                      D.dims[0], D.dims[1], D.dims[2], D.size);
+        MPI_Abort(MPI_COMM_WORLD, 2);
+    }
     MPI_Dims_create(D.size, 3, D.dims);            // fills in the zeros as evenly as possible
     int periods[3] = {0, 0, 0};
     MPI_Cart_create(MPI_COMM_WORLD, 3, D.dims, periods, 1, &D.cart);

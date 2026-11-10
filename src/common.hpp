@@ -30,6 +30,7 @@
 // is the contiguous (fastest) direction.
 #pragma once
 #include <algorithm>
+#include <cerrno>
 #include <cmath>
 #include <cstdio>
 #include <cstdlib>
@@ -41,6 +42,15 @@
 namespace poisson {
 
 constexpr double PI = 3.14159265358979323846;
+
+// Error exit. The MPI drivers set fatal_hook to a function that calls MPI_Abort,
+// so a rank that fails (for example on a file read) stops the whole job instead
+// of leaving the other ranks waiting in their next collective call.
+inline void (*fatal_hook)(int) = nullptr;
+[[noreturn]] inline void fail(int code) {
+    if (fatal_hook) fatal_hook(code);
+    std::exit(code);
+}
 
 struct Params {
     int dim = 2;                          // 2 or 3
@@ -89,7 +99,7 @@ inline void usage(const char* prog) {
         "  --cuda-aware           (mpi_cuda only) use CUDA-aware MPI\n"
         "  --verbose              print per-iteration progress\n"
         "satellite gap filling (replaces the manufactured problem):\n"
-        "  --data FILE            grid file written by bin/asc2grid (sets the grid size)\n"
+        "  --data FILE            grid file written by bin/gridtool (sets the grid size)\n"
         "  --day K                2D: time slice to fill (default 0); 3D: first slice\n"
         "  --days N               3D: number of slices to use (default 0 = all remaining)\n"
         "  --tweight W            3D: weight of time neighbours vs space neighbours (default 1)\n"
@@ -101,18 +111,37 @@ inline void usage(const char* prog) {
         "  --out FILE             write the filled field (grid file)\n", prog);
 }
 
-inline void parse_list(const std::string& s, long* out, int maxn, long fill) {
-    // "256" -> {256,256,256}; "256,128" -> {256,128,fill}
+// Strict number parsing: the whole string must be a number, otherwise stop with
+// a message. (std::atoi would turn "abc" into 0 and the run would go ahead.)
+inline long to_long(const std::string& s, const char* name) {
+    char* end = nullptr;
+    errno = 0;
+    const long v = std::strtol(s.c_str(), &end, 10);
+    if (s.empty() || errno != 0 || *end != '\0') { std::fprintf(stderr, "%s: '%s' is not an integer\n", name, s.c_str()); fail(2); }
+    return v;
+}
+inline double to_double(const std::string& s, const char* name) {
+    char* end = nullptr;
+    errno = 0;
+    const double v = std::strtod(s.c_str(), &end);
+    if (s.empty() || errno != 0 || *end != '\0' || !std::isfinite(v)) { std::fprintf(stderr, "%s: '%s' is not a number\n", name, s.c_str()); fail(2); }
+    return v;
+}
+
+// "256" -> {256,256,256}; "256,128" -> {256,128,fill}. Returns how many values were given.
+inline int parse_list(const std::string& s, long* out, int maxn, long fill, const char* name) {
     std::vector<long> v;
     size_t pos = 0;
     while (pos <= s.size()) {
         size_t c = s.find(',', pos);
         if (c == std::string::npos) c = s.size();
-        v.push_back(std::atol(s.substr(pos, c - pos).c_str()));
+        v.push_back(to_long(s.substr(pos, c - pos), name));
         pos = c + 1;
     }
-    if (v.size() == 1) { for (int d = 0; d < maxn; ++d) out[d] = v[0]; return; }
+    if ((int)v.size() > maxn) { std::fprintf(stderr, "%s: at most %d values\n", name, maxn); fail(2); }
+    if (v.size() == 1) { for (int d = 0; d < maxn; ++d) out[d] = v[0]; return 1; }
     for (int d = 0; d < maxn; ++d) out[d] = d < (int)v.size() ? v[d] : fill;
+    return (int)v.size();
 }
 
 inline Params parse_args(int argc, char** argv) {
@@ -121,19 +150,21 @@ inline Params parse_args(int argc, char** argv) {
     for (int a = 1; a < argc; ++a) {
         std::string k = argv[a];
         auto need = [&](const char* name) -> std::string {
-            if (a + 1 >= argc) { std::fprintf(stderr, "missing value for %s\n", name); usage(argv[0]); std::exit(2); }
+            if (a + 1 >= argc) { std::fprintf(stderr, "missing value for %s\n", name); usage(argv[0]); fail(2); }
             return argv[++a];
         };
-        if      (k == "--dim")         p.dim = std::atoi(need("--dim").c_str());
+        auto need_l = [&](const char* name) { return to_long(need(name), name); };
+        auto need_d = [&](const char* name) { return to_double(need(name), name); };
+        if      (k == "--dim")         p.dim = (int)need_l("--dim");
         else if (k == "--n")           nstr = need("--n");
-        else if (k == "--local-n")     p.local_n = std::atol(need("--local-n").c_str());
+        else if (k == "--local-n")     p.local_n = need_l("--local-n");
         else if (k == "--solver")      p.solver = need("--solver");
         else if (k == "--exchange")    p.exchange = need("--exchange");
         else if (k == "--dims")        dstr = need("--dims");
-        else if (k == "--iters")       p.iters = std::atol(need("--iters").c_str());
-        else if (k == "--tol")         p.tol = std::atof(need("--tol").c_str());
-        else if (k == "--check-every") p.check_every = std::atoi(need("--check-every").c_str());
-        else if (k == "--threads")     p.threads = std::atoi(need("--threads").c_str());
+        else if (k == "--iters")       p.iters = need_l("--iters");
+        else if (k == "--tol")         p.tol = need_d("--tol");
+        else if (k == "--check-every") p.check_every = (int)need_l("--check-every");
+        else if (k == "--threads")     p.threads = (int)need_l("--threads");
         else if (k == "--csv")         p.csv = need("--csv");
         else if (k == "--tag")         p.tag = need("--tag");
         else if (k == "--cuda-aware")  p.cuda_aware = true;
@@ -141,32 +172,52 @@ inline Params parse_args(int argc, char** argv) {
         else if (k == "--data")        p.data = need("--data");
         else if (k == "--out")         p.out = need("--out");
         else if (k == "--ref")         p.ref = need("--ref");
-        else if (k == "--holdout")     p.holdout = std::atof(need("--holdout").c_str());
-        else if (k == "--tweight")     p.tweight = std::atof(need("--tweight").c_str());
-        else if (k == "--day")         p.day = std::atoi(need("--day").c_str());
-        else if (k == "--days")        p.days = std::atoi(need("--days").c_str());
-        else if (k == "--seed")        p.seed = (unsigned)std::atol(need("--seed").c_str());
-        else if (k == "--holdout-block") p.holdout_block = std::max(1, std::atoi(need("--holdout-block").c_str()));
-        else if (k == "--eval-day")    p.eval_day = std::atoi(need("--eval-day").c_str());
+        else if (k == "--holdout")     p.holdout = need_d("--holdout");
+        else if (k == "--tweight")     p.tweight = need_d("--tweight");
+        else if (k == "--day")         p.day = (int)need_l("--day");
+        else if (k == "--days")        p.days = (int)need_l("--days");
+        else if (k == "--seed")        p.seed = (unsigned)need_l("--seed");
+        else if (k == "--holdout-block") p.holdout_block = (int)need_l("--holdout-block");
+        else if (k == "--eval-day")    p.eval_day = (int)need_l("--eval-day");
         else if (k == "-h" || k == "--help") { usage(argv[0]); std::exit(0); }
-        else { std::fprintf(stderr, "unknown option %s\n", k.c_str()); usage(argv[0]); std::exit(2); }
+        else { std::fprintf(stderr, "unknown option %s\n", k.c_str()); usage(argv[0]); fail(2); }
     }
-    if (p.dim != 2 && p.dim != 3) { std::fprintf(stderr, "--dim must be 2 or 3\n"); std::exit(2); }
-    if (!nstr.empty()) parse_list(nstr, p.n, 3, p.n[0]);
+    auto bad = [](const char* msg) { std::fprintf(stderr, "%s\n", msg); fail(2); };
+    if (p.dim != 2 && p.dim != 3) bad("--dim must be 2 or 3");
+    if (!nstr.empty()) {
+        const int given = parse_list(nstr, p.n, 3, 0, "--n");
+        if (given != 1 && given != p.dim) bad("--n takes one value, or one value per dimension (NX,NY in 2D, NX,NY,NZ in 3D)");
+    }
     if (p.dim == 2) p.n[2] = 1;
-    if (!dstr.empty()) { long d[3] = {0, 0, 0}; parse_list(dstr, d, 3, 1); for (int i = 0; i < 3; ++i) p.dims[i] = (int)d[i]; if (dstr.find(',') == std::string::npos) { p.dims[1] = p.dims[2] = 0; } }
-    if (p.dim == 2) p.dims[2] = 1;
-    if (p.solver != "jacobi" && p.solver != "cg") { std::fprintf(stderr, "--solver must be jacobi or cg\n"); std::exit(2); }
-    if (p.exchange != "sendrecv" && p.exchange != "isend" && p.exchange != "overlap" && p.exchange != "rma") {
-        std::fprintf(stderr, "--exchange must be sendrecv|isend|overlap|rma\n"); std::exit(2);
+    for (int d = 0; d < p.dim; ++d) if (p.n[d] < 1) bad("--n must be at least 1 in every dimension");
+    if (!dstr.empty()) {
+        long d[3] = {0, 0, 0};
+        const int given = parse_list(dstr, d, 3, 1, "--dims");
+        for (int i = 0; i < 3; ++i) p.dims[i] = (int)d[i];
+        if (given == 1) p.dims[1] = p.dims[2] = 0;
+        for (int i = 0; i < 3; ++i) if (p.dims[i] < 0) bad("--dims values must be 0 (let MPI choose) or positive");
     }
-    if (p.holdout < 0 || p.holdout >= 1) { std::fprintf(stderr, "--holdout must be in [0,1)\n"); std::exit(2); }
-    if (p.data_mode() && p.local_n > 0) { std::fprintf(stderr, "--local-n cannot be combined with --data\n"); std::exit(2); }
+    if (p.dim == 2) p.dims[2] = 1;
+    if (p.solver != "jacobi" && p.solver != "cg") bad("--solver must be jacobi or cg");
+    if (p.exchange != "sendrecv" && p.exchange != "isend" && p.exchange != "overlap" && p.exchange != "rma")
+        bad("--exchange must be sendrecv|isend|overlap|rma");
+    if (p.iters < 1) bad("--iters must be at least 1");
+    if (p.tol < 0) bad("--tol must be 0 (fixed iterations) or positive");
+    if (p.check_every < 0) bad("--check-every must be 0 (never) or positive");
+    if (p.threads < 0) bad("--threads must be 0 (use OMP_NUM_THREADS) or positive");
+    if (p.local_n < 0) bad("--local-n must be positive");
+    if (p.holdout < 0 || p.holdout >= 1) bad("--holdout must be in [0,1)");
+    if (p.holdout_block < 1) bad("--holdout-block must be at least 1");
+    if (p.tweight < 0) bad("--tweight must not be negative");
+    if (p.day < 0) bad("--day must not be negative");
+    if (p.days < 0) bad("--days must be 0 (all remaining days) or positive");
+    if (p.data_mode() && p.local_n > 0) bad("--local-n cannot be combined with --data");
     return p;
 }
 
 // Geometry of one rank's block (also used by the serial code with the whole grid as one block).
 struct Local {
+    int dim = 2;                      // problem dimension; a 2D block has nz = 1 and no z-neighbours
     int nx = 0, ny = 0, nz = 0;       // interior points owned by this rank
     long ox = 0, oy = 0, oz = 0;      // global index offset of local interior point (1,1,1)
     long sx = 1, sy = 0, sz = 0;      // strides
@@ -179,6 +230,7 @@ struct Local {
 
 inline Local make_local(const Params& p, const long gn[3], int nx, int ny, int nz, long ox, long oy, long oz) {
     Local L;
+    L.dim = p.dim;
     L.nx = nx; L.ny = ny; L.nz = nz; L.ox = ox; L.oy = oy; L.oz = oz;
     L.sx = 1; L.sy = nx + 2; L.sz = (long)(nx + 2) * (ny + 2);
     L.ntot = (size_t)(nx + 2) * (ny + 2) * (nz + 2);

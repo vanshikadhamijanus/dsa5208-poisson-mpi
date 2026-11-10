@@ -132,7 +132,7 @@ Per-iteration time should grow linearly with N (slope 1 on log-log axes). Jacobi
 | CG 3D | 128 | 12 | 3x2x2 | 222 | 0.175 | 6.54 | 0.55 | 0.138 | 1.02 | 0.019 | 0.033 | 29.9% |
 | CG 3D | 128 | 16 | 4x2x2 | 222 | 0.396 | 2.88 | 0.18 | 0.163 | 1.15 | 0.058 | 0.248 | 77.1% |
 
-`imbalance` is the slowest rank's compute time divided by the mean over ranks; 1.0 means perfectly balanced work. A value well above 1 means some ranks (here, those on the laptop's efficiency cores) finish late and the others wait for them inside the halo exchange or the all-reduce.
+`imbalance` is the slowest rank's compute time divided by the mean over ranks; 1.0 means perfectly balanced work. A value well above 1 means some ranks finish late and the others wait for them inside the halo exchange or the all-reduce.
 
 
 ### Weak scaling: the grid grows with the rank count so each rank always owns the same number of points. Ideal is a flat time (efficiency 1).
@@ -195,21 +195,21 @@ Per-iteration time should grow linearly with N (slope 1 on log-log axes). Jacobi
 | Jacobi 3D | 16 | sendrecv | 0.479 | 0.139 | 0.390 | 0.017 | 1.35 |
 
 
-### Shape of the process grid at fixed rank count. `halo_cells_per_rank` is the number of boundary values each rank sends per sweep (its surface area); fewer means less communication volume, but contiguity of the faces also matters.
+### Shape of the process grid at fixed rank count. `halo_cells_per_rank` is the number of boundary values each rank sends per sweep (its surface area); fewer means less communication volume, but contiguity of the faces also matters. Compare shapes only within the same `cores` value.
 
-| case | dims | halo_cells_per_rank | t_total | t_compute_max | t_halo_max |
-|---|---|---|---|---|---|
-| Jacobi 2D | 4x4x1 | 2048 | 0.190 | 0.088 | 0.141 |
-| Jacobi 2D | 2x8x1 | 2560 | 0.202 | 0.084 | 0.157 |
-| Jacobi 2D | 8x2x1 | 2560 | 0.226 | 0.101 | 0.182 |
-| Jacobi 2D | 16x1x1 | 4096 | 0.208 | 0.095 | 0.173 |
-| Jacobi 2D | 1x16x1 | 4096 | 0.191 | 0.086 | 0.142 |
-| Jacobi 3D | 1x4x4 | 36864 | 0.304 | 0.096 | 0.232 |
-| Jacobi 3D | 2x2x4 | 36864 | 0.284 | 0.105 | 0.211 |
-| Jacobi 3D | 4x2x2 | 36864 | 0.298 | 0.119 | 0.220 |
-| Jacobi 3D | 4x4x1 | 36864 | 0.334 | 0.118 | 0.248 |
-| Jacobi 3D | 16x1x1 | 73728 | 0.420 | 0.109 | 0.351 |
-| Jacobi 3D | 1x1x16 | 73728 | 0.295 | 0.110 | 0.216 |
+| case | cores | dims | halo_cells_per_rank | t_total | t_compute_max | t_halo_max |
+|---|---|---|---|---|---|---|
+| Jacobi 2D | 16 | 4x4x1 | 2048 | 0.190 | 0.088 | 0.141 |
+| Jacobi 2D | 16 | 2x8x1 | 2560 | 0.202 | 0.084 | 0.157 |
+| Jacobi 2D | 16 | 8x2x1 | 2560 | 0.226 | 0.101 | 0.182 |
+| Jacobi 2D | 16 | 16x1x1 | 4096 | 0.208 | 0.095 | 0.173 |
+| Jacobi 2D | 16 | 1x16x1 | 4096 | 0.191 | 0.086 | 0.142 |
+| Jacobi 3D | 16 | 1x4x4 | 36864 | 0.304 | 0.096 | 0.232 |
+| Jacobi 3D | 16 | 2x2x4 | 36864 | 0.284 | 0.105 | 0.211 |
+| Jacobi 3D | 16 | 4x2x2 | 36864 | 0.298 | 0.119 | 0.220 |
+| Jacobi 3D | 16 | 4x4x1 | 36864 | 0.334 | 0.118 | 0.248 |
+| Jacobi 3D | 16 | 16x1x1 | 73728 | 0.420 | 0.109 | 0.351 |
+| Jacobi 3D | 16 | 1x1x16 | 73728 | 0.295 | 0.110 | 0.216 |
 
 
 ### Residual-check interval for Jacobi. Each check costs one extra halo exchange, one residual sweep and one MPI_Allreduce.

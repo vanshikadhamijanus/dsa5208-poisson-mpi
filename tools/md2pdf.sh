@@ -21,4 +21,6 @@ command -v chromium >/dev/null 2>&1 && CHROME=chromium
 "$CHROME" --headless=new --disable-gpu --no-sandbox --run-all-compositor-stages-before-draw \
   --virtual-time-budget=10000 --no-pdf-header-footer --print-to-pdf="$OUT" "file://$(cd "$(dirname "$HTML")" && pwd)/$(basename "$HTML")" 2>/dev/null
 rm -f "$HTML"
-echo "wrote $OUT ($(python3 -c "import sys;d=open(sys.argv[1],'rb').read();print(d.count(b'/Type /Page')-d.count(b'/Type /Pages'))" "$OUT") pages)"
+# page count: page objects minus the page-tree objects (no Python needed)
+PAGES=$(( $(LC_ALL=C grep -ao '/Type /Page' "$OUT" | wc -l) - $(LC_ALL=C grep -ao '/Type /Pages' "$OUT" | wc -l) ))
+echo "wrote $OUT ($PAGES pages)"

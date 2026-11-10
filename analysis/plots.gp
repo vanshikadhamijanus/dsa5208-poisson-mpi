@@ -5,7 +5,7 @@ if (!exists("dir")) dir = "results/figures"
 exists_file(f) = system("[ -f '".f."' ] && echo 1 || echo 0") + 0
 set terminal pngcairo size 1500,430 enhanced font "Helvetica,11"
 set grid lc rgb "#dddddd"
-set key top left box opaque
+set key inside top left box opaque
 set style line 1 lc rgb "#1f77b4" pt 7 ps 1.1 lw 1.6
 set style line 2 lc rgb "#ff7f0e" pt 5 ps 1.1 lw 1.6
 set style line 3 lc rgb "#2ca02c" pt 9 ps 1.1 lw 1.6
@@ -30,13 +30,16 @@ unset multiplot
 set output dir."/strong_scaling.png"
 set multiplot layout 1,3
 set logscale xy; set xlabel "cores p"; set ylabel "time (s)"; set title "Strong scaling: time"
+set key inside bottom left box opaque
 plot for [i=1:4] D("strong",i) u 1:2 w lp ls i t name(i)
+set key inside top left box opaque
 set ylabel "speedup T1/Tp"; set title "Strong scaling: speedup"
 plot for [i=1:4] D("strong",i) u 1:3 w lp ls i t name(i), x ls 9 t "ideal"
 unset logscale y; set yrange [0:1.3]; set ylabel "efficiency T1/(p Tp)"; set title "Strong scaling: efficiency"
+set key inside top right box opaque
 plot for [i=1:4] D("strong",i) u 1:4 w lp ls i t name(i), 1 ls 9 notitle
 unset multiplot
-set autoscale y; unset logscale
+set autoscale y; unset logscale; set key inside top left box opaque
 
 set terminal pngcairo size 800,430 enhanced font "Helvetica,11"
 set output dir."/strong_comm_fraction.png"
@@ -49,12 +52,14 @@ unset logscale
 set terminal pngcairo size 1500,430 enhanced font "Helvetica,11"
 set output dir."/weak_scaling.png"
 set multiplot layout 1,2
-set logscale x; set xlabel "cores p"; set ylabel "time (s)"; set title "Weak scaling: time (constant work per rank)"
+set logscale xy; set xlabel "cores p"; set ylabel "time (s)"; set title "Weak scaling: time (constant work per rank)"
+set key inside top left box opaque
 plot for [i=1:4] D("weak",i) u 1:2 w lp ls i t name(i)
-set yrange [0:1.3]; set ylabel "weak efficiency T1/Tp"; set title "Weak scaling: efficiency"
+unset logscale y; set yrange [0:1.3]; set ylabel "weak efficiency T1/Tp"; set title "Weak scaling: efficiency"
+set key inside top right box opaque
 plot for [i=1:4] D("weak",i) u 1:3 w lp ls i t name(i), 1 ls 9 notitle
 unset multiplot
-set autoscale y; unset logscale
+set autoscale y; unset logscale; set key inside top left box opaque
 
 # ---------------------------------------------------------------- exchange modes (grouped bars, log y)
 set output dir."/exchange_modes.png"
@@ -78,52 +83,62 @@ unset logscale; set xtics rotate by 0 font ",11"; set style data lines
 # ---------------------------------------------------------------- process-grid shape
 set output dir."/decomposition_shape.png"
 set multiplot layout 1,2
-set style fill solid 0.8 border -1; set boxwidth 0.7; set ylabel "seconds"; set yrange [0:*]; set xtics rotate by -25 font ",9"
+set style fill solid 0.8 border -1; set boxwidth 0.7; set ylabel "seconds (log scale)"; set logscale y; set yrange [0.05:*]; set xtics rotate by -25 font ",9"
 set title "Process-grid shape, Jacobi 2D (sorted by halo cells per rank)"
 plot D("decomp",1) u 1:3:xtic(2) w boxes lc rgb "#1f77b4" t "total", D("decomp",1) u 1:4 w boxes lc rgb "#444444" t "halo (max)"
 set title "Process-grid shape, Jacobi 3D (sorted by halo cells per rank)"
 plot D("decomp",2) u 1:3:xtic(2) w boxes lc rgb "#ff7f0e" t "total", D("decomp",2) u 1:4 w boxes lc rgb "#444444" t "halo (max)"
 unset multiplot
-set autoscale y; set xtics rotate by 0 font ",11"
+set autoscale y; unset logscale; set xtics rotate by 0 font ",11"
 
 # ---------------------------------------------------------------- residual-check interval
 set terminal pngcairo size 800,430 enhanced font "Helvetica,11"
 set output dir."/check_interval.png"
-set logscale x; set xtics ("1" 1, "10" 10, "100" 100, "never" 1000); set xlabel "sweeps between residual checks"; set ylabel "seconds"
+set logscale xy; set xtics ("1" 1, "10" 10, "100" 100, "never" 1000); set xlabel "sweeps between residual checks"; set ylabel "seconds (log scale)"
+set key inside top right box opaque
 set title "Cost of the global residual check (Jacobi, 200 sweeps)"
 plot D("checkevery",1) u 1:2 w lp ls 1 t "Jacobi 2D total", D("checkevery",1) u 1:3 w lp ls 1 dt 3 t "Jacobi 2D all-reduce", \
      D("checkevery",2) u 1:2 w lp ls 2 t "Jacobi 3D total", D("checkevery",2) u 1:3 w lp ls 2 dt 3 t "Jacobi 3D all-reduce"
-unset logscale; set xtics autofreq
+unset logscale; set xtics autofreq; set key inside top left box opaque
 
 # ---------------------------------------------------------------- MPI+OpenMP split
 set terminal pngcairo size 1500,430 enhanced font "Helvetica,11"
 set output dir."/hybrid_split.png"
 set multiplot layout 1,2
-set xlabel "MPI ranks x OpenMP threads"; set ylabel "time (s)"; set title "MPI+OpenMP: same core count, different split (largest core count)"
+# legend in a band above the data: log headroom for time, 100-135% for the share
+set key inside top center horizontal box opaque
+set logscale y; set yrange [*:*]; set offsets 0, 0, 0, 0
+set xlabel "MPI ranks x OpenMP threads"; set ylabel "time (s, log scale)"; set title "MPI+OpenMP: same core count, different split (largest core count)"
+stats D("hybrid",3) u 3 nooutput; ymax = STATS_max * 8
+stats D("hybrid",1) u 3 nooutput; ymin = STATS_min / 2
+set yrange [ymin:ymax]; set ytics ("0.1" 0.1, "0.2" 0.2, "0.5" 0.5, "1" 1, "2" 2, "5" 5, "10" 10, "20" 20, "50" 50, "100" 100, "200" 200)
 plot for [i=1:4] D("hybrid",i) u 1:3:xtic(2) w lp ls i t name(i)
-set ylabel "communication share (%)"; set title "Communication share vs split"
+unset logscale y; set yrange [0:135]; set ytics 0,20,100; set ylabel "communication share (%)"; set title "Communication share vs split"
 plot for [i=1:4] D("hybrid",i) u 1:4:xtic(2) w lp ls i t name(i)
-unset multiplot
+unset multiplot; set autoscale y; set ytics autofreq
 # the same study on one 64-core node, when the results also hold it (hybrid_<tag>_c64.dat)
 if (exists_file(dir."/hybrid_jac2d_c64.dat")) {
   set output dir."/hybrid_split_64.png"
   set multiplot layout 1,2
-  set ylabel "time (s)"; set title "MPI+OpenMP on one node: 64 cores, different split"
+  stats dir."/hybrid_cg2d_c64.dat" u 3 nooutput; ymax = STATS_max * 8
+  stats dir."/hybrid_jac2d_c64.dat" u 3 nooutput; ymin = STATS_min / 2
+  set logscale y; set yrange [ymin:ymax]; set ytics ("0.1" 0.1, "0.2" 0.2, "0.5" 0.5, "1" 1, "2" 2, "5" 5, "10" 10, "20" 20, "50" 50, "100" 100, "200" 200); set ylabel "time (s, log scale)"; set title "MPI+OpenMP on one node: 64 cores, different split"
   plot for [i=1:4] dir."/hybrid_".word(tags,i)."_c64.dat" u 1:3:xtic(2) w lp ls i t name(i)
-  set ylabel "communication share (%)"; set title "Communication share vs split (one node)"
+  unset logscale y; set yrange [0:135]; set ytics 0,20,100; set ylabel "communication share (%)"; set title "Communication share vs split (one node)"
   plot for [i=1:4] dir."/hybrid_".word(tags,i)."_c64.dat" u 1:4:xtic(2) w lp ls i t name(i)
-  unset multiplot
+  unset multiplot; set autoscale y; set ytics autofreq
 }
+set key inside top left box opaque
 
 # ---------------------------------------------------------------- OpenMP threads vs MPI
 if (exists_file(dir."/omp_jac2d.dat")) {   # OpenMP-only runs exist only in the laptop results
 set output dir."/openmp_threads.png"
 set multiplot layout 1,2
 set logscale xy; set xlabel "threads / cores"; set ylabel "speedup"; set title "Shared memory (OpenMP) vs MPI on one machine"
-set key top left font ",8"
+set key inside top left font ",8"
 plot for [i=1:4] D("omp",i) u 1:3 w lp ls i t name(i)." OpenMP", \
      for [i=1:4] D("strong",i) u 1:3 w lp ls i dt 2 lw 1 t name(i)." MPI", x ls 9 t "ideal"
-unset logscale y; set yrange [0:1.3]; set ylabel "efficiency"; set title "OpenMP efficiency"; set key top right font ",10"
+unset logscale y; set yrange [0:1.3]; set ylabel "efficiency"; set title "OpenMP efficiency"; set key inside top right font ",10"
 plot for [i=1:4] D("omp",i) u 1:4 w lp ls i t name(i), 1 ls 9 notitle
 unset multiplot
 set autoscale y; unset logscale
@@ -133,9 +148,11 @@ set autoscale y; unset logscale
 if (exists_file(dir."/gpu_jac2d_mpi_cuda.dat")) {
   set terminal pngcairo size 800,430 enhanced font "Helvetica,11"
   set output dir."/gpu_vs_cpu.png"
-  set logscale xy; set xlabel "grid points N"; set ylabel "seconds per iteration"; set title "One GPU vs one CPU node (OpenMP)"
+  set logscale xy; set format y "%g"; set format x "10^{%L}"; set yrange [1e-5:1]; set key inside top left box opaque maxrows 4
+  set xlabel "grid points N"; set ylabel "seconds per iteration"; set title "One GPU vs 36 cores of the same node (OpenMP)"
   plot for [i=1:4] dir."/gpu_".word(tags,i)."_mpi_cuda.dat" u 1:2 w lp ls i t name(i)." GPU", \
-       for [i=1:4] dir."/gpu_".word(tags,i)."_mpi_omp.dat"  u 1:2 w lp ls i dt 2 t name(i)." CPU node"
+       for [i=1:4] dir."/gpu_".word(tags,i)."_mpi_omp.dat"  u 1:2 w lp ls i dt 2 t name(i)." 36 CPU cores"
+  set format x "% h"; set format y "% h"; set autoscale y; set key inside top left box opaque noautotitle; set key autotitle; set key maxrows auto
 }
 
 # ---------------------------------------------------------------- satellite gap filling (only if the data runs exist)
@@ -147,13 +164,16 @@ if (exists_file(G(1)) || exists_file(G(3))) {
   set output dir."/gapfill_scaling.png"
   set multiplot layout 1,3
   set logscale xy; set xlabel "cores p"; set ylabel "time (s)"; set title "Satellite gap filling: time"
+  set key inside top right box opaque
   plot for [i=1:4] G(i) u 1:2 w lp ls i t word(gnames, i)
+  set key inside top left box opaque
   set ylabel "speedup T1/Tp"; set title "Satellite gap filling: speedup"
   plot for [i=1:4] G(i) u 1:3 w lp ls i t word(gnames, i), x ls 9 t "ideal"
-  unset logscale y; set yrange [0:1.3]; set ylabel "efficiency T1/(p Tp)"; set title "Satellite gap filling: efficiency"
+  unset logscale y; set yrange [0:1.45]; set ylabel "efficiency T1/(p Tp)"; set title "Satellite gap filling: efficiency"
+  set key inside top right box opaque
   plot for [i=1:4] G(i) u 1:4 w lp ls i t word(gnames, i), 1 ls 9 notitle
   unset multiplot
-  set autoscale y; unset logscale
+  set autoscale y; unset logscale; set key inside top left box opaque
 }
 if (exists_file(dir."/gapfill_acc2d.dat")) {
   set terminal pngcairo size 1500,430 enhanced font "Helvetica,11"
@@ -161,7 +181,7 @@ if (exists_file(dir."/gapfill_acc2d.dat")) {
   set multiplot layout 1,2
   set logscale x; set xlabel "side of the hidden patch (pixels of 4 km)"; set ylabel "RMSE on hidden pixels (deg C)"
   set title "Fill error against the size of the hole"
-  set key top left
+  set key inside top left
   plot dir."/gapfill_acc2d.dat" u 1:2 w lp ls 1 t "2D: the day alone, space only", \
        dir."/gapfill_acc3d_day.dat" u 1:2 w lp ls 3 t "3D: the year, error on the same day", \
        dir."/gapfill_acc3d.dat" u 1:2 w lp ls 2 t "3D: the year, error on all days", \
@@ -180,7 +200,7 @@ if (exists_file(dir."/layout_compare.dat")) {
   set output dir."/layout_compare.png"
   set style data histogram; set style histogram clustered gap 1; set style fill solid 0.85 border -1
   set boxwidth 0.9; set logscale y; set ylabel "seconds (log scale)"; set xlabel ""
-  set xtics rotate by -25 font ",9"; set key top left
+  set xtics rotate by -25 font ",9"; set key inside top left
   set title "256 cores: 4 nodes x 64 cores against 8 nodes x 32 cores"
   plot dir."/layout_compare.dat" u 3:xtic(2) t "4 x 64 (whole nodes)" lc rgb "#1f77b4", \
        ''                         u 4 t "8 x 32 (half nodes, shared)" lc rgb "#ff7f0e"

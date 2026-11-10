@@ -1,0 +1,30 @@
+#!/bin/bash
+# Optional: three more repeats of the 256-rank strong-scaling runs (report Table 8),
+# so that the report can give a median and a range instead of the faster of two runs.
+# Same resource request and mpirun line as vanda_jobs/jobs_4x64/mpi_256.pbs. It writes
+# to its own folder, so the original measurements in results/cluster stay untouched:
+#
+#   qsub scripts/vanda/repeat_256.pbs        ->  results/cluster_repeat/strong.csv
+#
+# Needs bin/poisson_mpi built on Vanda (scripts/vanda/build.pbs). The runs take
+# about a minute; the short walltime helps PBS fit the job in sooner.
+# Change the -P line below if you use a different project.
+#PBS -N repeat_256
+#PBS -P personal-e1621744
+#PBS -l select=4:ncpus=64:mpiprocs=64:ompthreads=1:mem=200gb
+#PBS -l walltime=00:15:00
+#PBS -j oe
+#PBS -k oed
+cd $PBS_O_WORKDIR
+module load gcc/13.1.0 openmpi4/gcc/4.1.8
+export OMP_NUM_THREADS=1 OMP_PROC_BIND=close OMP_PLACES=cores
+OUT=results/cluster_repeat; mkdir -p $OUT
+M="mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --map-by core --bind-to core --mca mca_base_component_show_load_errors 0 -x LD_LIBRARY_PATH -x OMP_NUM_THREADS -x OMP_PROC_BIND -x OMP_PLACES -np 256"
+echo "=== $PBS_JOBNAME started $(date) on: $(sort -u $PBS_NODEFILE | tr '\n' ' ')"
+for r in 1 2 3; do
+  $M bin/poisson_mpi --dim 2 --n 8192 --iters 200 --csv $OUT/strong.csv --tag jac2d
+  $M bin/poisson_mpi --dim 3 --n 512  --iters 200 --csv $OUT/strong.csv --tag jac3d
+  $M bin/poisson_mpi --dim 2 --n 4096 --solver cg --tol 1e-8 --iters 1000000 --csv $OUT/strong.csv --tag cg2d
+  $M bin/poisson_mpi --dim 3 --n 256  --solver cg --tol 1e-8 --iters 1000000 --csv $OUT/strong.csv --tag cg3d
+done
+echo "=== $PBS_JOBNAME finished $(date)"

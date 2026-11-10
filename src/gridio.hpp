@@ -96,31 +96,36 @@ inline double hash01(long gi, long gj, long gk, unsigned seed) {
 // Set the global grid size from the file header. Call before building the decomposition.
 inline void data_configure(Params& P) {
     GridHeader h;
-    if (!read_header(P.data, h)) { std::fprintf(stderr, "cannot read grid file %s\n", P.data.c_str()); std::exit(2); }
-    if (P.day < 0 || P.day >= h.nt) { std::fprintf(stderr, "--day %d outside the file's %d days\n", P.day, h.nt); std::exit(2); }
+    if (!read_header(P.data, h)) { std::fprintf(stderr, "cannot read grid file %s\n", P.data.c_str()); fail(2); }
+    if (P.day < 0 || P.day >= h.nt) { std::fprintf(stderr, "--day %d outside the file's %d days\n", P.day, h.nt); fail(2); }
     P.n[0] = h.nx; P.n[1] = h.ny;
     if (P.dim == 3) { int avail = h.nt - P.day; P.n[2] = (P.days > 0 && P.days < avail) ? P.days : avail; }
     else P.n[2] = 1;
+    if (P.eval_day >= 0 && (P.eval_day < P.day || P.eval_day >= P.day + P.n[2])) {
+        std::fprintf(stderr, "--eval-day %d is outside the selected days %d..%ld\n", P.eval_day, P.day, P.day + P.n[2] - 1); fail(2);
+    }
     if (!P.ref.empty()) {
         GridHeader r;
         if (!read_header(P.ref, r) || r.nx != h.nx || r.ny != h.ny || r.nt != h.nt) {
-            std::fprintf(stderr, "--ref must be a grid file with the same nx, ny, nt as --data\n"); std::exit(2);
+            std::fprintf(stderr, "--ref must be a grid file with the same nx, ny, nt as --data\n"); fail(2);
         }
     }
 }
 
-// Read this rank's block, halo included, of the time slices [day0, day0+nz). Halo
-// cells outside the global box get LAND_VALUE. `dst` has L.ntot entries.
-inline bool read_block(const std::string& path, const GridHeader& h, const Local& L, int day0, float* dst) {
+// Read this rank's block, halo included, of the time slices [day0, day0+nsel). Halo
+// cells outside the global box get LAND_VALUE. "Outside" in time means outside the
+// selected window, not outside the file: with --day 90 --days 30 the day after the
+// window (day 120) must not leak into the last slice's time halo as observed data.
+// `dst` has L.ntot entries.
+inline bool read_block(const std::string& path, const GridHeader& h, const Local& L, int day0, long nsel, float* dst) {
     FILE* f = std::fopen(path.c_str(), "rb");
     if (!f) return false;
-    std::vector<float> row(L.nx + 2);
     for (int k = 0; k <= L.nz + 1; ++k) {
         const long gk = L.oz + k - 1;                       // slice within the selected range
         for (int j = 0; j <= L.ny + 1; ++j) {
             const long gj = L.oy + j - 1;
             float* out = dst + L.idx(0, j, k);
-            if (gk < 0 || gk >= (long)h.nt - day0 || gj < 0 || gj >= h.ny) { std::fill(out, out + L.nx + 2, LAND_VALUE); continue; }
+            if (gk < 0 || gk >= nsel || gk >= (long)h.nt - day0 || gj < 0 || gj >= h.ny) { std::fill(out, out + L.nx + 2, LAND_VALUE); continue; }
             // columns ox-1 .. ox+nx, clamped to [0, nx)
             long i0 = L.ox - 1, i1 = L.ox + L.nx;           // inclusive global column range of the stored row
             long c0 = std::max(i0, 0L), c1 = std::min(i1, (long)h.nx - 1);
@@ -149,14 +154,15 @@ struct DataBlock {
 // Read the block and classify every cell (halo included; the global mean is not known yet).
 inline DataBlock load_data(const Params& P, const Local& L) {
     DataBlock D;
-    if (!read_header(P.data, D.hdr)) { std::fprintf(stderr, "cannot read %s\n", P.data.c_str()); std::exit(2); }
+    if (!read_header(P.data, D.hdr)) { std::fprintf(stderr, "cannot read %s\n", P.data.c_str()); fail(2); }
     D.day0 = P.day;
     D.obs.assign(L.ntot, LAND_VALUE);
-    if (!read_block(P.data, D.hdr, L, D.day0, D.obs.data())) { std::fprintf(stderr, "error reading %s\n", P.data.c_str()); std::exit(2); }
+    if (!read_block(P.data, D.hdr, L, D.day0, P.n[2], D.obs.data())) { std::fprintf(stderr, "error reading %s\n", P.data.c_str()); fail(2); }
     if (!P.ref.empty()) {
-        GridHeader rh; read_header(P.ref, rh);
+        GridHeader rh;
+        if (!read_header(P.ref, rh)) { std::fprintf(stderr, "cannot read %s\n", P.ref.c_str()); fail(2); }
         D.ref.assign(L.ntot, LAND_VALUE);
-        if (!read_block(P.ref, rh, L, D.day0, D.ref.data())) { std::fprintf(stderr, "error reading %s\n", P.ref.c_str()); std::exit(2); }
+        if (!read_block(P.ref, rh, L, D.day0, P.n[2], D.ref.data())) { std::fprintf(stderr, "error reading %s\n", P.ref.c_str()); fail(2); }
     }
     D.mask.assign(L.ntot, M_LAND);
     for (int k = 0; k <= L.nz + 1; ++k)

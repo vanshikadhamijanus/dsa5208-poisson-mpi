@@ -73,10 +73,11 @@ static void halo_start(const Decomp& D, const Geo& g, GpuHalo& H, double* u, boo
         MPI_Isend(slo, (int)H.size[d], MPI_DOUBLE, D.lo[d], 20 + d, D.cart, &H.req[H.nreq++]);
     }
 }
-// Wait, copy received faces to the device and unpack them into the halo planes.
-static void halo_finish(const Decomp& D, const Geo& g, GpuHalo& H, double* u, bool cuda_aware) {
+// Wait for the messages.
+static void halo_wait(GpuHalo& H) { MPI_Waitall(H.nreq, H.req, MPI_STATUSES_IGNORE); H.nreq = 0; }
+// Copy received faces to the device and unpack them into the halo planes.
+static void halo_unpack(const Decomp& D, const Geo& g, GpuHalo& H, double* u, bool cuda_aware) {
     const int n[3] = {g.nx, g.ny, g.nz};
-    MPI_Waitall(H.nreq, H.req, MPI_STATUSES_IGNORE);
     for (int d = 0; d < D.ndims_active; ++d) {
         int threads = 256, blocks = (int)((H.size[d] + threads - 1) / threads);
         if (D.lo[d] != MPI_PROC_NULL) {
@@ -89,6 +90,10 @@ static void halo_finish(const Decomp& D, const Geo& g, GpuHalo& H, double* u, bo
         }
     }
     CUDA_CHECK(cudaDeviceSynchronize());
+}
+static void halo_finish(const Decomp& D, const Geo& g, GpuHalo& H, double* u, bool cuda_aware) {
+    halo_wait(H);
+    halo_unpack(D, g, H, u, cuda_aware);
 }
 
 struct GpuTimers { double compute = 0, halo = 0, allreduce = 0; };
@@ -131,9 +136,13 @@ static void exchange_and_apply(const Decomp& D, const Geo& g, const Local& L, Gp
     if (overlap && has_deep_interior(L)) {
         t0 = MPI_Wtime();
         launch(to_box(deep_interior(L)));           // asynchronous: runs while messages fly
+        halo_wait(H);                               // messages complete while the kernel runs
+        T.halo += MPI_Wtime() - t0;                 // the hidden part of the kernel is inside this
+        t0 = MPI_Wtime();
+        CUDA_CHECK(cudaDeviceSynchronize());        // the part of the interior kernel the messages did not hide
         T.compute += MPI_Wtime() - t0;
         t0 = MPI_Wtime();
-        halo_finish(D, g, H, u, cuda_aware);        // includes a device sync
+        halo_unpack(D, g, H, u, cuda_aware);
         T.halo += MPI_Wtime() - t0;
         t0 = MPI_Wtime();
         for_each_boundary_slab(L, [&](Range r) { launch(to_box(r)); });
@@ -153,6 +162,7 @@ static void exchange_and_apply(const Decomp& D, const Geo& g, const Local& L, Gp
 int main(int argc, char** argv) {
     int provided;
     MPI_Init_thread(&argc, &argv, MPI_THREAD_FUNNELED, &provided);
+    poisson::fatal_hook = [](int code) { MPI_Abort(MPI_COMM_WORLD, code); };
     Params P = parse_args(argc, argv);
     if (P.data_mode()) data_configure(P);
     Decomp D = make_decomp(P);

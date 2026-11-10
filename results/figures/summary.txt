@@ -31,10 +31,10 @@ exchange_best Jacobi 2D p=8: overlap
 exchange_best Jacobi 2D p=16: overlap
 exchange_best Jacobi 3D p=8: sendrecv
 exchange_best Jacobi 3D p=16: isend
-hybrid_best_split_jac2d: 8x2
-hybrid_best_split_jac3d: 4x4
-hybrid_best_split_cg2d: 8x2
-hybrid_best_split_cg3d: 8x2
+hybrid_best_split_jac2d_c16: 8x2
+hybrid_best_split_jac3d_c16: 4x4
+hybrid_best_split_cg2d_c16: 8x2
+hybrid_best_split_cg3d_c16: 8x2
 gapfill_sst2d_cg: max_cores=16 speedup=2.41677 efficiency=0.151048 serial_time=0.585075 iters=489 rmse_hidden=0.154646
 gapfill_sst2d_jac: max_cores=16 speedup=3.93575 efficiency=0.245984 serial_time=0.348979 iters=1000 rmse_hidden=0.159506
 gapfill_sst3d_cg: max_cores=16 speedup=4.99341 efficiency=0.312088 serial_time=97.8896 iters=199 rmse_hidden=0.231833

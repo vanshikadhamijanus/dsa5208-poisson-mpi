@@ -13,9 +13,17 @@
 #include <cstring>
 #include <cstdio>
 
+// CUDA_CHECK stops the job on any error. It calls poisson::fail (common.hpp), which
+// the MPI driver points at MPI_Abort, so one failing rank stops all of them.
+#include "common.hpp"
+#define CUDA_CHECK(call) do { cudaError_t e_ = (call); if (e_ != cudaSuccess) { \
+    std::fprintf(stderr, "CUDA error %s at %s:%d\n", cudaGetErrorString(e_), __FILE__, __LINE__); poisson::fail(4); } } while (0)
+
 #ifdef __CUDACC__
 #include <cuda_runtime.h>
-#define KERNEL_LAUNCH(kernel, grid, block, ...) kernel<<<grid, block>>>(__VA_ARGS__)
+// A launch with a bad configuration fails silently until the next synchronising
+// call; cudaGetLastError right after the launch reports it at the line that caused it.
+#define KERNEL_LAUNCH(kernel, grid, block, ...) do { kernel<<<grid, block>>>(__VA_ARGS__); CUDA_CHECK(cudaGetLastError()); } while (0)
 #define POISSON_CUDA_REAL 1
 #else
 #define POISSON_CUDA_REAL 0
@@ -53,8 +61,5 @@ template <class Fn> inline void emul_launch(dim3 grid, dim3 block, Fn fn) {
         }
     }
 }
-#define KERNEL_LAUNCH(kernel, grid, block, ...) emul_launch(grid, block, [&]() { kernel(__VA_ARGS__); })
+#define KERNEL_LAUNCH(kernel, grid, block, ...) do { emul_launch(grid, block, [&]() { kernel(__VA_ARGS__); }); CUDA_CHECK(cudaGetLastError()); } while (0)
 #endif
-
-#define CUDA_CHECK(call) do { cudaError_t e_ = (call); if (e_ != cudaSuccess) { \
-    std::fprintf(stderr, "CUDA error %s at %s:%d\n", cudaGetErrorString(e_), __FILE__, __LINE__); std::exit(4); } } while (0)

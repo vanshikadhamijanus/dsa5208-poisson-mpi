@@ -1,0 +1,34 @@
+#!/bin/bash
+# Record what a Vanda CPU node looks like and where 64 MPI ranks land on it, with
+# the same placement as the scaling runs (--map-by core --bind-to core). This
+# answers the open question in report Section 6.1: how many of the 64 ranks sit
+# on each socket.
+#
+#   qsub scripts/vanda/hwinfo.pbs
+#
+# Output: hwinfo.o<jobid> and hwinfo_ranks_<jobid>.txt in the submission folder.
+# It needs no program from bin/ and runs for a few seconds.
+# Change the -P line below if you use a different project.
+#PBS -N hwinfo
+#PBS -P personal-e1621744
+#PBS -l select=1:ncpus=64:mpiprocs=64:mem=8gb
+#PBS -l walltime=00:10:00
+#PBS -j oe
+cd $PBS_O_WORKDIR
+module load gcc/13.1.0 openmpi4/gcc/4.1.8
+echo "=== node $(hostname), job $PBS_JOBID, $(date)"
+lscpu | grep -E "^(Model name|Socket|Core|Thread|CPU\(s\)|NUMA)"
+numactl -H 2>/dev/null | head -4
+free -g | head -2
+echo "=== cores this job may use"
+grep Cpus_allowed_list /proc/self/status
+echo "=== where each rank runs (same mpirun options as the scaling runs)"
+RANKS=hwinfo_ranks_${PBS_JOBID%%.*}.txt
+mpirun --prefix /cm/shared/apps/openmpi4/gcc/4.1.8 -hostfile $PBS_NODEFILE --map-by core --bind-to core \
+  --mca mca_base_component_show_load_errors 0 -np 64 \
+  bash -c 'c=$(taskset -cp $$ | sed "s/.*: //"); c1=${c%%[-,]*}; s=$(cat /sys/devices/system/cpu/cpu$c1/topology/physical_package_id); echo "rank $OMPI_COMM_WORLD_RANK cpu $c socket $s"' \
+  | sort -k2 -n > $RANKS
+cat $RANKS
+echo "=== ranks per socket"
+awk '{n[$6]++} END{for (s in n) print "socket " s ": " n[s] " ranks"}' $RANKS
+echo "=== done $(date)"

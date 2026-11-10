@@ -63,10 +63,18 @@ struct MpiComm {
 int main(int argc, char** argv) {
     int provided;
     MPI_Init_thread(&argc, &argv, MPI_THREAD_FUNNELED, &provided);
+    poisson::fatal_hook = [](int code) { MPI_Abort(MPI_COMM_WORLD, code); };
     Params P = parse_args(argc, argv);
 #ifdef _OPENMP
     if (P.threads > 0) omp_set_num_threads(P.threads);
     const char* impl = "mpi_omp";
+    // Only the master thread calls MPI, outside parallel regions, so FUNNELED is enough.
+    // If the library cannot promise that, threaded runs are not safe: stop.
+    if (provided < MPI_THREAD_FUNNELED && omp_get_max_threads() > 1) {
+        int r; MPI_Comm_rank(MPI_COMM_WORLD, &r);
+        if (r == 0) std::fprintf(stderr, "MPI library gives thread level %d, below MPI_THREAD_FUNNELED; run with 1 thread\n", provided);
+        MPI_Abort(MPI_COMM_WORLD, 2);
+    }
 #else
     const char* impl = "mpi";
 #endif

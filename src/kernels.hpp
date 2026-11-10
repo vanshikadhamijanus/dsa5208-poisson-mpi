@@ -216,6 +216,9 @@ inline void error_norms(const Params& P, const Local& L, const double* u, double
 // Helper used by the overlap mode: apply `fn` to the outer layer of the interior,
 // i.e. the cells that touch a halo. The six slabs are chosen so that no cell is
 // visited twice. `fn(Range)` is any of the range kernels above.
+// 2D or 3D is taken from L.dim, not from nz: a 3D block can be one layer thick
+// (for example 16 ranks along z on a 16^3 grid), and every one of its cells then
+// touches a z-halo, so none of them may be updated before the messages arrive.
 template <class Fn>
 inline void for_each_boundary_slab(const Local& L, Fn fn) {
     const int nx = L.nx, ny = L.ny, nz = L.nz;
@@ -226,16 +229,17 @@ inline void for_each_boundary_slab(const Local& L, Fn fn) {
         // y-faces: x in [2,nx)
         fn(Range{2, nx, 1, 2, 1, nz + 1});
         if (ny > 1) fn(Range{2, nx, ny, ny + 1, 1, nz + 1});
-        if (ny > 2 && nz > 1) {
+        if (ny > 2 && L.dim == 3) {
             // z-faces: x in [2,nx), y in [2,ny)
             fn(Range{2, nx, 2, ny, 1, 2});
             if (nz > 1) fn(Range{2, nx, 2, ny, nz, nz + 1});
         }
     }
 }
-// The deep interior, i.e. cells that do not touch any halo. Empty if the block is too thin.
+// The deep interior, i.e. cells that do not touch any halo. Empty if the block is too thin
+// (in 3D that includes any block with fewer than 3 layers in some direction).
 inline Range deep_interior(const Local& L) {
-    if (L.nz == 1) return Range{2, L.nx, 2, L.ny, 1, 2};       // 2D: a single z-layer
+    if (L.dim == 2) return Range{2, L.nx, 2, L.ny, 1, 2};      // 2D: a single z-layer, no z-halo
     return Range{2, L.nx, 2, L.ny, 2, L.nz};
 }
 inline bool has_deep_interior(const Local& L) {

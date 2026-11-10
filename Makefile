@@ -8,6 +8,7 @@
 #   make cuda       -> bin/poisson_mpi_cuda (MPI + CUDA; needs nvcc)
 #   make gridtool   -> bin/gridtool        (satellite data: ASCII grids -> grid file, info, slices)
 #   make all        -> the four CPU binaries and gridtool
+#   make check      -> pass/fail tests: every build against the serial answer (scripts/local/check.sh)
 #   make figures    -> bin/summarize + gnuplot: results/<RESULTS>/*.csv -> results/figures/*.png, tables.md
 #                      (make figures RESULTS=results/cluster FIGDIR=results/figures_cluster LABEL="NUS Vanda")
 #                      ALT=results/cluster_8x32 ALTLABEL="8 nodes x 32 cores" adds the node-layout comparison
@@ -55,7 +56,7 @@ endif
 HDRS := src/common.hpp src/kernels.hpp src/solver.hpp src/gridio.hpp
 BIN  := bin
 
-.PHONY: all serial omp mpi mpi_omp cuda cuda_emul summarize gridtool figures clean
+.PHONY: all serial omp mpi mpi_omp cuda cuda_emul summarize gridtool figures check clean
 
 RESULTS ?= results/local
 FIGDIR  ?= results/figures
@@ -82,6 +83,9 @@ $(BIN)/summarize: analysis/summarize.cpp | $(BIN)
 
 $(BIN)/gridtool: tools/gridtool.cpp src/gridio.hpp src/common.hpp | $(BIN)
 	$(CXX) $(CXXFLAGS) -Isrc $< -o $@
+
+check: all cuda_emul
+	scripts/local/check.sh
 
 figures: $(BIN)/summarize
 	mkdir -p $(FIGDIR)
