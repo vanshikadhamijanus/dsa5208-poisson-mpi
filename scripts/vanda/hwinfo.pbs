@@ -9,10 +9,14 @@
 # Output: hwinfo.o<jobid> and hwinfo_ranks_<jobid>.txt in the submission folder.
 # It needs no program from bin/ and runs for a few seconds.
 # Change the -P line below if you use a different project.
+# mem=200gb matches the scaling jobs. Without place=excl the job was held by PBS
+# after 21 failed start attempts (exit status -3); with the node reserved it ran
+# (CN-006, 10 November 2026: 36 cores on socket 0, 28 on socket 1).
 #PBS -N hwinfo
 #PBS -P personal-e1621744
-#PBS -l select=1:ncpus=64:mpiprocs=64:mem=8gb
+#PBS -l select=1:ncpus=64:mpiprocs=64:mem=200gb
 #PBS -l walltime=00:10:00
+#PBS -l place=excl
 #PBS -j oe
 cd $PBS_O_WORKDIR
 module load gcc/13.1.0 openmpi4/gcc/4.1.8
