@@ -4,7 +4,7 @@
 #
 #   make check            (builds first)   or   scripts/local/check.sh
 #
-# Needs at most 8 MPI ranks and takes about a minute on a laptop. Set MPIRUN to
+# Needs at most 8 MPI ranks and takes about 15 seconds on a laptop. Set MPIRUN to
 # change the launcher (default "mpirun --oversubscribe", for Open MPI).
 # The data tests run only if data/india_2025.grid exists (override with GRID=...);
 # the --days window test also needs the raw daily files in data/raw/india/.

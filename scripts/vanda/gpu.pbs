@@ -2,7 +2,7 @@
 # MPI+CUDA on one Vanda GPU, against the MPI+OpenMP build on the same node's 36 cores.
 # Before the first submission, build on a GPU node (the login node has a different CPU):
 #   qsub -I -q auto_free -l select=1:ncpus=36:ngpus=1:mem=200gb -l walltime=01:00:00
-#   cd /scratch/$USER/poisson-mpi
+#   cd /scratch/$USER/dsa5208-poisson-mpi
 #   module load gcc/13.1.0 openmpi4/gcc/4.1.8 cuda12.4/toolkit/12.4.1
 #   nvidia-smi                 # which GPU this node has
 #   make all cuda              # CPU binaries + bin/poisson_mpi_cuda (fat binary: V100, A100, A40, L40, H100)

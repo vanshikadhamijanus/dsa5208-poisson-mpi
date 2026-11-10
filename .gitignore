@@ -16,3 +16,24 @@ logs_vanda/
 *.o[0-9]*
 *.e[0-9]*
 hwinfo_ranks_*.txt
+# the beginner's handbook is kept locally for the team, not submitted
+handbook/
+tools/handbook_source.md
+# not part of the submission: the invalid first round of Vanda runs, the superseded
+# laptop-only draft of the report, and duplicate copies of scripts/vanda/*.pbs
+results/cluster_round1/
+report/report_laptop_version.md
+vanda_jobs/vanda/
+# editor and OS files
+.vscode/
+.idea/
+*.swp
+*~
+Thumbs.db
+# the report is edited in report/report.docx; the Markdown copy and the tools that
+# turned it into a PDF are kept locally for reference (tools/ is also used by the local handbook)
+report/report.md
+report/build.sh
+tools/md2pdf.sh
+tools/doc.css
+tools/report.css

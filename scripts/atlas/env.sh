@@ -15,7 +15,7 @@ PPN=${PPN:-96}                      # MPI ranks per node = cores per node (Atlas
 RANKS=${RANKS:-"1 2 4 8 16 32 64 96"}   # Atlas: one 96-core node is the limit; on Vanda: "1 2 4 8 16 32 64 128 256"
 WALL=${WALL:-04:00:00}              # wall time of each multi-node job
 WALL_NODE=${WALL_NODE:-08:00:00}    # wall time of the single-node job (it runs everything up to PPN ranks)
-PROJECT_DIR=${PROJECT_DIR:-$HOME/poisson-mpi}
+PROJECT_DIR=${PROJECT_DIR:-$HOME/dsa5208-poisson-mpi}
 MODULES=${MODULES:-"source /app1/ebenv; module load GCC/13.2.0 OpenMPI/4.1.6-GCC-13.2.0"}   # Atlas, verified; on Vanda use the names from 'module avail'
 GPU_MODULES=${GPU_MODULES:-"module load cuda; module load openmpi"}
 MPIRUN=${MPIRUN:-"mpirun"}           # some sites want 'mpirun -hostfile $PBS_NODEFILE'
