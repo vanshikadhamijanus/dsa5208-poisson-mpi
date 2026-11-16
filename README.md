@@ -5,7 +5,7 @@ Team: Aditya Vijindra Pandhari (A0328872R), Apurwa Kumari (A0333260R) and
 Vanshika Dhamija (A0333989H).
 
 Repository: https://github.com/vanshikadhamijanus/dsa5208-poisson-mpi
-Report: `report/report.pdf`, edited in `report/report.docx` (see "Editing the report").
+Report: `report/Scalable_Assignment3.pdf`, edited in `report/Scalable_Assignment3.docx` (see "Editing the report").
 
 Satellite infrared sensors cannot see the sea surface through clouds, so every
 daily temperature map has holes. We fill them by solving the Laplace equation
@@ -27,12 +27,12 @@ satellite data provide the application.
 All timings are from the NUS Vanda cluster. The report gives the details and the caveats.
 
 - Every build (serial, OpenMP, MPI, MPI+OpenMP, MPI+CUDA) gives the serial answer: the same iteration count on every rank count, thread split and node layout and on the GPU, and the same error apart from rounding in the last digits.
-- Speedup at 256 cores: 74 (Jacobi 2D), 77 (Jacobi 3D), 137 (CG 2D) and 103 (CG 3D). Inside one node memory bandwidth is the limit (efficiency about 0.3 by 32 cores). From one node to four, scaling is linear or better.
+- Speedup at 256 cores: 74 (Jacobi 2D), 77 (Jacobi 3D), 137 (CG 2D) and 103 (CG 3D). Inside one node memory bandwidth is the limit (efficiency about 0.3 by 32 cores). From one node to four, scaling is close to linear or better.
 - Weak scaling is flat from one node to four (efficiency 0.94 to 1.00 for three of the four problems).
-- At 256 ranks CG is limited by the all-reduce (about 0.1 ms each over TCP), and Jacobi by the halo exchange, where the memory layout of the faces matters more than the exchange strategy.
+- At 256 ranks CG is limited by the all-reduce (about 0.1 ms each over TCP), and Jacobi by the halo exchange, where the memory layout of the faces matters more than the exchange strategy. The shape of the process grid changes the runtime by up to 4.7 times.
 - Pure MPI was as fast as or faster than every MPI+OpenMP split.
-- One A40 GPU is 1.9 to 2.7 times faster than 36 CPU cores on large grids and 1.2 to 1.5 times faster than a full 64-core node on Jacobi. On CG it ties with the full node.
-- Gap filling: about 0.15 °C error on 64 km holes, against 0.92 °C for filling with the mean. The whole year fills in 2.5 s on 256 cores.
+- One A40 GPU is 1.9 to 2.7 times faster than 36 CPU cores on large grids and 1.2 to 1.5 times faster than a full 64-core node on Jacobi. On CG it ties with the full node, and on small grids the CPU wins by up to 7.5 times.
+- Gap filling: about 0.15 °C error on 64 km holes on the test day (10 April 2025), against 0.92 °C for filling with the mean. Using time as a third dimension helps only on the largest holes, about 250 km across. The whole year fills in 2.5 s on 256 cores.
 
 ## Layout
 
@@ -62,8 +62,8 @@ dsa5208-poisson-mpi/
   results/cluster_8x32/       the same 256-rank runs on 8 nodes x 32 cores
   results/figures/            laptop figures and tables (the OpenMP-only figure and the maps are used in the report)
   results/figures_cluster/    the Vanda figures and tables used in the report
-  report/report.docx          the report, for editing
-  report/report.pdf           the report, as submitted
+  report/Scalable_Assignment3.docx   the report, for editing
+  report/Scalable_Assignment3.pdf    the report, as submitted
 ```
 
 Not in the repository: the satellite data (`data/`, about 2.5 GB) and the
@@ -100,8 +100,8 @@ exchange mode on uneven blocks, blocks one cell thick, CG with overlap, Jacobi
 stopping at a tolerance, the CUDA driver through its emulation layer, ten
 invalid command lines that must be rejected and, if `data/india_2025.grid`
 exists, the satellite data, including a byte-for-byte check of the MPI-IO
-output. It must end with `37 passed, 0 failed` (fewer tests run without the
-data). Set `MPIRUN=...` to change the launcher; the default is
+output. It must end with `37 passed, 0 failed`, or `33 passed, 0 failed` on a
+fresh clone without the satellite data. Set `MPIRUN=...` to change the launcher; the default is
 `mpirun --oversubscribe` (Open MPI).
 
 A ten-second smoke test: both lines must print `iters=183` and `l2_err=3.445134e-05`.
@@ -132,7 +132,7 @@ The region is the seas around India, latitude 5 N to 25 N and longitude 65 E to 
 knows a `singapore` box (8 S to 8 N, 96 E to 120 E) and accepts any custom box.
 
 ```
-scripts/data/download.sh india 2025 ref        # 365 days + reference, about 1.1 GB, 20-40 minutes
+scripts/data/download.sh india 2025 ref        # 365 days + reference, about 1.4 GB, 20-40 minutes
 make gridtool
 bin/gridtool convert data/india_2025.grid --mask data/raw/india/mask.asc data/raw/india/sst_2025-*.asc
 bin/gridtool regrid  data/india_2025.grid data/india_2025_ref.grid --offset -273.15 data/raw/india/ref_2025-*.asc
@@ -171,20 +171,23 @@ scripts/local/maps.sh data/india_2025.grid 99 results/fields/fill2d_day99.grid r
 | option | meaning |
 |---|---|
 | `--dim 2\|3` | square or cube (manufactured problem); one day or the year stack (data) |
-| `--n N` or `--n NX,NY[,NZ]` | global interior grid points: one value, or one per dimension |
+| `--n N` or `--n NX,NY[,NZ]` | global interior grid points: one value, or one per dimension (default 256) |
 | `--local-n M` | weak scaling: each rank owns M points per dimension, and the global grid follows the process grid |
-| `--solver jacobi\|cg` | iteration |
+| `--solver jacobi\|cg` | iteration (default jacobi) |
 | `--iters K` | maximum iterations (default 1000) |
 | `--tol T` | stop when the relative residual drops below T (default 0: run exactly `--iters` sweeps) |
 | `--check-every C` | Jacobi only: compute the global residual every C sweeps (0 = never) |
-| `--exchange sendrecv\|isend\|overlap\|rma` | halo exchange strategy |
+| `--exchange sendrecv\|isend\|overlap\|rma` | halo exchange strategy (default isend) |
 | `--dims PX,PY[,PZ]` | force the process grid shape (the product must equal the number of ranks) |
 | `--threads T` | OpenMP threads per rank |
 | `--csv FILE --tag TEXT` | append one result row to FILE |
+| `--verbose` | print the relative residual while iterating |
+| `--cuda-aware` | `poisson_mpi_cuda` only: hand GPU buffers straight to a CUDA-aware MPI |
 | `--data FILE` | satellite grid file (sets the grid size) |
 | `--day K`, `--days N` | 2D: the day to fill (0-based). 3D: first day and number of days (0 = all) |
 | `--tweight W` | 3D: weight of the time neighbours relative to the space neighbours (default 1) |
 | `--holdout F`, `--holdout-block B` | hide a fraction F of the observed pixels, in BxB patches, to measure the fill error |
+| `--seed S` | seed of the hold-out selection (default 1) |
 | `--eval-day K` | 3D: report the hidden-pixel error for day K only, to compare with the 2D fill of that day |
 | `--ref FILE` | gap-free reference grid on the same grid (made by `gridtool regrid`) |
 | `--out FILE` | write the filled field as a grid file (MPI-IO in parallel) |
@@ -206,7 +209,9 @@ make figures LABEL="your machine"                     # bin/summarize + gnuplot 
 
 The first block of `run_all.sh` is the validation (convergence order, Jacobi
 stopping at the same sweep in serial and in parallel, every implementation on
-the same problem). A third argument picks stages (for example `data`). The data
+the same problem). A third argument picks stages (for example `data`).
+`EXTRA_RANKS=12` adds a rank count that is not a power of two; the laptop
+results in `results/local` include 12 ranks. The data
 stage runs only if `data/india_2025.grid` exists (`GRID=`, `DAY=` and `DAYS3D=`
 override the file, the 2D day and the number of days in 3D). `OUT=dir` writes
 somewhere other than `results/local`.
@@ -216,6 +221,10 @@ repeated runs and derives speedup, efficiency, communication share,
 convergence order, log-log slopes and the gap-filling tables, and then runs
 `analysis/plots.gp`. The outputs are the PNG figures, `tables.md` and
 `summary.txt`. Axes for time, problem size and core count are logarithmic.
+In `summary.txt` the `gapfill_sst3d_cg` line takes the last 256-core row of the
+satellite table, which is an MPI+OpenMP split; the speedup of 78 in the report
+is the pure-MPI row of `tables.md`. Rows that share a core count in that table
+can come out in a different order with another compiler; the values are the same.
 
 ### On Vanda
 
@@ -262,10 +271,10 @@ On another cluster (for example Atlas, 96 cores per node), edit
 
 ## Editing the report
 
-`report/report.docx` is the editable report. Open it in Word, make the changes
-and export with File > Save As (or Export) > PDF, saving over `report/report.pdf`.
-When Word asks whether to update the fields, choose Yes; this refreshes the
-table of contents. The figures are images inside the document: if a figure is
+`report/Scalable_Assignment3.docx` is the editable report. Open it in Word, make
+the changes and export with File > Save As (or Export) > PDF, saving over
+`report/Scalable_Assignment3.pdf`. The page numbers in the footer are fields and
+update on their own. The figures are images inside the document: if a figure is
 regenerated with `make figures`, replace it in Word (right-click > Change
 Picture) with the new PNG from `results/figures_cluster/` or `results/figures/`.
 
